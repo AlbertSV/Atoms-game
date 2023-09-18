@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{F8C94AED-C78A-0428-7DB4-6971AC44851B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MoveController.cs" />
+      <File FileName="Assets/Scripts/Enum.cs" />
+      <File FileName="Assets/Scripts/Particle.cs" Line="30" Column="43" />
+      <File FileName="Assets/Scripts/SpecialParticle.cs" Line="68" Column="44" />
+      <File FileName="Assets/Scripts/GeneralParticle.cs" Line="57" Column="1" />
+      <File FileName="Assets/Scripts/GameControl.cs" Line="268" Column="37" />
+      <File FileName="Assets/Scripts/FeaturesManager.cs" Line="30" Column="69" />
+      <File FileName="Assets/Scripts/Atom.cs" Line="179" Column="36" />
+      <File FileName="Assets/Scripts/Extensions.cs" />
+      <File FileName="Assets/Scripts/Struct.cs" />
+      <File FileName="Assets/Resources/Config.xml" />
+      <File FileName="../../../Downloads/Assets/AI/Scripts/Extensions.cs" />
+      <File FileName="../../../Downloads/Assets/AI/Scripts/Structs.cs" />
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" Line="241" Column="1" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" Line="8" Column="14" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/MenuClose.cs" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="71" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Dva" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="MenuPanels" expanded="True">
+                  <Node name="Menu" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/albertsafin/github/Mendeleev/Dva/Assets/Scripts/GameControl.cs" relfile="Assets/Scripts/GameControl.cs" line="210" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5a603e3c-6bfd-406e-85dc-c0fd46690775" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
