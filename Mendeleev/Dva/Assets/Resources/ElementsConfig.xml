@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Units>
+  <Atom>
+    <AtomStructure ID="1000001001" Name ="Hydrogen" Symbol="H" Material="" Composition="e:1 p:1" Number="1"/>
+    <AtomStructure ID="1001002002" Name ="Helium" Symbol="He" Material="" Composition="e:2 p:2" Number="2"/> 
+    <AtomStructure ID="1003003003" Name ="Lithium" Symbol="Li" Material="" Composition="e:3 p:3" Number="3"/> 
+    <AtomStructure ID="1005004004" Name ="Beryllium" Symbol="Be" Material="" Composition="e:4 p:4" Number="4"/>
+    <AtomStructure ID="1005005005" Name ="Boron" Symbol="B" Material="" Composition="e:5 p:5" Number="5"/> 
+
+    <AtomStructure ID="1006006006" Name ="Carbon" Symbol="C" Material="" Composition="e:6 p:6" Number="6"/>
+
+    <AtomStructure ID="1007007007" Name ="Nitrogen" Symbol="N" Material="" Composition="e:7 p:7" Number="7"/>
+
+    <AtomStructure ID="1008008008" Name ="Oxygen" Symbol="O" Material="" Composition="e:8 p:8" Number="8"/>
+
+    <AtomStructure ID="1009009009" Name ="Fluorine" Symbol="F" Material="" Composition="e:9 p:9" Number="9"/>
+    <AtomStructure ID="1010010010" Name ="Neon" Symbol="Ne" Material="" Composition="e:10 p:10" Number="10"/>
+
+    <AtomStructure ID="1012011011" Name ="Sodium" Symbol="Na" Material="" Composition="e:11 p:11" Number="11"/>
+    <AtomStructure ID="1012012012" Name ="Magnesium" Symbol="Mg" Material="" Composition="e:12 p:12" Number="12"/>
+
+    <AtomStructure ID="1014013013" Name ="Aluminium" Symbol="Al" Material="" Composition="e:13 p:13" Number="13"/>
+    <AtomStructure ID="1014014014" Name ="Silicon" Symbol="Si" Material="" Composition="e:14 p:14" Number="14"/>
+
+    <AtomStructure ID="1016015015" Name ="Phosphorus" Symbol="P" Material="" Composition="e:15 p:15" Number="15"/>
+    <AtomStructure ID="1016016016" Name ="Sulfur" Symbol="S" Material="" Composition="e:16 p:16" Number="16"/>
+
+    <AtomStructure ID="1018017017" Name ="Chlorine" Symbol="Cl" Material="" Composition="e:17 p:17" Number="17"/>
+
+    <AtomStructure ID="1018018018" Name ="Argon" Symbol="Ar" Material="" Composition="e:18 p:18" Number="18"/>
+
+    <AtomStructure ID="1020019019" Name ="Potassium" Symbol="K" Material="" Composition="e:19 p:19" Number="19"/>
+    <AtomStructure ID="1020020020" Name ="Calcium" Symbol="Ca" Material="" Composition="e:20 p:20" Number="20"/>
+
+    <AtomStructure ID="1024021021" Name ="Scandium" Symbol="Sc" Material="" Composition="e:21 p:21" Number="21"/>
+    <AtomStructure ID="1024022022" Name ="Titanium" Symbol="Ti" Material="" Composition="e:22 p:22" Number="22"/>
+
+    <AtomStructure ID="1027023023" Name ="Vanadium" Symbol="V" Material="" Composition="e:23 p:23" Number="23"/>
+    <AtomStructure ID="1026024024" Name ="Chromium" Symbol="Cr" Material="" Composition="e:24 p:24" Number="24"/>
+
+    <AtomStructure ID="1030025025" Name ="Manganese" Symbol="Mn" Material="" Composition="e:25 p:25" Number="25"/>
+    <AtomStructure ID="1028026026" Name ="Iron" Symbol="Fe" Material="" Composition="28n26e26p"/>
+    <AtomStructure ID="1030026026" Name ="Iron-56" Symbol="Fe-56" Material="" Composition="30n26e26p"/>
+    <AtomStructure ID="1031026026" Name ="Iron-57" Symbol="Fe-57" Material="" Composition="31n26e26p"/>
+    <AtomStructure ID="1032026026" Name ="Iron-58" Symbol="Fe-58" Material="" Composition="32n26e26p"/>
+    <AtomStructure ID="1032027027" Name ="Cobalt" Symbol="Co" Material="" Composition="32n27e27p"/>
+    <AtomStructure ID="1030028028" Name ="Nickel" Symbol="Ni" Material="" Composition="30n28e28p"/>
+    <AtomStructure ID="1032028028" Name ="Nickel-60" Symbol="Ni-60" Material="" Composition="32n28e28p"/>
+    <AtomStructure ID="1033028028" Name ="Nickel-61" Symbol="Ni-61" Material="" Composition="33n28e28p"/>
+    <AtomStructure ID="1034028028" Name ="Nickel-62" Symbol="Ni-62" Material="" Composition="34n28e28p"/>
+    <AtomStructure ID="1036028028" Name ="Nickel-64" Symbol="Ni-64" Material="" Composition="36n28e28p"/>
+    <AtomStructure ID="1034029029" Name ="Copper" Symbol="Cu" Material="" Composition="34n29e29p"/>
+    <AtomStructure ID="1036029029" Name ="Copper-65" Symbol="Cu-65" Material="" Composition="36n29e29p"/>
+    <AtomStructure ID="1034030030" Name ="Zinc" Symbol="Zn" Material="" Composition="34n30e30p"/>
+    <AtomStructure ID="1036030030" Name ="Zinc-66" Symbol="Zn-66" Material="" Composition="36n30e30p"/>
+    <AtomStructure ID="1037030030" Name ="Zinc-67" Symbol="Zn-67" Material="" Composition="37n30e30p"/>
+    <AtomStructure ID="1038030030" Name ="Zinc-68" Symbol="Zn-68" Material="" Composition="38n30e30p"/>
+    <AtomStructure ID="1040030030" Name ="Zinc-70" Symbol="Zn-70" Material="" Composition="40n30e30p"/>
+    <AtomStructure ID="1038031031" Name ="Gallium" Symbol="Ga" Material="" Composition="38n31e31p"/>
+    <AtomStructure ID="1040031031" Name ="Gallium-71" Symbol="Ga-71" Material="" Composition="40n31e31p"/>
+    <AtomStructure ID="1038032032" Name ="Germanium" Symbol="Ge" Material="" Composition="38n32e32p"/>
+    <AtomStructure ID="1040032032" Name ="Germanium-72" Symbol="Ge-72" Material="" Composition="40n32e32p"/>
+    <AtomStructure ID="1041032032" Name ="Germanium-73" Symbol="Ge-73" Material="" Composition="41n32e32p"/>
+    <AtomStructure ID="1042032032" Name ="Germanium-74" Symbol="Ge-74" Material="" Composition="42n32e32p"/>
+    <AtomStructure ID="1042033033" Name ="Arsenic" Symbol="As" Material="" Composition="42n33e33p"/>
+    <AtomStructure ID="1040034034" Name ="Selenium" Symbol="Se" Material="" Composition="40n34e34p"/>
+    <AtomStructure ID="1042034034" Name ="Selenium-76" Symbol="Se-76" Material="" Composition="42n34e34p"/>
+    <AtomStructure ID="1043034034" Name ="Selenium-77" Symbol="Se-77" Material="" Composition="43n34e34p"/>
+    <AtomStructure ID="1044034034" Name ="Selenium-78" Symbol="Se-78" Material="" Composition="44n34e34p"/>
+    <AtomStructure ID="1046034034" Name ="Selenium-80" Symbol="Se-80" Material="" Composition="46n34e34p"/>
+    <AtomStructure ID="1044035035" Name ="Bromine" Symbol="Br" Material="" Composition="44n35e35p"/>
+    <AtomStructure ID="1046035035" Name ="Bromine-81" Symbol="Br-81" Material="" Composition="46n35e35p"/>
+    <AtomStructure ID="1044036036" Name ="Krypton" Symbol="Kr" Material="" Composition="44n36e36p"/>
+    <AtomStructure ID="1046036036" Name ="Krypton-82" Symbol="Kr-82" Material="" Composition="46n36e36p"/>
+    <AtomStructure ID="1047036036" Name ="Krypton-83" Symbol="Kr-83" Material="" Composition="47n36e36p"/>
+    <AtomStructure ID="1048036036" Name ="Krypton-84" Symbol="Kr-84" Material="" Composition="48n36e36p"/>
+    <AtomStructure ID="1050036036" Name ="Krypton-86" Symbol="Kr-86" Material="" Composition="50n36e36p"/>
+    <AtomStructure ID="1048037037" Name ="Rubidium" Symbol="Rb" Material="" Composition="48n37e37p"/>
+    <AtomStructure ID="1050037037" Name ="Rubidium-87" Symbol="Rb-87" Material="" Composition="50n37e37p"/>
+    <AtomStructure ID="1046038038" Name ="Strontium" Symbol="Sr" Material="" Composition="46n38e38p"/>
+    <AtomStructure ID="1048038038" Name ="Strontium-86" Symbol="Sr-86" Material="" Composition="48n38e38p"/>
+    <AtomStructure ID="1049038038" Name ="Strontium-87" Symbol="Sr-87" Material="" Composition="49n38e38p"/>
+    <AtomStructure ID="1050038038" Name ="Strontium-88" Symbol="Sr-88" Material="" Composition="50n38e38p"/>
+    <AtomStructure ID="1050039039" Name ="Yttrium" Symbol="Y" Material="" Composition="50n39e39p"/>
+    <AtomStructure ID="1050040040" Name ="Zirconium" Symbol="Zr" Material="" Composition="50n40e40p"/>
+    <AtomStructure ID="1051040040" Name ="Zirconium-91" Symbol="Zr-91" Material="" Composition="51n40e40p"/>
+    <AtomStructure ID="1052040040" Name ="Zirconium-92" Symbol="Zr-92" Material="" Composition="52n40e40p"/>
+    <AtomStructure ID="1054040040" Name ="Zirconium-94" Symbol="Zr-94" Material="" Composition="54n40e40p"/>
+    <AtomStructure ID="1052041041" Name ="Niobium" Symbol="Nb" Material="" Composition="52n41e41p"/>
+    <AtomStructure ID="1050042042" Name ="Molybdenum" Symbol="Mo" Material="" Composition="50n42e42p"/>
+    <AtomStructure ID="1052042042" Name ="Molybdenum-94" Symbol="Mo-94" Material="" Composition="52n42e42p"/>
+    <AtomStructure ID="1053042042" Name ="Molybdenum-95" Symbol="Mo-95" Material="" Composition="53n42e42p"/>
+    <AtomStructure ID="1054042042" Name ="Molybdenum-96" Symbol="Mo-96" Material="" Composition="54n42e42p"/>
+    <AtomStructure ID="1055042042" Name ="Molybdenum-97" Symbol="Mo-97" Material="" Composition="55n42e42p"/>
+    <AtomStructure ID="1056042042" Name ="Molybdenum-98" Symbol="Mo-98" Material="" Composition="56n42e42p"/>
+    <AtomStructure ID="1056043043" Name ="Technetium" Symbol="Tc" Material="" Composition="56n43e43p"/>
+    <AtomStructure ID="1052044044" Name ="Ruthenium" Symbol="Ru" Material="" Composition="52n44e44p"/>
+    <AtomStructure ID="1054044044" Name ="Ruthenium-98" Symbol="Ru-98" Material="" Composition="54n44e44p"/>
+    <AtomStructure ID="1055044044" Name ="Ruthenium-99" Symbol="Ru-99" Material="" Composition="55n44e44p"/>
+    <AtomStructure ID="1056044044" Name ="Ruthenium-100" Symbol="Ru-100" Material="" Composition="56n44e44p"/>
+    <AtomStructure ID="1057044044" Name ="Ruthenium-101" Symbol="Ru-101" Material="" Composition="57n44e44p"/>
+    <AtomStructure ID="1058044044" Name ="Ruthenium-102" Symbol="Ru-102" Material="" Composition="58n44e44p"/>
+    <AtomStructure ID="1060044044" Name ="Ruthenium-104" Symbol="Ru-104" Material="" Composition="60n44e44p"/>
+    <AtomStructure ID="1058045045" Name ="Rhodium" Symbol="Rh" Material="" Composition="58n45e45p"/>
+    <AtomStructure ID="1056046046" Name ="Palladium" Symbol="Pd" Material="" Composition="56n46e46p"/>
+    <AtomStructure ID="1058046046" Name ="Palladium-104" Symbol="Pd-104" Material="" Composition="58n46e46p"/>
+    <AtomStructure ID="1059046046" Name ="Palladium-105" Symbol="Pd-105" Material="" Composition="59n46e46p"/>
+    <AtomStructure ID="1060046046" Name ="Palladium-106" Symbol="Pd-106" Material="" Composition="60n46e46p"/>
+    <AtomStructure ID="1062046046" Name ="Palladium-108" Symbol="Pd-108" Material="" Composition="62n46e46p"/>
+    <AtomStructure ID="1064046046" Name ="Palladium-110" Symbol="Pd-110" Material="" Composition="64n46e46p"/>
+    <AtomStructure ID="1060047047" Name ="Silver" Symbol="Ag" Material="" Composition="60n47e47p"/>
+    <AtomStructure ID="1062047047" Name ="Silver-109" Symbol="Ag-109" Material="" Composition="62n47e47p"/>
+    <AtomStructure ID="1058048048" Name ="Cadmium" Symbol="Cd" Material="" Composition="58n48e48p"/>
+    <AtomStructure ID="1060048048" Name ="Cadmium-108" Symbol="Cd-108" Material="" Composition="60n48e48p"/>
+    <AtomStructure ID="1062048048" Name ="Cadmium-110" Symbol="Cd-110" Material="" Composition="62n48e48p"/>
+    <AtomStructure ID="1063048048" Name ="Cadmium-111" Symbol="Cd-111" Material="" Composition="63n48e48p"/>
+    <AtomStructure ID="1064048048" Name ="Cadmium-112" Symbol="Cd-112" Material="" Composition="64n48e48p"/>
+    <AtomStructure ID="1066048048" Name ="Cadmium-114" Symbol="Cd-114" Material="" Composition="66n48e48p"/>
+    <AtomStructure ID="1064049049" Name ="Indium" Symbol="In" Material="" Composition="64n49e49p"/>
+    <AtomStructure ID="1066049049" Name ="Indium-115" Symbol="In-115" Material="" Composition="66n49e49p"/>
+    <AtomStructure ID="1062050050" Name ="Tin" Symbol="Sn" Material="" Composition="62n50e50p"/>
+    <AtomStructure ID="1064050050" Name ="Tin-114" Symbol="Sn-114" Material="" Composition="64n50e50p"/>
+    <AtomStructure ID="1065050050" Name ="Tin-115" Symbol="Sn-115" Material="" Composition="65n50e50p"/>
+    <AtomStructure ID="1066050050" Name ="Tin-116" Symbol="Sn-116" Material="" Composition="66n50e50p"/>
+    <AtomStructure ID="1067050050" Name ="Tin-117" Symbol="Sn-117" Material="" Composition="67n50e50p"/>
+    <AtomStructure ID="1068050050" Name ="Tin-118" Symbol="Sn-118" Material="" Composition="68n50e50p"/>
+    <AtomStructure ID="1069050050" Name ="Tin-119" Symbol="Sn-119" Material="" Composition="69n50e50p"/>
+    <AtomStructure ID="1070050050" Name ="Tin-120" Symbol="Sn-120" Material="" Composition="70n50e50p"/>
+    <AtomStructure ID="1072050050" Name ="Tin-122" Symbol="Sn-122" Material="" Composition="72n50e50p"/>
+    <AtomStructure ID="1074050050" Name ="Tin-124" Symbol="Sn-124" Material="" Composition="74n50e50p"/>
+    <AtomStructure ID="1070051051" Name ="Antimony" Symbol="Sb" Material="" Composition="70n51e51p"/>
+    <AtomStructure ID="1072051051" Name ="Antimony-123" Symbol="Sb-123" Material="" Composition="72n51e51p"/>
+    <AtomStructure ID="1068052052" Name ="Tellurium" Symbol="Te" Material="" Composition="68n52e52p"/>
+    <AtomStructure ID="1070052052" Name ="Tellurium-122" Symbol="Te-122" Material="" Composition="70n52e52p"/>
+    <AtomStructure ID="1071052052" Name ="Tellurium-123" Symbol="Te-123" Material="" Composition="71n52e52p"/>
+    <AtomStructure ID="1072052052" Name ="Tellurium-124" Symbol="Te-124" Material="" Composition="72n52e52p"/>
+    <AtomStructure ID="1073052052" Name ="Tellurium-125" Symbol="Te-125" Material="" Composition="73n52e52p"/>
+    <AtomStructure ID="1074052052" Name ="Tellurium-126" Symbol="Te-126" Material="" Composition="74n52e52p"/>
+    <AtomStructure ID="1076052052" Name ="Tellurium-128" Symbol="Te-128" Material="" Composition="76n52e52p"/>
+    <AtomStructure ID="1078052052" Name ="Tellurium-130" Symbol="Te-130" Material="" Composition="78n52e52p"/>
+    <AtomStructure ID="1074053053" Name ="Iodine" Symbol="I" Material="" Composition="74n53e53p"/>
+    <AtomStructure ID="1072054054" Name ="Xenon" Symbol="Xe" Material="" Composition="72n54e54p"/>
+    <AtomStructure ID="1074054054" Name ="Xenon-128" Symbol="Xe-128" Material="" Composition="74n54e54p"/>
+    <AtomStructure ID="1075054054" Name ="Xenon-129" Symbol="Xe-129" Material="" Composition="75n54e54p"/>
+    <AtomStructure ID="1076054054" Name ="Xenon-130" Symbol="Xe-130" Material="" Composition="76n54e54p"/>
+    <AtomStructure ID="1077054054" Name ="Xenon-131" Symbol="Xe-131" Material="" Composition="77n54e54p"/>
+    <AtomStructure ID="1078054054" Name ="Xenon-132" Symbol="Xe-132" Material="" Composition="78n54e54p"/>
+    <AtomStructure ID="1080054054" Name ="Xenon-134" Symbol="Xe-134" Material="" Composition="80n54e54p"/>
+    <AtomStructure ID="1078055055" Name ="Caesium" Symbol="Cs" Material="" Composition="78n55e55p"/>
+    <AtomStructure ID="1076056056" Name ="Barium" Symbol="Ba" Material="" Composition="76n56e56p"/>
+    <AtomStructure ID="1078056056" Name ="Barium-134" Symbol="Ba-134" Material="" Composition="78n56e56p"/>
+    <AtomStructure ID="1079056056" Name ="Barium-135" Symbol="Ba-135" Material="" Composition="79n56e56p"/>
+    <AtomStructure ID="1080056056" Name ="Barium-136" Symbol="Ba-136" Material="" Composition="80n56e56p"/>
+    <AtomStructure ID="1081056056" Name ="Barium-137" Symbol="Ba-137" Material="" Composition="81n56e56p"/>
+    <AtomStructure ID="1082056056" Name ="Barium-138" Symbol="Ba-138" Material="" Composition="82n56e56p"/>
+    <AtomStructure ID="1081057057" Name ="Lanthanum" Symbol="La" Material="" Composition="81n57e57p"/>
+    <AtomStructure ID="1082057057" Name ="Lanthanum-139" Symbol="La-139" Material="" Composition="82n57e57p"/>
+    <AtomStructure ID="1078058058" Name ="Cerium" Symbol="Ce" Material="" Composition="78n58e58p"/>
+    <AtomStructure ID="1080058058" Name ="Cerium-138" Symbol="Ce-138" Material="" Composition="80n58e58p"/>
+    <AtomStructure ID="1082058058" Name ="Cerium-140" Symbol="Ce-140" Material="" Composition="82n58e58p"/>
+    <AtomStructure ID="1084058058" Name ="Cerium-142" Symbol="Ce-142" Material="" Composition="84n58e58p"/>
+    <AtomStructure ID="1082059059" Name ="Praseodymium" Symbol="Pr" Material="" Composition="82n59e59p"/>
+    <AtomStructure ID="1082060060" Name ="Neodymium" Symbol="Nd" Material="" Composition="82n60e60p"/>
+    <AtomStructure ID="1083060060" Name ="Neodymium-143" Symbol="Nd-143" Material="" Composition="83n60e60p"/>
+    <AtomStructure ID="1084060060" Name ="Neodymium-144" Symbol="Nd-144" Material="" Composition="84n60e60p"/>
+    <AtomStructure ID="1085060060" Name ="Neodymium-145" Symbol="Nd-145" Material="" Composition="85n60e60p"/>
+    <AtomStructure ID="1086060060" Name ="Neodymium-146" Symbol="Nd-146" Material="" Composition="86n60e60p"/>
+    <AtomStructure ID="1088060060" Name ="Neodymium-148" Symbol="Nd-148" Material="" Composition="88n60e60p"/>
+    <AtomStructure ID="1086061061" Name ="Promethium" Symbol="Pm" Material="" Composition="86n61e61p"/>
+    <AtomStructure ID="1082062062" Name ="Samarium" Symbol="Sm" Material="" Composition="82n62e62p"/>
+    <AtomStructure ID="1085062062" Name ="Samarium-147" Symbol="Sm-147" Material="" Composition="85n62e62p"/>
+    <AtomStructure ID="1086062062" Name ="Samarium-148" Symbol="Sm-148" Material="" Composition="86n62e62p"/>
+    <AtomStructure ID="1087062062" Name ="Samarium-149" Symbol="Sm-149" Material="" Composition="87n62e62p"/>
+    <AtomStructure ID="1088062062" Name ="Samarium-150" Symbol="Sm-150" Material="" Composition="88n62e62p"/>
+    <AtomStructure ID="1090062062" Name ="Samarium-152" Symbol="Sm-152" Material="" Composition="90n62e62p"/>
+    <AtomStructure ID="1092062062" Name ="Samarium-154" Symbol="Sm-154" Material="" Composition="92n62e62p"/>
+    <AtomStructure ID="1088063063" Name ="Europium" Symbol="Eu" Material="" Composition="88n63e63p"/>
+    <AtomStructure ID="1090063063" Name ="Europium-153" Symbol="Eu-153" Material="" Composition="90n63e63p"/>
+    <AtomStructure ID="1090064064" Name ="Gadolinium" Symbol="Gd" Material="" Composition="90n64e64p"/>
+    <AtomStructure ID="1091064064" Name ="Gadolinium-155" Symbol="Gd-155" Material="" Composition="91n64e64p"/>
+    <AtomStructure ID="1092064064" Name ="Gadolinium-156" Symbol="Gd-156" Material="" Composition="92n64e64p"/>
+    <AtomStructure ID="1093064064" Name ="Gadolinium-157" Symbol="Gd-157" Material="" Composition="93n64e64p"/>
+    <AtomStructure ID="1094064064" Name ="Gadolinium-158" Symbol="Gd-158" Material="" Composition="94n64e64p"/>
+    <AtomStructure ID="1096064064" Name ="Gadolinium-160" Symbol="Gd-160" Material="" Composition="96n64e64p"/>
+    <AtomStructure ID="1094065065" Name ="Terbium" Symbol="Tb" Material="" Composition="94n65e65p"/>
+    <AtomStructure ID="1090066066" Name ="Dysprosium" Symbol="Dy" Material="" Composition="90n66e66p"/>
+    <AtomStructure ID="1092066066" Name ="Dysprosium-158" Symbol="Dy-158" Material="" Composition="92n66e66p"/>
+    <AtomStructure ID="1094066066" Name ="Dysprosium-160" Symbol="Dy-160" Material="" Composition="94n66e66p"/>
+    <AtomStructure ID="1095066066" Name ="Dysprosium-161" Symbol="Dy-161" Material="" Composition="95n66e66p"/>
+    <AtomStructure ID="1096066066" Name ="Dysprosium-162" Symbol="Dy-162" Material="" Composition="96n66e66p"/>
+    <AtomStructure ID="1097066066" Name ="Dysprosium-163" Symbol="Dy-163" Material="" Composition="97n66e66p"/>
+    <AtomStructure ID="1098066066" Name ="Dysprosium-164" Symbol="Dy-164" Material="" Composition="98n66e66p"/>
+    <AtomStructure ID="1098067067" Name ="Holmium" Symbol="Ho" Material="" Composition="98n67e67p"/>
+    <AtomStructure ID="1094068068" Name ="Erbium" Symbol="Er" Material="" Composition="94n68e68p"/>
+    <AtomStructure ID="1096068068" Name ="Erbium-164" Symbol="Er-164" Material="" Composition="96n68e68p"/>
+    <AtomStructure ID="1098068068" Name ="Erbium-166" Symbol="Er-166" Material="" Composition="98n68e68p"/>
+    <AtomStructure ID="1099068068" Name ="Erbium-167" Symbol="Er-167" Material="" Composition="99n68e68p"/>
+    <AtomStructure ID="1100068068" Name ="Erbium-168" Symbol="Er-168" Material="" Composition="100n68e68p"/>
+    <AtomStructure ID="1102068068" Name ="Erbium-170" Symbol="Er-170" Material="" Composition="102n68e68p"/>
+    <AtomStructure ID="1100069069" Name ="Thulium" Symbol="Tm" Material="" Composition="100n69e69p"/>
+    <AtomStructure ID="1098070070" Name ="Ytterbium" Symbol="Yb" Material="" Composition="98n70e70p"/>
+    <AtomStructure ID="1100070070" Name ="Ytterbium-170" Symbol="Yb-170" Material="" Composition="100n70e70p"/>
+    <AtomStructure ID="1101070070" Name ="Ytterbium-171" Symbol="Yb-171" Material="" Composition="101n70e70p"/>
+    <AtomStructure ID="1102070070" Name ="Ytterbium-172" Symbol="Yb-172" Material="" Composition="102n70e70p"/>
+    <AtomStructure ID="1103070070" Name ="Ytterbium-173" Symbol="Yb-173" Material="" Composition="103n70e70p"/>
+    <AtomStructure ID="1104070070" Name ="Ytterbium-174" Symbol="Yb-174" Material="" Composition="104n70e70p"/>
+    <AtomStructure ID="1106070070" Name ="Ytterbium-176" Symbol="Yb-176" Material="" Composition="106n70e70p"/>
+    <AtomStructure ID="1104071071" Name ="Lutetium" Symbol="Lu" Material="" Composition="104n71e71p"/>
+    <AtomStructure ID="1105071071" Name ="Lutetium-176" Symbol="Lu-176" Material="" Composition="105n71e71p"/>
+    <AtomStructure ID="1104072072" Name ="Hafnium" Symbol="Hf" Material="" Composition="104n72e72p"/>
+    <AtomStructure ID="1105072072" Name ="Hafnium-177" Symbol="Hf-177" Material="" Composition="105n72e72p"/>
+    <AtomStructure ID="1106072072" Name ="Hafnium-178" Symbol="Hf-178" Material="" Composition="106n72e72p"/>
+    <AtomStructure ID="1107072072" Name ="Hafnium-179" Symbol="Hf-179" Material="" Composition="107n72e72p"/>
+    <AtomStructure ID="1108072072" Name ="Hafnium-180" Symbol="Hf-180" Material="" Composition="108n72e72p"/>
+    <AtomStructure ID="1107073073" Name ="Tantalum" Symbol="Ta" Material="" Composition="107n73e73p"/>
+    <AtomStructure ID="1108073073" Name ="Tantalum-181" Symbol="Ta-181" Material="" Composition="108n73e73p"/>
+    <AtomStructure ID="1108074074" Name ="Tungsten" Symbol="W" Material="" Composition="108n74e74p"/>
+    <AtomStructure ID="1109074074" Name ="Tungsten-183" Symbol="W-183" Material="" Composition="109n74e74p"/>
+    <AtomStructure ID="1110074074" Name ="Tungsten-184" Symbol="W-184" Material="" Composition="110n74e74p"/>
+    <AtomStructure ID="1112074074" Name ="Tungsten-186" Symbol="W-186" Material="" Composition="112n74e74p"/>
+    <AtomStructure ID="1110075075" Name ="Rhenium-185" Symbol="Re-185" Material="" Composition="110n75e75p"/>
+    <AtomStructure ID="1112075075" Name ="Rhenium" Symbol="Re" Material="" Composition="112n75e75p"/>
+    <AtomStructure ID="1111076076" Name ="Osmium" Symbol="Os" Material="" Composition="111n76e76p"/>
+    <AtomStructure ID="1112076076" Name ="Osmium-188" Symbol="Os-188" Material="" Composition="112n76e76p"/>
+    <AtomStructure ID="1113076076" Name ="Osmium-189" Symbol="Os-189" Material="" Composition="113n76e76p"/>
+    <AtomStructure ID="1114076076" Name ="Osmium-190" Symbol="Os-190" Material="" Composition="114n76e76p"/>
+    <AtomStructure ID="1116076076" Name ="Osmium-192" Symbol="Os-192" Material="" Composition="116n76e76p"/>
+    <AtomStructure ID="1114077077" Name ="Iridium" Symbol="Ir" Material="" Composition="114n77e77p"/>
+    <AtomStructure ID="1116077077" Name ="Iridium-193" Symbol="Ir-193" Material="" Composition="116n77e77p"/>
+    <AtomStructure ID="1114078078" Name ="Platinum" Symbol="Pt" Material="" Composition="114n78e78p"/>
+    <AtomStructure ID="1116078078" Name ="Platinum-194" Symbol="Pt-194" Material="" Composition="116n78e78p"/>
+    <AtomStructure ID="1117078078" Name ="Platinum-195" Symbol="Pt-195" Material="" Composition="117n78e78p"/>
+    <AtomStructure ID="1118078078" Name ="Platinum-196" Symbol="Pt-196" Material="" Composition="118n78e78p"/>
+    <AtomStructure ID="1120078078" Name ="Platinum-198" Symbol="Pt-198" Material="" Composition="120n78e78p"/>
+    <AtomStructure ID="1118079079" Name ="Gold" Symbol="Au" Material="" Composition="118n79e79p"/>
+    <AtomStructure ID="1116080080" Name ="Mercury" Symbol="Hg" Material="" Composition="116n80e80p"/>
+    <AtomStructure ID="1118080080" Name ="Mercury-198" Symbol="Hg-198" Material="" Composition="118n80e80p"/>
+    <AtomStructure ID="1119080080" Name ="Mercury-199" Symbol="Hg-199" Material="" Composition="119n80e80p"/>
+    <AtomStructure ID="1120080080" Name ="Mercury-200" Symbol="Hg-200" Material="" Composition="120n80e80p"/>
+    <AtomStructure ID="1121080080" Name ="Mercury-201" Symbol="Hg-201" Material="" Composition="121n80e80p"/>
+    <AtomStructure ID="1122080080" Name ="Mercury-202" Symbol="Hg-202" Material="" Composition="122n80e80p"/>
+    <AtomStructure ID="1124080080" Name ="Mercury-204" Symbol="Hg-204" Material="" Composition="124n80e80p"/>
+    <AtomStructure ID="1122081081" Name ="Thallium" Symbol="Tl" Material="" Composition="122n81e81p"/>
+    <AtomStructure ID="1124081081" Name ="Thallium-205" Symbol="Tl-205" Material="" Composition="124n81e81p"/>
+    <AtomStructure ID="1122082082" Name ="Lead" Symbol="Pb" Material="" Composition="122n82e82p"/>
+    <AtomStructure ID="1124082082" Name ="Lead-206" Symbol="Pb-206" Material="" Composition="124n82e82p"/>
+    <AtomStructure ID="1125082082" Name ="Lead-207" Symbol="Pb-207" Material="" Composition="125n82e82p"/>
+    <AtomStructure ID="1126082082" Name ="Lead-208" Symbol="Pb-208" Material="" Composition="126n82e82p"/>
+    <AtomStructure ID="1126083083" Name ="Bismuth" Symbol="Bi" Material="" Composition="126n83e83p"/>
+    <AtomStructure ID="1124084084" Name ="Polonium" Symbol="Po" Material="" Composition="124n84e84p"/>
+    <AtomStructure ID="1125084084" Name ="Polonium-209" Symbol="Po-209" Material="" Composition="125n84e84p"/>
+    <AtomStructure ID="1124085085" Name ="Astatine" Symbol="At" Material="" Composition="124n85e85p"/>
+    <AtomStructure ID="1125085085" Name ="Astatine-210" Symbol="At-210" Material="" Composition="125n85e85p"/>
+    <AtomStructure ID="1126085085" Name ="Astatine-211" Symbol="At-211" Material="" Composition="126n85e85p"/>
+    <AtomStructure ID="1136086086" Name ="Radon" Symbol="Rn" Material="" Composition="136n86e86p"/>
+    <AtomStructure ID="1125087087" Name ="Francium" Symbol="Fr" Material="" Composition="125n87e87p"/>
+    <AtomStructure ID="1136087087" Name ="Francium-223" Symbol="Fr-223" Material="" Composition="136n87e87p"/>
+    <AtomStructure ID="1138088088" Name ="Radium" Symbol="Ra" Material="" Composition="138n88e88p"/>
+    <AtomStructure ID="1138089089" Name ="Actinium" Symbol="Ac" Material="" Composition="138n89e89p"/>
+    <AtomStructure ID="1142090090" Name ="Thorium" Symbol="Th" Material="" Composition="142n90e90p"/>
+    <AtomStructure ID="1140091091" Name ="Protactinium" Symbol="Pa" Material="" Composition="140n91e91p"/>
+    <AtomStructure ID="1146092092" Name ="Uranium" Symbol="U" Material="" Composition="146n92e92p"/>
+    <AtomStructure ID="1143093093" Name ="Neptunium" Symbol="Np" Material="" Composition="143n93e93p"/>
+    <AtomStructure ID="1144093093" Name ="Neptunium-237" Symbol="Np-237" Material="" Composition="144n93e93p"/>
+    <AtomStructure ID="1145094094" Name ="Plutonium" Symbol="Pu" Material="" Composition="145n94e94p"/>
+    <AtomStructure ID="1146094094" Name ="Plutonium-240" Symbol="Pu-240" Material="" Composition="146n94e94p"/>
+    <AtomStructure ID="1148094094" Name ="Plutonium-242" Symbol="Pu-242" Material="" Composition="148n94e94p"/>
+    <AtomStructure ID="1150094094" Name ="Plutonium-244" Symbol="Pu-244" Material="" Composition="150n94e94p"/>
+    <AtomStructure ID="1146095095" Name ="Americium" Symbol="Am" Material="" Composition="146n95e95p"/>
+    <AtomStructure ID="1147095095" Name ="Americium-242" Symbol="Am-242" Material="" Composition="147n95e95p"/>
+    <AtomStructure ID="1148095095" Name ="Americium-243" Symbol="Am-243" Material="" Composition="148n95e95p"/>
+    <AtomStructure ID="1151096096" Name ="Curium" Symbol="Cm" Material="" Composition="151n96e96p"/>
+    <AtomStructure ID="1152096096" Name ="Curium-248" Symbol="Cm-248" Material="" Composition="152n96e96p"/>
+    <AtomStructure ID="1150097097" Name ="Berkelium" Symbol="Bk" Material="" Composition="150n97e97p"/>
+    <AtomStructure ID="1151097097" Name ="Berkelium-248" Symbol="Bk-248" Material="" Composition="151n97e97p"/>
+    <AtomStructure ID="1154098098" Name ="Californium" Symbol="Cf" Material="" Composition="154n98e98p"/>
+    <AtomStructure ID="1153099099" Name ="Einsteinium" Symbol="Es" Material="" Composition="153n99e99p"/>
+    <AtomStructure ID="1155099099" Name ="Einsteinium-254" Symbol="Es-254" Material="" Composition="155n99e99p"/>
+    <AtomStructure ID="1157100100" Name ="Fermium" Symbol="Fm" Material="" Composition="157n100e100p"/>
+    <AtomStructure ID="1157101101" Name ="Mendelevium" Symbol="Md" Material="" Composition="157n101e101p"/>
+    <AtomStructure ID="1159101101" Name ="Mendelevium-260" Symbol="Md-260" Material="" Composition="159n101e101p"/>
+    <AtomStructure ID="1157102102" Name ="Nobelium" Symbol="No" Material="" Composition="157n102e102p"/>
+    <AtomStructure ID="1159103103" Name ="Lawrencium" Symbol="Lr" Material="" Composition="159n103e103p"/>
+    <AtomStructure ID="1161103103" Name ="Lawrencium-264" Symbol="Lr-264" Material="" Composition="161n103e103p"/>
+    <AtomStructure ID="1163103103" Name ="Lawrencium-266" Symbol="Lr-266" Material="" Composition="163n103e103p"/>
+    <AtomStructure ID="1159104104" Name ="Rutherfordium" Symbol="Rf" Material="" Composition="159n104e104p"/>
+    <AtomStructure ID="1163104104" Name ="Rutherfordium-267" Symbol="Rf-267" Material="" Composition="163n104e104p"/>
+    <AtomStructure ID="1162105105" Name ="Dubnium" Symbol="Db" Material="" Composition="162n105e105p"/>
+    <AtomStructure ID="1163105105" Name ="Dubnium-268" Symbol="Db-268" Material="" Composition="163n105e105p"/>
+    <AtomStructure ID="1165105105" Name ="Dubnium-270" Symbol="Db-270" Material="" Composition="165n105e105p"/>
+    <AtomStructure ID="1163106106" Name ="Seaborgium" Symbol="Sg" Material="" Composition="163n106e106p"/>
+    <AtomStructure ID="1163107107" Name ="Bohrium" Symbol="Bh" Material="" Composition="163n107e107p"/>
+    <AtomStructure ID="1171107107" Name ="Bohrium-278" Symbol="Bh-278" Material="" Composition="171n107e107p"/>
+    <AtomStructure ID="1169108108" Name ="Hassium" Symbol="Hs" Material="" Composition="169n108e108p"/>
+    <AtomStructure ID="1173109109" Name ="Meitnerium" Symbol="Mt" Material="" Composition="173n109e109p"/>
+    <AtomStructure ID="1169110110" Name ="Darmstadtium" Symbol="Ds" Material="" Composition="169n110e110p"/>
+    <AtomStructure ID="1171110110" Name ="Darmstadtium-281" Symbol="Ds-281" Material="" Composition="171n110e110p"/>
+    <AtomStructure ID="1171111111" Name ="Roentgenium" Symbol="Rg" Material="" Composition="171n111e111p"/>
+    <AtomStructure ID="1172111111" Name ="Roentgenium-283" Symbol="Rg-283" Material="" Composition="172n111e111p"/>
+    <AtomStructure ID="1175111111" Name ="Roentgenium-286" Symbol="Rg-286" Material="" Composition="175n111e111p"/>
+    <AtomStructure ID="1173112112" Name ="Copernicium" Symbol="Cn" Material="" Composition="173n112e112p"/>
+    <AtomStructure ID="1172113113" Name ="Nihonium" Symbol="Nh" Material="" Composition="172n113e113p"/>
+    <AtomStructure ID="1173113113" Name ="Nihonium-286" Symbol="Nh-286" Material="" Composition="173n113e113p"/>
+    <AtomStructure ID="1174113113" Name ="Nihonium-287" Symbol="Nh-287" Material="" Composition="174n113e113p"/>
+    <AtomStructure ID="1177113113" Name ="Nihonium-290" Symbol="Nh-290" Material="" Composition="177n113e113p"/>
+    <AtomStructure ID="1175114114" Name ="Flerovium" Symbol="Fl" Material="" Composition="175n114e114p"/>
+    <AtomStructure ID="1176114114" Name ="Flerovium-290" Symbol="Fl-290" Material="" Composition="176n114e114p"/>
+    <AtomStructure ID="1173115115" Name ="Moscovium" Symbol="Mc" Material="" Composition="173n115e115p"/>
+    <AtomStructure ID="1174115115" Name ="Moscovium-289" Symbol="Mc-289" Material="" Composition="174n115e115p"/>
+    <AtomStructure ID="1175115115" Name ="Moscovium-290" Symbol="Mc-290" Material="" Composition="175n115e115p"/>
+    <AtomStructure ID="1175116116" Name ="Livermorium" Symbol="Lv" Material="" Composition="175n116e116p"/>
+    <AtomStructure ID="1177116116" Name ="Livermorium-293" Symbol="Lv-293" Material="" Composition="177n116e116p"/>
+    <AtomStructure ID="1176117117" Name ="Tennessine" Symbol="Ts" Material="" Composition="176n117e117p"/>
+    <AtomStructure ID="1177117117" Name ="Tennessine-294" Symbol="Ts-294" Material="" Composition="177n117e117p"/>
+    <AtomStructure ID="1176118118" Name ="Oganesson" Symbol="Og" Material="" Composition="176n118e118p"/>
+  </Atom>
+</Units>

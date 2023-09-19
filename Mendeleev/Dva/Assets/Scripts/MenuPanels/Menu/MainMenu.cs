@@ -11,12 +11,20 @@ namespace Dva
     {
         [SerializeField] private GameObject _mainMenuUI;
         [SerializeField] private GameObject _optionMenuUI;
+        private Animator _animator;
 
+        private void Awake()
+        {
+            _animator = gameObject.GetComponent<Animator>();
+        }
 
         public void PlayGame()
         {
-            StartCoroutine(WaitForAnimation());
-            
+            if(_animator != null)
+            {
+                _animator.SetTrigger("ToPlay");
+            }
+
         }
 
         public void OptionMenu()
@@ -37,9 +45,8 @@ namespace Dva
 #endif
         }
 
-        private IEnumerator WaitForAnimation()
+        private void WaitForAnimationPlay()
         {
-            yield return new WaitForSeconds(1f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

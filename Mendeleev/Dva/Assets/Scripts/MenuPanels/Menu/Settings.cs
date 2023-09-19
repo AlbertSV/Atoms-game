@@ -13,12 +13,14 @@ namespace Dva
         [SerializeField] private TMP_Dropdown _difficultyDropdown;
         [SerializeField] private GameObject _optionMenuUI;
         [SerializeField] private GameObject _mainMenuUI;
+        private Animator _animator;
 
         void Start()
         {
             _volumeToggle.isOn = (PlayerPrefs.GetInt("volumeToggle") != 0);
             _volumeSlider.value = PlayerPrefs.GetFloat("volumeSlider", 20f);
             _difficultyDropdown.value = PlayerPrefs.GetInt("difficulty");
+            _animator = gameObject.GetComponent<Animator>();
             
         }
 
@@ -32,14 +34,13 @@ namespace Dva
 
         public void Back()
         {
-            WaitForAnimation();
-            _mainMenuUI.SetActive(true);
+            _animator.SetTrigger("Back");
         }    
 
-        private IEnumerator WaitForAnimation()
+        private void WaitForAnimationBack()
         {
-            yield return new WaitForSeconds(0.6f);
             _optionMenuUI.SetActive(false);
+            _mainMenuUI.SetActive(true);
         }
 
     }
