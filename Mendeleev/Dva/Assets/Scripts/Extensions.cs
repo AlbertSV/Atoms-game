@@ -12,12 +12,19 @@ namespace Dva
     public static class AIUtility
     {
         private static readonly string c_ConfigPath = "//Resources//Config.xml";
+        private static readonly string c_ElementsConfigPath = "//Resources//ElementsConfig.xml";
 
-        private static List<AtomData> _atomData = new List<AtomData>();
         private static Dictionary<int, string> _NameIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> _SymbolIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> _MaterialIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> _CompositionIDDict = new Dictionary<int, string>();
+
+        private static Dictionary<int, string> e_NameIDDict = new Dictionary<int, string>();
+        private static Dictionary<int, string> e_SymbolIDDict = new Dictionary<int, string>();
+        private static Dictionary<int, int> e_MaterialIDDict = new Dictionary<int, int>();
+        private static Dictionary<int, string> e_CompositionIDDict = new Dictionary<int, string>();
+        private static Dictionary<int, int> e_IsotopesIDDict = new Dictionary<int, int>();
+        private static Dictionary<int, int> e_NumberIDDict = new Dictionary<int, int>();
 
         //Запускается автоматически
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
@@ -25,6 +32,7 @@ namespace Dva
         {
             var root = XDocument.Load(Application.dataPath + c_ConfigPath).Root;
             ConfigurationAtomData(root);
+            root = XDocument.Load(Application.dataPath + c_ElementsConfigPath).Root;
 
         }
 
@@ -41,7 +49,6 @@ namespace Dva
                 var atomMaterialStr = element.Attribute("Material").Value;
                 var atomCompositionStr = element.Attribute("Composition").Value;
 
-                //_atomData.Add(new AtomData { ID = atomIDInt, Name = atomNameStr, Symbol = atomSymbolStr, Material = atomMaterialStr, Composition = atomCompositionStr});
                 _NameIDDict.Add(atomIDInt, atomNameStr);
                 _SymbolIDDict.Add(atomIDInt, atomSymbolStr);
                 _MaterialIDDict.Add(atomIDInt, atomMaterialStr);
@@ -49,13 +56,43 @@ namespace Dva
             }
         }
 
+        private static void ConfigurationElementsData(XElement root)
+        {
+            //Проходка по группам действий
+            foreach (var element in root.Element("Atom").Elements("Element"))
+            {
+
+                //Получение значения перечисления для игрока
+                var atomIDInt = int.Parse(element.Attribute("ID").Value);
+                var atomNameStr = element.Attribute("Name").Value;
+                var atomSymbolStr = element.Attribute("Symbol").Value;
+                var atomMaterialInt = int.Parse(element.Attribute("Material").Value);
+                var atomCompositionStr = element.Attribute("Composition").Value;
+                var atomNumberInt = int.Parse(element.Attribute("Composition").Value);
+                var atomIsotopesInt = int.Parse(element.Attribute("Composition").Value);
+
+                e_NameIDDict.Add(atomIDInt, atomNameStr);
+                e_SymbolIDDict.Add(atomIDInt, atomSymbolStr);
+                e_MaterialIDDict.Add(atomIDInt, atomMaterialInt);
+                e_CompositionIDDict.Add(atomIDInt, atomCompositionStr);
+                e_NumberIDDict.Add(atomIDInt, atomNumberInt);
+                e_IsotopesIDDict.Add(atomIDInt, atomIsotopesInt);
+            }
+        }
+
         /// <summary>
         /// Возвращает коллекцию для чтения с коэффициентами изменения приоритетов действий бота по действиям игрока
         /// </summary>
-        public static IReadOnlyList<AtomData> GetAtomData => _atomData;
         public static IReadOnlyDictionary<int, string> GetAtomName => _NameIDDict;
         public static IReadOnlyDictionary<int, string> GetAtomSymbol => _SymbolIDDict;
         public static IReadOnlyDictionary<int, string> GetAtomMaterial => _MaterialIDDict;
         public static IReadOnlyDictionary<int, string> GetAtomComposition => _CompositionIDDict;
+
+        public static IReadOnlyDictionary<int, string> GetElementName => e_NameIDDict;
+        public static IReadOnlyDictionary<int, string> GetElementSymbol => e_SymbolIDDict;
+        public static IReadOnlyDictionary<int, int> GetElementMaterial => e_MaterialIDDict;
+        public static IReadOnlyDictionary<int, string> GetElementComposition => e_CompositionIDDict;
+        public static IReadOnlyDictionary<int, int> GetElementNumber => e_NumberIDDict;
+        public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesIDDict;
     }
 }

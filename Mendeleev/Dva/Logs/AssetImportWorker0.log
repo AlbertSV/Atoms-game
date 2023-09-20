@@ -1868,3 +1868,42 @@ Received Import Request.
   path: Assets/Resources/ElementsConfig.xml
   artifactKey: Guid(6da42866172f846cc90b4db73a7445e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Resources/ElementsConfig.xml using Guid(6da42866172f846cc90b4db73a7445e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f6d3d67862a6ff735f1745ce5d88403') in 0.002582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7002.542640 seconds.
+  path: Assets/Resources/Prefabs/Element.prefab
+  artifactKey: Guid(ee5b51f5d3bc94a73921f0062f2279b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Element.prefab using Guid(ee5b51f5d3bc94a73921f0062f2279b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e410e09da6f0f70a9c5321609e16d1') in 0.053672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.127517 seconds.
+  path: Assets/Materials/ElementsMat/ActinidesMat.mat
+  artifactKey: Guid(4e52dc6b047c44ce8965f9132d1da07a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ElementsMat/ActinidesMat.mat using Guid(4e52dc6b047c44ce8965f9132d1da07a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28974781f737a713488c2c3c4d7ef069') in 0.021151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Materials/ElementsMat/AlkalineEarthMetalsMat.mat
+  artifactKey: Guid(fa2707eb3c8874d90bd8026854c09427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ElementsMat/AlkalineEarthMetalsMat.mat using Guid(fa2707eb3c8874d90bd8026854c09427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdd74ea48eebe32683d34ba83d4c1f54') in 0.012749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Materials/ElementsMat/ReactiveNonmetalsMat.mat
+  artifactKey: Guid(862d810da5c114290bd834e495aa5bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ElementsMat/ReactiveNonmetalsMat.mat using Guid(862d810da5c114290bd834e495aa5bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0268dec5b34d241ac2f787e97a92ad') in 0.024762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Materials/ElementsMat/NobleGasesMat.mat
+  artifactKey: Guid(e091c7c430fd8493188656e0f8eb0944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ElementsMat/NobleGasesMat.mat using Guid(e091c7c430fd8493188656e0f8eb0944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57e5bcdeb0a8e7bdf496bfd367b04b5') in 0.012201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Materials/ElementsMat/MetalloidsMat.mat
+  artifactKey: Guid(fb2e5faca31844832bf4225519b9d9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ElementsMat/MetalloidsMat.mat using Guid(fb2e5faca31844832bf4225519b9d9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c385da8a74813e5ecb4a3c3cc6a316e1') in 0.019131 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting

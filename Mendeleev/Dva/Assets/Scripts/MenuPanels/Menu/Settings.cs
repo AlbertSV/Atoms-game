@@ -24,7 +24,7 @@ namespace Dva
             
         }
 
-        //save the settings parameters
+        //save the settings parameter
         public void Save()
         {
             PlayerPrefs.SetFloat("volumeSlider", _volumeSlider.value);
