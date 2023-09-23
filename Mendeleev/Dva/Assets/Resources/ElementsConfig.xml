@@ -4,20 +4,20 @@
     <Element ID="111601001" Name="Hydrogen" Symbol="H" Material="8" Composition="e:1 p:1" Number="1" Isotopes="3"/>
     <Element ID="111602002" Name="Helium" Symbol="He" Material="6" Composition="e:2 p:2" Number="2" Isotopes="2"/>
     <Element ID="111603003" Name="Lithium" Symbol="Li" Material="2" Composition="e:3 p:3" Number="3" Isotopes="2"/>
-    <Element ID="111604004" Name="Beryllium" Symbol="Be" Material="9" Composition="e:4 p:4" Number="4" Isotopes="1"/>
-    <Element ID="111605005" Name="Boron" Symbol="B" Material="8" Composition="e:5 p:5" Number="5" Isotopes="2"/>
+    <Element ID="111604004" Name="Beryllium" Symbol="Be" Material="3" Composition="e:4 p:4" Number="4" Isotopes="1"/>
+    <Element ID="111605005" Name="Boron" Symbol="B" Material="5" Composition="e:5 p:5" Number="5" Isotopes="2"/>
     <Element ID="111606006" Name="Carbon" Symbol="C" Material="8" Composition="e:6 p:6" Number="6" Isotopes="2"/>
     <Element ID="111607007" Name="Nitrogen" Symbol="N" Material="8" Composition="e:7 p:7" Number="7" Isotopes="2"/>
     <Element ID="111608008" Name="Oxygen" Symbol="O" Material="8" Composition="e:8 p:8" Number="8" Isotopes="3"/>
     <Element ID="111609009" Name="Fluorine" Symbol="F" Material="8" Composition="e:9 p:9" Number="9" Isotopes="1"/>
     <Element ID="111610010" Name="Neon" Symbol="Ne" Material="6" Composition="e:10 p:10" Number="10" Isotopes="3"/>
     <Element ID="111611011" Name="Sodium" Symbol="Na" Material="2" Composition="e:11 p:11" Number="11" Isotopes="1"/>
-    <Element ID="111612012" Name="Magnesium" Symbol="Mg" Material="9" Composition="e:12 p:12" Number="12" Isotopes="3"/>
-    <Element ID="111613013" Name="Aluminium" Symbol="Al" Material="9" Composition="e:13 p:13" Number="13" Isotopes="1"/>
-    <Element ID="111614014" Name="Silicon" Symbol="Si" Material="5" Composition="e:14 p:14" Number="14" Isotopes="2"/>
+    <Element ID="111612012" Name="Magnesium" Symbol="Mg" Material="3" Composition="e:12 p:12" Number="12" Isotopes="3"/>
+    <Element ID="111613013" Name="Aluminium" Symbol="Al" Material="7" Composition="e:13 p:13" Number="13" Isotopes="1"/>
+    <Element ID="111614014" Name="Silicon" Symbol="Si" Material="5" Composition="e:14 p:14" Number="14" Isotopes="3"/>
     <Element ID="111615015" Name="Phosphorus" Symbol="P" Material="8" Composition="e:15 p:15" Number="15" Isotopes="1"/>
-    <Element ID="111616016" Name="Sulfur" Symbol="S" Material="8" Composition="e:16 p:16" Number="16" Isotopes="2"/>
-    <Element ID="111617017" Name="Chlorine" Symbol="Cl" Material="8" Composition="e:17 p:17" Number="17" Isotopes="1"/>
+    <Element ID="111616016" Name="Sulfur" Symbol="S" Material="8" Composition="e:16 p:16" Number="16" Isotopes="3"/>
+    <Element ID="111617017" Name="Chlorine" Symbol="Cl" Material="8" Composition="e:17 p:17" Number="17" Isotopes="2"/>
     <Element ID="111618018" Name="Argon" Symbol="Ar" Material="6" Composition="e:18 p:18" Number="18" Isotopes="3"/>
     <Element ID="111619019" Name="Potassium" Symbol="K" Material="2" Composition="e:19 p:19" Number="19" Isotopes="2"/>
     <Element ID="111620020" Name="Calcium" Symbol="Ca" Material="3" Composition="e:20 p:20" Number="20" Isotopes="5"/>
@@ -26,27 +26,27 @@
     <Element ID="111623023" Name="Vanadium" Symbol="V" Material="9" Composition="e:23 p:23" Number="23" Isotopes="2"/>
     <Element ID="111624024" Name="Chromium" Symbol="Cr" Material="9" Composition="e:24 p:24" Number="24" Isotopes="4"/>
     <Element ID="111625025" Name="Manganese" Symbol="Mn" Material="9" Composition="e:25 p:25" Number="25" Isotopes="1"/>
-    <Element ID="111626026" Name="Iron" Symbol="Fe" Material="9" Composition="e:26 p:26" Number="26" Isotopes="3"/>
+    <Element ID="111626026" Name="Iron" Symbol="Fe" Material="9" Composition="e:26 p:26" Number="26" Isotopes="4"/>
     <Element ID="111627027" Name="Cobalt" Symbol="Co" Material="9" Composition="e:27 p:27" Number="27" Isotopes="1"/>
     <Element ID="111628028" Name="Nickel" Symbol="Ni" Material="9" Composition="e:28 p:28" Number="28" Isotopes="5"/>
-    <Element ID="111629029" Name="Copper" Symbol="Cu" Material="9" Composition="e:29 p:29" Number="29" Isotopes="1"/>
+    <Element ID="111629029" Name="Copper" Symbol="Cu" Material="9" Composition="e:29 p:29" Number="29" Isotopes="2"/>
     <Element ID="111630030" Name="Zinc" Symbol="Zn" Material="9" Composition="e:30 p:30" Number="30" Isotopes="5"/>
-    <Element ID="111631031" Name="Gallium" Symbol="Ga" Material="9" Composition="e:31 p:31" Number="31" Isotopes="1"/>
+    <Element ID="111631031" Name="Gallium" Symbol="Ga" Material="7" Composition="e:31 p:31" Number="31" Isotopes="2"/>
     <Element ID="111632032" Name="Germanium" Symbol="Ge" Material="5" Composition="e:32 p:32" Number="32" Isotopes="4"/>
     <Element ID="111633033" Name="Arsenic" Symbol="As" Material="8" Composition="e:33 p:33" Number="33" Isotopes="1"/>
     <Element ID="111634034" Name="Selenium" Symbol="Se" Material="8" Composition="e:34 p:34" Number="34" Isotopes="5"/>
-    <Element ID="111635035" Name="Bromine" Symbol="Br" Material="8" Composition="e:35 p:35" Number="35" Isotopes="1"/>
+    <Element ID="111635035" Name="Bromine" Symbol="Br" Material="8" Composition="e:35 p:35" Number="35" Isotopes="2"/>
     <Element ID="111636036" Name="Krypton" Symbol="Kr" Material="6" Composition="e:36 p:36" Number="36" Isotopes="5"/>
-    <Element ID="111637037" Name="Rubidium" Symbol="Rb" Material="2" Composition="e:37 p:37" Number="37" Isotopes="1"/>
+    <Element ID="111637037" Name="Rubidium" Symbol="Rb" Material="2" Composition="e:37 p:37" Number="37" Isotopes="2"/>
     <Element ID="111638038" Name="Strontium" Symbol="Sr" Material="3" Composition="e:38 p:38" Number="38" Isotopes="4"/>
-    <Element ID="111639039" Name="Yttrium" Symbol="Y" Material="4" Composition="e:39 p:39" Number="39" Isotopes="1"/>
-    <Element ID="111640040" Name="Zirconium" Symbol="Zr" Material="4" Composition="e:40 p:40" Number="40" Isotopes="4"/>
+    <Element ID="111639039" Name="Yttrium" Symbol="Y" Material="9" Composition="e:39 p:39" Number="39" Isotopes="1"/>
+    <Element ID="111640040" Name="Zirconium" Symbol="Zr" Material="9" Composition="e:40 p:40" Number="40" Isotopes="4"/>
     <Element ID="111641041" Name="Niobium" Symbol="Nb" Material="9" Composition="e:41 p:41" Number="41" Isotopes="1"/>
     <Element ID="111642042" Name="Molybdenum" Symbol="Mo" Material="9" Composition="e:42 p:42" Number="42" Isotopes="6"/>
-    <Element ID="111643043" Name="Technetium" Symbol="Tc" Material="1" Composition="e:43 p:43" Number="43" Isotopes="1"/>
+    <Element ID="111643043" Name="Technetium" Symbol="Tc" Material="9" Composition="e:43 p:43" Number="43" Isotopes="1"/>
     <Element ID="111644044" Name="Ruthenium" Symbol="Ru" Material="9" Composition="e:44 p:44" Number="44" Isotopes="7"/>
     <Element ID="111645045" Name="Rhodium" Symbol="Rh" Material="9" Composition="e:45 p:45" Number="45" Isotopes="1"/>
-    <Element ID="111646046" Name="Palladium" Symbol="Pd" Material="9" Composition="e:46 p:46" Number="46" Isotopes="5"/>
+    <Element ID="111646046" Name="Palladium" Symbol="Pd" Material="9" Composition="e:46 p:46" Number="46" Isotopes="6"/>
     <Element ID="111647047" Name="Silver" Symbol="Ag" Material="9" Composition="e:47 p:47" Number="47" Isotopes="2"/>
     <Element ID="111648048" Name="Cadmium" Symbol="Cd" Material="9" Composition="e:48 p:48" Number="48" Isotopes="6"/>
     <Element ID="111649049" Name="Indium" Symbol="In" Material="2" Composition="e:49 p:49" Number="49" Isotopes="2"/>
@@ -57,26 +57,26 @@
     <Element ID="111654054" Name="Xenon" Symbol="Xe" Material="6" Composition="e:54 p:54" Number="54" Isotopes="7"/>
     <Element ID="111655055" Name="Caesium" Symbol="Cs" Material="2" Composition="e:55 p:55" Number="55" Isotopes="1"/>
     <Element ID="111656056" Name="Barium" Symbol="Ba" Material="3" Composition="e:56 p:56" Number="56" Isotopes="6"/>
-    <Element ID="111657057" Name="Lanthanum" Symbol="La" Material="4" Composition="e:57 p:57" Number="57" Isotopes="1"/>
+    <Element ID="111657057" Name="Lanthanum" Symbol="La" Material="4" Composition="e:57 p:57" Number="57" Isotopes="2"/>
     <Element ID="111658058" Name="Cerium" Symbol="Ce" Material="4" Composition="e:58 p:58" Number="58" Isotopes="4"/>
     <Element ID="111659059" Name="Praseodymium" Symbol="Pr" Material="4" Composition="e:59 p:59" Number="59" Isotopes="1"/>
     <Element ID="111660060" Name="Neodymium" Symbol="Nd" Material="4" Composition="e:60 p:60" Number="60" Isotopes="6"/>
     <Element ID="111661061" Name="Promethium" Symbol="Pm" Material="4" Composition="e:61 p:61" Number="61" Isotopes="1"/>
     <Element ID="111662062" Name="Samarium" Symbol="Sm" Material="4" Composition="e:62 p:62" Number="62" Isotopes="7"/>
-    <Element ID="111663063" Name="Europium" Symbol="Eu" Material="4" Composition="e:63 p:63" Number="63" Isotopes="1"/>
-    <Element ID="111664064" Name="Gadolinium" Symbol="Gd" Material="4" Composition="e:64 p:64" Number="64" Isotopes="7"/>
+    <Element ID="111663063" Name="Europium" Symbol="Eu" Material="4" Composition="e:63 p:63" Number="63" Isotopes="2"/>
+    <Element ID="111664064" Name="Gadolinium" Symbol="Gd" Material="4" Composition="e:64 p:64" Number="64" Isotopes="6"/>
     <Element ID="111665065" Name="Terbium" Symbol="Tb" Material="4" Composition="e:65 p:65" Number="65" Isotopes="1"/>
     <Element ID="111666066" Name="Dysprosium" Symbol="Dy" Material="4" Composition="e:66 p:66" Number="66" Isotopes="7"/>
     <Element ID="111667067" Name="Holmium" Symbol="Ho" Material="4" Composition="e:67 p:67" Number="67" Isotopes="1"/>
     <Element ID="111668068" Name="Erbium" Symbol="Er" Material="4" Composition="e:68 p:68" Number="68" Isotopes="6"/>
     <Element ID="111669069" Name="Thulium" Symbol="Tm" Material="4" Composition="e:69 p:69" Number="69" Isotopes="1"/>
     <Element ID="111670070" Name="Ytterbium" Symbol="Yb" Material="4" Composition="e:70 p:70" Number="70" Isotopes="7"/>
-    <Element ID="111671071" Name="Lutetium" Symbol="Lu" Material="4" Composition="e:71 p:71" Number="71" Isotopes="1"/>
-    <Element ID="111672072" Name="Hafnium" Symbol="Hf" Material="9" Composition="e:72 p:72" Number="72" Isotopes="6"/>
+    <Element ID="111671071" Name="Lutetium" Symbol="Lu" Material="4" Composition="e:71 p:71" Number="71" Isotopes="2"/>
+    <Element ID="111672072" Name="Hafnium" Symbol="Hf" Material="9" Composition="e:72 p:72" Number="72" Isotopes="5"/>
     <Element ID="111673073" Name="Tantalum" Symbol="Ta" Material="9" Composition="e:73 p:73" Number="73" Isotopes="2"/>
-    <Element ID="111674074" Name="Tungsten" Symbol="W" Material="9" Composition="e:74 p:74" Number="74" Isotopes="5"/>
+    <Element ID="111674074" Name="Tungsten" Symbol="W" Material="9" Composition="e:74 p:74" Number="74" Isotopes="4"/>
     <Element ID="111675075" Name="Rhenium" Symbol="Re" Material="9" Composition="e:75 p:75" Number="75" Isotopes="2"/>
-    <Element ID="111676076" Name="Osmium" Symbol="Os" Material="9" Composition="e:76 p:76" Number="76" Isotopes="7"/>
+    <Element ID="111676076" Name="Osmium" Symbol="Os" Material="9" Composition="e:76 p:76" Number="76" Isotopes="5"/>
     <Element ID="111677077" Name="Iridium" Symbol="Ir" Material="9" Composition="e:77 p:77" Number="77" Isotopes="2"/>
     <Element ID="111678078" Name="Platinum" Symbol="Pt" Material="9" Composition="e:78 p:78" Number="78" Isotopes="5"/>
     <Element ID="111679079" Name="Gold" Symbol="Au" Material="9" Composition="e:79 p:79" Number="79" Isotopes="1"/>
@@ -84,40 +84,40 @@
     <Element ID="111681081" Name="Thallium" Symbol="Tl" Material="2" Composition="e:81 p:81" Number="81" Isotopes="2"/>
     <Element ID="111682082" Name="Lead" Symbol="Pb" Material="9" Composition="e:82 p:82" Number="82" Isotopes="4"/>
     <Element ID="111683083" Name="Bismuth" Symbol="Bi" Material="2" Composition="e:83 p:83" Number="83" Isotopes="1"/>
-    <Element ID="111684084" Name="Polonium" Symbol="Po" Material="1" Composition="e:84 p:84" Number="84" Isotopes="1"/>
-    <Element ID="111685085" Name="Astatine" Symbol="At" Material="8" Composition="e:85 p:85" Number="85" Isotopes="1"/>
+    <Element ID="111684084" Name="Polonium" Symbol="Po" Material="1" Composition="e:84 p:84" Number="84" Isotopes="2"/>
+    <Element ID="111685085" Name="Astatine" Symbol="At" Material="8" Composition="e:85 p:85" Number="85" Isotopes="3"/>
     <Element ID="111686086" Name="Radon" Symbol="Rn" Material="6" Composition="e:86 p:86" Number="86" Isotopes="1"/>
-    <Element ID="111687087" Name="Francium" Symbol="Fr" Material="2" Composition="e:87 p:87" Number="87" Isotopes="1"/>
-    <Element ID="111688088" Name="Radium" Symbol="Ra" Material="3" Composition="e:88 p:88" Number="88" Isotopes="2"/>
+    <Element ID="111687087" Name="Francium" Symbol="Fr" Material="2" Composition="e:87 p:87" Number="87" Isotopes="2"/>
+    <Element ID="111688088" Name="Radium" Symbol="Ra" Material="3" Composition="e:88 p:88" Number="88" Isotopes="1"/>
     <Element ID="111689089" Name="Actinium" Symbol="Ac" Material="1" Composition="e:89 p:89" Number="89" Isotopes="1"/>
     <Element ID="111690090" Name="Thorium" Symbol="Th" Material="1" Composition="e:90 p:90" Number="90" Isotopes="1"/>
     <Element ID="111691091" Name="Protactinium" Symbol="Pa" Material="1" Composition="e:91 p:91" Number="91" Isotopes="1"/>
-    <Element ID="111692092" Name="Uranium" Symbol="U" Material="1" Composition="e:92 p:92" Number="92" Isotopes="3"/>
-    <Element ID="111693093" Name="Neptunium" Symbol="Np" Material="1" Composition="e:93 p:93" Number="93" Isotopes="1"/>
-    <Element ID="111694094" Name="Plutonium" Symbol="Pu" Material="1" Composition="e:94 p:94" Number="94" Isotopes="1"/>
-    <Element ID="111695095" Name="Americium" Symbol="Am" Material="1" Composition="e:95 p:95" Number="95" Isotopes="1"/>
-    <Element ID="111696096" Name="Curium" Symbol="Cm" Material="1" Composition="e:96 p:96" Number="96" Isotopes="1"/>
-    <Element ID="111697097" Name="Berkelium" Symbol="Bk" Material="1" Composition="e:97 p:97" Number="97" Isotopes="1"/>
+    <Element ID="111692092" Name="Uranium" Symbol="U" Material="1" Composition="e:92 p:92" Number="92" Isotopes="1"/>
+    <Element ID="111693093" Name="Neptunium" Symbol="Np" Material="1" Composition="e:93 p:93" Number="93" Isotopes="2"/>
+    <Element ID="111694094" Name="Plutonium" Symbol="Pu" Material="1" Composition="e:94 p:94" Number="94" Isotopes="4"/>
+    <Element ID="111695095" Name="Americium" Symbol="Am" Material="1" Composition="e:95 p:95" Number="95" Isotopes="3"/>
+    <Element ID="111696096" Name="Curium" Symbol="Cm" Material="1" Composition="e:96 p:96" Number="96" Isotopes="2"/>
+    <Element ID="111697097" Name="Berkelium" Symbol="Bk" Material="1" Composition="e:97 p:97" Number="97" Isotopes="2"/>
     <Element ID="111698098" Name="Californium" Symbol="Cf" Material="1" Composition="e:98 p:98" Number="98" Isotopes="1"/>
-    <Element ID="111699099" Name="Einsteinium" Symbol="Es" Material="1" Composition="e:99 p:99" Number="99" Isotopes="1"/>
+    <Element ID="111699099" Name="Einsteinium" Symbol="Es" Material="1" Composition="e:99 p:99" Number="99" Isotopes="2"/>
     <Element ID="1116100100" Name="Fermium" Symbol="Fm" Material="1" Composition="e:100 p:100" Number="100" Isotopes="1"/>
-    <Element ID="1116101101" Name="Mendelevium" Symbol="Md" Material="1" Composition="e:101 p:101" Number="101" Isotopes="1"/>
+    <Element ID="1116101101" Name="Mendelevium" Symbol="Md" Material="1" Composition="e:101 p:101" Number="101" Isotopes="2"/>
     <Element ID="1116102102" Name="Nobelium" Symbol="No" Material="1" Composition="e:102 p:102" Number="102" Isotopes="1"/>
-    <Element ID="1116103103" Name="Lawrencium" Symbol="Lr" Material="1" Composition="e:103 p:103" Number="103" Isotopes="1"/>
-    <Element ID="1116104104" Name="Rutherfordium" Symbol="Rf" Material="7" Composition="e:104 p:104" Number="104" Isotopes="1"/>
-    <Element ID="1116105105" Name="Dubnium" Symbol="Db" Material="7" Composition="e:105 p:105" Number="105" Isotopes="1"/>
+    <Element ID="1116103103" Name="Lawrencium" Symbol="Lr" Material="1" Composition="e:103 p:103" Number="103" Isotopes="3"/>
+    <Element ID="1116104104" Name="Rutherfordium" Symbol="Rf" Material="7" Composition="e:104 p:104" Number="104" Isotopes="2"/>
+    <Element ID="1116105105" Name="Dubnium" Symbol="Db" Material="7" Composition="e:105 p:105" Number="105" Isotopes="3"/>
     <Element ID="1116106106" Name="Seaborgium" Symbol="Sg" Material="7" Composition="e:106 p:106" Number="106" Isotopes="1"/>
-    <Element ID="1116107107" Name="Bohrium" Symbol="Bh" Material="7" Composition="e:107 p:107" Number="107" Isotopes="1"/>
+    <Element ID="1116107107" Name="Bohrium" Symbol="Bh" Material="7" Composition="e:107 p:107" Number="107" Isotopes="2"/>
     <Element ID="1116108108" Name="Hassium" Symbol="Hs" Material="7" Composition="e:108 p:108" Number="108" Isotopes="1"/>
     <Element ID="1116109109" Name="Meitnerium" Symbol="Mt" Material="7" Composition="e:109 p:109" Number="109" Isotopes="1"/>
-    <Element ID="1116110110" Name="Darmstadtium" Symbol="Ds" Material="7" Composition="e:110 p:110" Number="110" Isotopes="1"/>
-    <Element ID="1116111111" Name="Roentgenium" Symbol="Rg" Material="7" Composition="e:111 p:111" Number="111" Isotopes="1"/>
+    <Element ID="1116110110" Name="Darmstadtium" Symbol="Ds" Material="7" Composition="e:110 p:110" Number="110" Isotopes="2"/>
+    <Element ID="1116111111" Name="Roentgenium" Symbol="Rg" Material="7" Composition="e:111 p:111" Number="111" Isotopes="3"/>
     <Element ID="1116112112" Name="Copernicium" Symbol="Cn" Material="7" Composition="e:112 p:112" Number="112" Isotopes="1"/>
-    <Element ID="1116113113" Name="Nihonium" Symbol="Nh" Material="7" Composition="e:113 p:113" Number="113" Isotopes="1"/>
-    <Element ID="1116114114" Name="Flerovium" Symbol="Fl" Material="7" Composition="e:114 p:114" Number="114" Isotopes="1"/>
-    <Element ID="1116115115" Name="Moscovium" Symbol="Mc" Material="7" Composition="e:115 p:115" Number="115" Isotopes="1"/>
-    <Element ID="1116116116" Name="Livermorium" Symbol="Lv" Material="7" Composition="e:116 p:116" Number="116" Isotopes="1"/>
-    <Element ID="1116117117" Name="Tennessine" Symbol="Ts" Material="7" Composition="e:117 p:117" Number="117" Isotopes="1"/>
+    <Element ID="1116113113" Name="Nihonium" Symbol="Nh" Material="7" Composition="e:113 p:113" Number="113" Isotopes="4"/>
+    <Element ID="1116114114" Name="Flerovium" Symbol="Fl" Material="7" Composition="e:114 p:114" Number="114" Isotopes="2"/>
+    <Element ID="1116115115" Name="Moscovium" Symbol="Mc" Material="7" Composition="e:115 p:115" Number="115" Isotopes="3"/>
+    <Element ID="1116116116" Name="Livermorium" Symbol="Lv" Material="7" Composition="e:116 p:116" Number="116" Isotopes="2"/>
+    <Element ID="1116117117" Name="Tennessine" Symbol="Ts" Material="7" Composition="e:117 p:117" Number="117" Isotopes="2"/>
     <Element ID="1116118118" Name="Oganesson" Symbol="Og" Material="7" Composition="e:118 p:118" Number="118" Isotopes="1"/>
   </Atom>
 </Units>

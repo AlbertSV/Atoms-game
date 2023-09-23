@@ -376,6 +376,7 @@
 "Assets/Scripts/Progress.cs"
 "Assets/Scripts/SpecialParticle.cs"
 "Assets/Scripts/Struct.cs"
+"Assets/Scripts/Table/ElementsTable.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
