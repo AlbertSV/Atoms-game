@@ -1,36 +1,39 @@
 ﻿<Properties StartupConfiguration="{F8C94AED-C78A-0428-7DB4-6971AC44851B}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="da696eba-2f62-47ce-a789-313e01feb800" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7fb837d-e8bb-41a7-b77f-0739dce9adb9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/GameControl.cs" relfile="Assets/Scripts/GameControl.cs" line="210" column="1" />
-      <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/Menu/MainMenu.cs" relfile="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" line="25" column="1" />
+      <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/Table/ElementsTable.cs" relfile="Assets/Scripts/Table/ElementsTable.cs" line="13" column="1" />
+      <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/Menu/MainMenu.cs" relfile="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" line="40" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuPanels/Menu/Settings.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs">
     <Files>
       <File FileName="Assets/Scripts/MoveController.cs" />
-      <File FileName="Assets/Scripts/Enum.cs" Line="47" Column="31" />
+      <File FileName="Assets/Scripts/Enum.cs" />
       <File FileName="Assets/Scripts/Particle.cs" />
       <File FileName="Assets/Scripts/SpecialParticle.cs" />
       <File FileName="Assets/Scripts/GeneralParticle.cs" />
-      <File FileName="Assets/Scripts/GameControl.cs" Line="268" Column="37" />
-      <File FileName="Assets/Scripts/FeaturesManager.cs" />
-      <File FileName="Assets/Scripts/Atom.cs" Line="230" Column="24" />
-      <File FileName="Assets/Scripts/Extensions.cs" Line="12" Column="34" />
+      <File FileName="Assets/Scripts/GameControl.cs" />
+      <File FileName="Assets/Scripts/FeaturesManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Atom.cs" Line="92" Column="60" />
+      <File FileName="Assets/Scripts/Extensions.cs" Line="37" Column="81" />
+      <File FileName="Assets/Resources/PlayerConfig.xml" Line="9" Column="9" />
       <File FileName="Assets/Resources/ElementsConfig.xml" Line="121" Column="96" />
       <File FileName="Assets/Scripts/Struct.cs" />
       <File FileName="Assets/Resources/Config.xml" Line="261" Column="110" />
       <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" Line="22" Column="10" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" Line="34" Column="44" />
       <File FileName="Assets/Scripts/MenuPanels/Menu/MenuClose.cs" Line="17" Column="2" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" />
-      <File FileName="Assets/Scripts/Progress.cs" Line="28" Column="1" />
-      <File FileName="Assets/Scripts/ElementTable.cs" Line="21" Column="2" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Table/ElementsTable.cs" Line="26" Column="12" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="43" Column="26" />
+      <File FileName="Assets/Scripts/Progress.cs" Line="47" Column="10" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/ElementMenu.cs" Line="25" Column="75" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -41,9 +44,10 @@
               <Node name="Scripts" expanded="True">
                 <Node name="MenuPanels" expanded="True">
                   <Node name="Menu" expanded="True">
-                    <Node name="Settings.cs" selected="True" />
+                    <Node name="PauseMenu.cs" selected="True" />
                   </Node>
                 </Node>
+                <Node name="Table" expanded="True" />
               </Node>
             </Node>
           </Node>

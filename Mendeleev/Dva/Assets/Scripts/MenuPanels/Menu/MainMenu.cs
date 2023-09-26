@@ -11,6 +11,7 @@ namespace Dva
     {
         [SerializeField] private GameObject _mainMenuUI;
         [SerializeField] private GameObject _optionMenuUI;
+        [SerializeField] private GameObject _elementMenuUI;
         private Animator _animator;
 
         private void Awake()
@@ -27,10 +28,18 @@ namespace Dva
 
         }
 
+        public void ElementMenu()
+        {
+            _mainMenuUI.SetActive(false);
+            _elementMenuUI.SetActive(true);
+            _elementMenuUI.GetComponent<Animator>().Play("ElementMenu");
+        }
+
         public void OptionMenu()
         {
             _mainMenuUI.SetActive(false);
             _optionMenuUI.SetActive(true);
+            _optionMenuUI.GetComponent<Animator>().Play("OptionMenuOpen");
         }    
 
         public void QuitGame()

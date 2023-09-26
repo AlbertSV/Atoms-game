@@ -13,6 +13,7 @@ namespace Dva
     {
         private static readonly string c_ConfigPath = "//Resources//Config.xml";
         private static readonly string c_ElementsConfigPath = "//Resources//ElementsConfig.xml";
+        private static readonly string p_NumbersList = "//Resources//PlayerConfig.xml";
 
         private static Dictionary<int, string> _NameIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> _SymbolIDDict = new Dictionary<int, string>();
@@ -26,13 +27,20 @@ namespace Dva
         private static Dictionary<int, int> e_IsotopesIDDict = new Dictionary<int, int>();
         private static Dictionary<int, int> e_NumberIDDict = new Dictionary<int, int>();
 
+        private static List<string> p_Numbers = new List<string>();
+        private static XDocument _fileToWrite;
+
         //Запускается автоматически
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Configuration()
         {
+            _fileToWrite = XDocument.Load(Application.dataPath + p_NumbersList);
             var root = XDocument.Load(Application.dataPath + c_ConfigPath).Root;
             ConfigurationAtomData(root);
             root = XDocument.Load(Application.dataPath + c_ElementsConfigPath).Root;
+            //ConfigurationElementsData(root);
+            root = XDocument.Load(Application.dataPath + p_NumbersList).Root;
+            ConfigurationPlayerNumbers(root);
 
         }
 
@@ -80,6 +88,26 @@ namespace Dva
             }
         }
 
+        private static void ConfigurationPlayerNumbers(XElement root)
+        {
+            //Проходка по группам действий
+            foreach (var element in root.Element("Atom").Elements("PlayerElements"))
+            {
+
+                //Получение значения перечисления для игрока
+                var playerNumbers = element.Attribute("Number").Value;
+
+                p_Numbers.Add(playerNumbers);
+            }
+        }
+
+        public static void RewriteXML(string number)
+        {
+            
+            _fileToWrite.Element("Units").Element("Atom").Add(new XElement("PlayerElements", new XAttribute("Number", number)));
+            _fileToWrite.Save(Application.dataPath + p_NumbersList);
+        }
+
         /// <summary>
         /// Возвращает коллекцию для чтения с коэффициентами изменения приоритетов действий бота по действиям игрока
         /// </summary>
@@ -94,5 +122,7 @@ namespace Dva
         public static IReadOnlyDictionary<int, string> GetElementComposition => e_CompositionIDDict;
         public static IReadOnlyDictionary<int, int> GetElementNumber => e_NumberIDDict;
         public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesIDDict;
+
+        public static List<string> GetPlayerNumbers => p_Numbers;
     }
 }

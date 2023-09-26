@@ -35,10 +35,12 @@ namespace Dva
         public void Back()
         {
             _animator.SetTrigger("Back");
+            
         }    
 
         private void WaitForAnimationBack()
         {
+            _optionMenuUI.transform.localScale = new Vector3(1f, 1f, 1f);
             _optionMenuUI.SetActive(false);
             _mainMenuUI.SetActive(true);
         }

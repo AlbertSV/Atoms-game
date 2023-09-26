@@ -16,9 +16,9 @@ namespace Dva
         private bool _toDecay = false;
         private bool _inDecay = false;
         protected int _atomID;
-        protected int _nAmount = 79;
-        protected int _eAmount = 79;
-        protected int _pAmount = 79;
+        protected int _nAmount = 0;
+        protected int _eAmount = 1;
+        protected int _pAmount = 0;
         protected TMP_Text _atomNameText;
         protected TMP_Text _atomCompositionText;
         protected TMP_Text _atomSymbolText;
@@ -26,6 +26,7 @@ namespace Dva
         protected TMP_Text _atomDecayText;
         private ParticleSystem _particleSystem;
         private Animator _animator;
+        private List<string> _openElements;
 
         public int AtomID => _atomID;
 
@@ -40,6 +41,7 @@ namespace Dva
             _atomSymbolObjectText = _gameManager.GetComponent<FeaturesManager>().AtomSymbolObject;
             _particleSystem = _gameManager.GetComponent<FeaturesManager>().ParticleSystem;
             _animator = _particleSystem.GetComponentInParent<Animator>();
+            _openElements = AIUtility.GetPlayerNumbers;
         }
 
 
@@ -87,6 +89,7 @@ namespace Dva
                     if (_eAmount == _pAmount && _nAmount >= _eAmount - 2)
                     {
                         _toDecay = false;
+                        _animator.SetBool("ToTrim", false);
                         _atomDecayText.text = "";
                         CompositionUpdate();
                         _inDecay = false;
@@ -235,6 +238,8 @@ namespace Dva
 
         protected void AtomUpgrade(int atomID)
         {
+            string number = (((atomID - 1000000000) % 1000000) % 1000).ToString();
+
             if (AIUtility.GetAtomName.ContainsKey(atomID))
             {
                 string name = AIUtility.GetAtomName[atomID];
@@ -250,12 +255,18 @@ namespace Dva
                 string symbol = AIUtility.GetAtomSymbol[atomID];
                 _atomSymbolText.text = symbol;
                 _atomSymbolObjectText.text = symbol;
+                if (!_openElements.Contains(number))
+                {
+                    _openElements.Add(number);
+                    AIUtility.RewriteXML(number);
+                }
             }
             else
             {
                 _atomSymbolText.text = "X";
                 _atomSymbolObjectText.text = "X";
             }
+
         }
 
         protected int AtomIDUpdate()
