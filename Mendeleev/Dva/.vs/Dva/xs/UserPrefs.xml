@@ -7,10 +7,11 @@
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/GameControl.cs" relfile="Assets/Scripts/GameControl.cs" line="210" column="1" />
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/Table/ElementsTable.cs" relfile="Assets/Scripts/Table/ElementsTable.cs" line="13" column="1" />
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/Menu/MainMenu.cs" relfile="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" line="40" column="1" />
+      <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/PauseMenu.cs" relfile="Assets/Scripts/MenuPanels/PauseMenu.cs" line="41" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuPanels/Menu/MainMenu.cs">
     <Files>
       <File FileName="Assets/Scripts/MoveController.cs" />
       <File FileName="Assets/Scripts/Enum.cs" />
@@ -26,28 +27,27 @@
       <File FileName="Assets/Scripts/Struct.cs" />
       <File FileName="Assets/Resources/Config.xml" Line="261" Column="110" />
       <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" Line="34" Column="44" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" Line="42" Column="52" />
       <File FileName="Assets/Scripts/MenuPanels/Menu/MenuClose.cs" Line="17" Column="2" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/PauseMenu.cs" Line="39" Column="1" />
       <File FileName="Assets/Scripts/Player.cs" Line="28" Column="1" />
       <File FileName="Assets/Scripts/Table/ElementsTable.cs" Line="26" Column="12" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="43" Column="26" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="14" Column="9" />
       <File FileName="Assets/Scripts/Progress.cs" Line="47" Column="10" />
       <File FileName="Assets/Scripts/MenuPanels/Menu/ElementMenu.cs" Line="25" Column="75" />
+      <File FileName="Assets/Scripts/MenuPanels/PauseButton.cs" Line="17" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Dva" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Resources" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="MenuPanels" expanded="True">
                   <Node name="Menu" expanded="True">
-                    <Node name="PauseMenu.cs" selected="True" />
+                    <Node name="MainMenu.cs" selected="True" />
                   </Node>
                 </Node>
-                <Node name="Table" expanded="True" />
               </Node>
             </Node>
           </Node>

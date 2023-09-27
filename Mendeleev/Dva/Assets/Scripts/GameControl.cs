@@ -14,6 +14,7 @@ namespace Dva
         [SerializeField] private int _maxSpecialAmount = 2;
         [SerializeField] private int _particleRenewTime = 15;
         [SerializeField] private float _particleSpeed = 0.01f;
+        [SerializeField] private int _lifesAmount = 3;
 
         [Header("Particles")]
         [SerializeField] private GeneralParticle _neutron;
@@ -25,6 +26,9 @@ namespace Dva
         [SerializeField] private SpecialParticle _fieldBiggerParticle;
         [SerializeField] private SpecialParticle _fieldSmallerParticle;
         [SerializeField] private SpecialParticle _fastNeutronParticle;
+        [SerializeField] private GameObject _life;
+        [SerializeField] private Transform _lifeHolder;
+        [SerializeField] private GameObject _endMenu;
 
         private float _count;
 
@@ -35,11 +39,14 @@ namespace Dva
         public List<GameObject> _fieldBiggerCounter;
         public List<GameObject> _fieldSmallerCounter;
         public List<GameObject> _neutronFastCounter;
+        public List<GameObject> _lifesList;
+
         private FeaturesManager _featuresManager;
         private Player _player;
         private Atom _atom;
         private bool _needToRemove;
         private bool _isBlackHoleActive = false;
+        private float _lifeStepCanvas = 0.2f;
 
         public List<GameObject> ParticleCounter => _particlesCounter;
         public float ParticleSpeed => _particleSpeed;
@@ -60,8 +67,10 @@ namespace Dva
             _fieldBiggerCounter = new List<GameObject>();
             _fieldSmallerCounter = new List<GameObject>();
             _neutronFastCounter = new List<GameObject>();
+            _lifesList = new List<GameObject>();
             _player = FindObjectOfType<Player>();
             _count = _particleRenewTime;
+            LifesCreation(_lifesAmount);
         }
 
         void Update()
@@ -284,7 +293,6 @@ namespace Dva
                         _fieldAnimator.SetBool("Bigger", true);
                     }
     
-                    //_featuresManager.Field.localScale = new Vector3(startField.x * sizeMultiplier, startField.y, startField.z * sizeMultiplier);
                     _featuresManager.LeftBoarder.transform.position = new Vector3(left * sizeMultiplier, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
                     _featuresManager.RightBoarder.transform.position = new Vector3(right * sizeMultiplier, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
                     _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top * sizeMultiplier);
@@ -307,7 +315,6 @@ namespace Dva
             }
 
 
-           // _featuresManager.Field.localScale = startField;
             _featuresManager.LeftBoarder.transform.position = new Vector3(left / sizeMultiplier, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
             _featuresManager.RightBoarder.transform.position = new Vector3(right / sizeMultiplier, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
             _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top / sizeMultiplier);
@@ -365,6 +372,23 @@ namespace Dva
                     Destroy(special.gameObject);
                 }
             }
+        }
+
+        private void LifesCreation(int lifeAmount)
+        {
+            for(int i=0; i< lifeAmount; i++)
+            {
+                GameObject life = Instantiate(_life, new Vector3(_lifeHolder.position.x + i * _lifeStepCanvas, _lifeHolder.position.y, _lifeHolder.position.z)
+                    , _life.transform.rotation, _lifeHolder);
+
+                _lifesList.Add(life);
+            }
+        }
+
+        public void EndGame()
+        {
+            Time.timeScale = 0f;
+            _endMenu.SetActive(true);
         }
     }
 }

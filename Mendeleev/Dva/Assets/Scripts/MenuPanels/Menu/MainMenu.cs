@@ -17,6 +17,7 @@ namespace Dva
         private void Awake()
         {
             _animator = gameObject.GetComponent<Animator>();
+            _animator.Play("MainMenu");
         }
 
         public void PlayGame()

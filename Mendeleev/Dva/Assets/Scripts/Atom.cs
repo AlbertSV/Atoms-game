@@ -104,6 +104,7 @@ namespace Dva
                     _atomID = AtomDecay();
                     AtomUpgrade(_atomID);
                     CompositionUpdate();
+                    DestroyLife(_gameManager.GetComponent<GameControl>()._lifesList);
                     _inDecay = false;
                     _toDecay = false;
                 }
@@ -186,6 +187,7 @@ namespace Dva
                     _particleSystem.Play();
                     _atomID = AtomIDUpdate();
                     CompositionUpdate();
+                    DestroyLife(_gameManager.GetComponent<GameControl>()._lifesList);
                 }
             }
         }
@@ -273,6 +275,18 @@ namespace Dva
         {
             _atomID = 1000000000 + _nAmount * 1000000 + _eAmount * 1000 + _pAmount;
             return _atomID;
+        }
+
+        private void DestroyLife(List<GameObject> lifesList)
+        {
+
+            Destroy(lifesList[lifesList.Count - 1]);
+            lifesList.RemoveAt(lifesList.Count - 1);
+
+            if(lifesList.Count == 0)
+            {
+                _gameManager.GetComponent<GameControl>().EndGame();
+            }
         }
     }
 }
