@@ -60,7 +60,7 @@ namespace Dva
                 }
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * 5f);
+                    transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * 3f);
                 }
             }
         }

@@ -64,6 +64,10 @@ namespace Dva
                 {
                     _gameControl._fieldBiggerCounter.Remove(objectTriggered);
                 }
+                else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.Lives)
+                {
+                    _gameControl._livesCounter.Remove(objectTriggered);
+                }
                 else
                 {
                     _gameControl._neutronFastCounter.Remove(objectTriggered);

@@ -16,9 +16,9 @@ namespace Dva
         private bool _toDecay = false;
         private bool _inDecay = false;
         protected int _atomID;
-        protected int _nAmount = 0;
-        protected int _eAmount = 1;
-        protected int _pAmount = 0;
+        protected int _nAmount = 20;
+        protected int _eAmount = 20;
+        protected int _pAmount = 20;
         protected TMP_Text _atomNameText;
         protected TMP_Text _atomCompositionText;
         protected TMP_Text _atomSymbolText;
@@ -104,7 +104,7 @@ namespace Dva
                     _atomID = AtomDecay();
                     AtomUpgrade(_atomID);
                     CompositionUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>()._lifesList);
+                    DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
                     _inDecay = false;
                     _toDecay = false;
                 }
@@ -187,7 +187,7 @@ namespace Dva
                     _particleSystem.Play();
                     _atomID = AtomIDUpdate();
                     CompositionUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>()._lifesList);
+                    DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
                 }
             }
         }

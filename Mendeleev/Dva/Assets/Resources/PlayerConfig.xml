@@ -5,5 +5,7 @@
     <PlayerElements Number="2" />
     <PlayerElements Number="3" />
     <PlayerElements Number="4" />
+    <PlayerElements Number="10" />
+    <PlayerElements Number="20" />
   </Atom>
 </Units>

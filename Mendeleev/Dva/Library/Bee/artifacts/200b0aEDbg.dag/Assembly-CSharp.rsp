@@ -365,6 +365,7 @@
 "Assets/Scripts/GameControl.cs"
 "Assets/Scripts/GeneralParticle.cs"
 "Assets/Scripts/Knob.cs"
+"Assets/Scripts/LevelControl.cs"
 "Assets/Scripts/MenuPanels/Menu/ElementMenu.cs"
 "Assets/Scripts/MenuPanels/Menu/MainMenu.cs"
 "Assets/Scripts/MenuPanels/Menu/MenuClose.cs"

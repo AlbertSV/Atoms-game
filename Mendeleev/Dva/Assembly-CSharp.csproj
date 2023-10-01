@@ -113,6 +113,7 @@
     <Compile Include="Assets/Scripts/TouchMove/TouchMove.cs" />
     <Compile Include="Assets/Scripts/Knob.cs" />
     <Compile Include="Assets/Scripts/TouchMove/FloatingJoystick.cs" />
+    <Compile Include="Assets/Scripts/LevelControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

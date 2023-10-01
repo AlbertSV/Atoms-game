@@ -30,7 +30,8 @@ namespace Dva
         TimeSlow,
         FastNeutron,
         FieldRise,
-        FiledShrink
+        FiledShrink,
+        Lives
     }
 
     public enum Materials
