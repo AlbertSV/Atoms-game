@@ -27,7 +27,7 @@ namespace Dva
         private static Dictionary<int, int> e_IsotopesIDDict = new Dictionary<int, int>();
         private static Dictionary<int, int> e_NumberIDDict = new Dictionary<int, int>();
 
-        private static List<string> p_Numbers = new List<string>();
+        private static Dictionary<int, int> p_Numbers = new Dictionary<int, int>();
         private static XDocument _fileToWrite;
 
         //Запускается автоматически
@@ -95,16 +95,18 @@ namespace Dva
             {
 
                 //Получение значения перечисления для игрока
-                var playerNumbers = element.Attribute("Number").Value;
+                var playerAtomID = int.Parse(element.Attribute("ID").Value);
+                var playerNumbers = int.Parse(element.Attribute("Number").Value);
 
-                p_Numbers.Add(playerNumbers);
+                p_Numbers.Add(playerAtomID, playerNumbers);
             }
         }
 
-        public static void RewriteXML(string number)
+        public static void RewriteXML(int number, int ID)
         {
             
-            _fileToWrite.Element("Units").Element("Atom").Add(new XElement("PlayerElements", new XAttribute("Number", number)));
+            _fileToWrite.Element("Units").Element("Atom").Add(new XElement("PlayerElements", new XAttribute("ID", ID),
+                new XAttribute("Number", number)));
             _fileToWrite.Save(Application.dataPath + p_NumbersList);
         }
 
@@ -123,6 +125,6 @@ namespace Dva
         public static IReadOnlyDictionary<int, int> GetElementNumber => e_NumberIDDict;
         public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesIDDict;
 
-        public static List<string> GetPlayerNumbers => p_Numbers;
+        public static Dictionary<int, int> GetPlayerNumbers => p_Numbers;
     }
 }

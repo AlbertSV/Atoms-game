@@ -8,12 +8,12 @@ namespace Dva
 {
     public class Progress : MonoBehaviour
     {
-        private List<int> _openElemenets;
+        private Dictionary<int, int> _openElemenets;
         private Dictionary<string, GameObject> _elements;
 
         private void Awake()
         {
-            _openElemenets = new List<int>();
+            _openElemenets = new Dictionary<int, int>();
             _elements = new Dictionary<string, GameObject>();
             ElementsTable[] allElements = FindObjectsOfType<ElementsTable>();
             _elements = allElements.ToDictionary(v => v.gameObject.name, v => v.gameObject);
@@ -28,9 +28,9 @@ namespace Dva
                 int number = (((atomID - 1000000000) % 1000000) % 1000);
                 int nAmount = (atomID - 1000000000) / 1000000;
 
-                if (!_openElemenets.Contains(number))
+                if (!_openElemenets.ContainsKey(atomID))
                 {
-                    _openElemenets.Add(number);
+                    _openElemenets[atomID] = number;
                 }
 
             }
@@ -38,10 +38,14 @@ namespace Dva
 
         private void OpenElemets()
         {
-            foreach (string element in (AIUtility.GetPlayerNumbers))
+            var listOfAtoms = AIUtility.GetPlayerNumbers.GroupBy(x => x.Value).Select(grp => grp.ToList()).ToList();
+
+            foreach (List<KeyValuePair<int,int>> element in listOfAtoms)
             {
-                _elements[element].transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                Debug.Log(_elements[element]);
+                Debug.Log(element);
+                //int.Parse(element);
+                //_elements[element].transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                //Debug.Log(_elements[element]);
             }
 
         }

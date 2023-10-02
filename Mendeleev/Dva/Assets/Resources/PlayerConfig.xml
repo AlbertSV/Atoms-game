@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Units>
   <Atom>
-    <PlayerElements Number="1" />
-    <PlayerElements Number="2" />
-    <PlayerElements Number="3" />
-    <PlayerElements Number="4" />
-    <PlayerElements Number="10" />
-    <PlayerElements Number="20" />
+    <PlayerElements ID="1000001001" Number="1" />
+    <PlayerElements ID="1001001001" Number="1" />
+    <PlayerElements ID="1002001001" Number="1" />
+    <PlayerElements ID="1002002002" Number="2" />
+    <PlayerElements ID="1001002002" Number="2" />
+    <PlayerElements ID="1003003003" Number="3" />
+    <PlayerElements ID="1004003003" Number="3" />
   </Atom>
 </Units>

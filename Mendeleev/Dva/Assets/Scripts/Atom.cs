@@ -12,13 +12,14 @@ namespace Dva
     public class Atom : MonoBehaviour
     {
         private GameObject _gameManager;
+        private FeaturesManager _featuresManager;
         private int _decayCount;
         private bool _toDecay = false;
         private bool _inDecay = false;
         protected int _atomID;
-        protected int _nAmount = 20;
-        protected int _eAmount = 20;
-        protected int _pAmount = 20;
+        protected int _nAmount = 0;
+        protected int _eAmount = 1;
+        protected int _pAmount = 0;
         protected TMP_Text _atomNameText;
         protected TMP_Text _atomCompositionText;
         protected TMP_Text _atomSymbolText;
@@ -26,20 +27,24 @@ namespace Dva
         protected TMP_Text _atomDecayText;
         private ParticleSystem _particleSystem;
         private Animator _animator;
-        private List<string> _openElements;
+        private Dictionary<int, int> _openElements;
+        private int _upgradeCounter = 0;
+        private float _multiField = 1.1f;
+        private float _multiAmount = 1.5f;
 
         public int AtomID => _atomID;
 
         void Start()
         {
             _gameManager = FindObjectOfType<GameControl>().gameObject;
-            _decayCount = _gameManager.GetComponent<FeaturesManager>().DecayCountDown;
-            _atomNameText = _gameManager.GetComponent<FeaturesManager>().AtomName;
-            _atomSymbolText = _gameManager.GetComponent<FeaturesManager>().AtomSymbol;
-            _atomCompositionText = _gameManager.GetComponent<FeaturesManager>().AtomComposition;
-            _atomDecayText = _gameManager.GetComponent<FeaturesManager>().AtomDecay;
-            _atomSymbolObjectText = _gameManager.GetComponent<FeaturesManager>().AtomSymbolObject;
-            _particleSystem = _gameManager.GetComponent<FeaturesManager>().ParticleSystem;
+            _featuresManager = _gameManager.GetComponent<FeaturesManager>();
+            _decayCount = _featuresManager.DecayCountDown;
+            _atomNameText = _featuresManager.AtomName;
+            _atomSymbolText = _featuresManager.AtomSymbol;
+            _atomCompositionText = _featuresManager.AtomComposition;
+            _atomDecayText = _featuresManager.AtomDecay;
+            _atomSymbolObjectText = _featuresManager.AtomSymbolObject;
+            _particleSystem = _featuresManager.ParticleSystem;
             _animator = _particleSystem.GetComponentInParent<Animator>();
             _openElements = AIUtility.GetPlayerNumbers;
         }
@@ -240,7 +245,9 @@ namespace Dva
 
         protected void AtomUpgrade(int atomID)
         {
-            string number = (((atomID - 1000000000) % 1000000) % 1000).ToString();
+            int level = ((atomID - 1000000000) % 1000000) % 1000;
+
+            LeveUpgrade(level);
 
             if (AIUtility.GetAtomName.ContainsKey(atomID))
             {
@@ -257,11 +264,13 @@ namespace Dva
                 string symbol = AIUtility.GetAtomSymbol[atomID];
                 _atomSymbolText.text = symbol;
                 _atomSymbolObjectText.text = symbol;
-                if (!_openElements.Contains(number))
+
+                if (!_openElements.ContainsKey(atomID))
                 {
-                    _openElements.Add(number);
-                    AIUtility.RewriteXML(number);
+                    _openElements.Add(atomID, level);
+                    AIUtility.RewriteXML(level, atomID);
                 }
+
             }
             else
             {
@@ -287,6 +296,65 @@ namespace Dva
             {
                 _gameManager.GetComponent<GameControl>().EndGame();
             }
+        }
+
+        private void LeveUpgrade(int level)
+        {
+            if (level > 20 && _upgradeCounter == 0)
+            {
+                LevelChange();
+                _upgradeCounter = 1;
+            }
+            else if (level > 40 && _upgradeCounter == 1)
+            {
+                LevelChange();
+                _upgradeCounter = 2;
+            }
+            else if (level > 60 && _upgradeCounter == 2)
+            {
+                LevelChange();
+                _upgradeCounter = 3;
+            }
+            else if (level > 80 && _upgradeCounter == 3)
+            {
+                LevelChange();
+                _upgradeCounter = 4;
+            }
+            else if (level > 100 && _upgradeCounter == 4)
+            {
+                LevelChange();
+                _upgradeCounter = 5;
+            }
+            else if (level > 110 && _upgradeCounter == 5)
+            {
+                LevelChange();
+                _upgradeCounter = 6;
+            }
+        }
+
+        private void LevelChange()
+        {
+            Vector3 startField = _featuresManager.Field.localScale;
+            float left = _featuresManager.LeftBoarder.transform.position.x;
+            float right = _featuresManager.RightBoarder.transform.position.x;
+            float top = _featuresManager.TopBoarder.transform.position.z;
+            float bottom = _featuresManager.BottomBoarder.transform.position.z;
+
+            _featuresManager.Field.localScale = new Vector3(startField.x * _multiField, startField.y, startField.z * _multiField);
+
+            _featuresManager.LeftBoarder.transform.position = new Vector3(left * _multiField, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
+            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x, _featuresManager.LeftBoarder.localScale.y, _featuresManager.Field.localScale.z);
+
+            _featuresManager.RightBoarder.transform.position = new Vector3(right * _multiField, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
+            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x, _featuresManager.RightBoarder.localScale.y, _featuresManager.Field.localScale.z);
+
+            _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top * _multiField);
+            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y, _featuresManager.Field.localScale.x);
+
+            _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, _featuresManager.BottomBoarder.transform.position.y, bottom * _multiField);
+            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y, _featuresManager.Field.localScale.x);
+
+            _gameManager.GetComponent<GameControl>()._maxParticleAmount = (int)(_gameManager.GetComponent<GameControl>()._maxParticleAmount * _multiAmount);
         }
     }
 }

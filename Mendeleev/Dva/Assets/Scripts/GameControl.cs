@@ -12,12 +12,12 @@ namespace Dva
     {
         [Header("Balance values")]
         [SerializeField] private Transform _particleParent;
-        [SerializeField] protected int _maxParticleAmount = 10;
-        [SerializeField] protected int _maxSpecialAmount = 2;
-        [SerializeField] protected int _particleRenewTime = 15;
-        [SerializeField] protected int _livesAmount = 3;
-        [SerializeField] protected int _maxLivesInField = 1;
-        [SerializeField] protected float _livesTimeAppear = 30f;
+        [SerializeField] public int _maxParticleAmount = 10;
+        [SerializeField] private int _maxSpecialAmount = 2;
+        [SerializeField] private int _particleRenewTime = 15;
+        [SerializeField] private int _livesAmount = 3;
+        [SerializeField] private int _maxLivesInField = 1;
+        [SerializeField] private float _livesTimeAppear = 30f;
 
         [Header("Particles")]
         [SerializeField] private GeneralParticle _neutron;
@@ -56,9 +56,9 @@ namespace Dva
         [HideInInspector]
         public List<GameObject> _livesList;
 
-        protected FeaturesManager _featuresManager;
-        protected Player _player;
-        protected Atom _atom;
+        private FeaturesManager _featuresManager;
+        private Player _player;
+        private Atom _atom;
         private bool _needToRemove;
         private bool _isBlackHoleActive = false;
         private float _liveStepCanvas = 0.1f;
@@ -93,7 +93,6 @@ namespace Dva
             SpecialParticleSpawn();
             ParticleRenew();
             _livesTimeRest -= Time.deltaTime;
-            Debug.Log(_livesTimeRest);
         }
 
         private void ParticleSpawn(GameObject particle)
@@ -327,6 +326,10 @@ namespace Dva
                     _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top * sizeMultiplier);
                     _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, _featuresManager.BottomBoarder.transform.position.y, bottom * sizeMultiplier);
 
+                    _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z * sizeMultiplier);
+                    _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z * sizeMultiplier);
+                    _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y, _featuresManager.TopBoarder.localScale.z * sizeMultiplier);
+                    _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y, _featuresManager.BottomBoarder.localScale.z * sizeMultiplier);
 
                     RemoveForEvent(_particlesToRemove, specialsToRemove, false, _particlesCounter);
                     RemoveForEvent(_particlesToRemove, specialsToRemove, true, _timeFastCounter);
@@ -348,6 +351,12 @@ namespace Dva
             _featuresManager.RightBoarder.transform.position = new Vector3(right / sizeMultiplier, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
             _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top / sizeMultiplier);
             _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, _featuresManager.BottomBoarder.transform.position.y, bottom / sizeMultiplier);
+
+            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z / sizeMultiplier);
+            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z / sizeMultiplier);
+            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y, _featuresManager.TopBoarder.localScale.z / sizeMultiplier);
+            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y, _featuresManager.BottomBoarder.localScale.z / sizeMultiplier);
+
 
             if (particle == SpecialParticleType.FieldRise)
             {
