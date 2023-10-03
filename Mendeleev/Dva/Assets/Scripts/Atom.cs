@@ -25,14 +25,18 @@ namespace Dva
         protected TMP_Text _atomSymbolText;
         protected TMP_Text _atomSymbolObjectText;
         protected TMP_Text _atomDecayText;
+        private TMP_Text _statisticText;
         private ParticleSystem _particleSystem;
         private Animator _animator;
         private Dictionary<int, int> _openElements;
         private int _upgradeCounter = 0;
         private float _multiField = 1.1f;
         private float _multiAmount = 1.5f;
+        private int _statistic = 0;
+
 
         public int AtomID => _atomID;
+        public int StatisticScore => _statistic;
 
         void Start()
         {
@@ -45,6 +49,7 @@ namespace Dva
             _atomDecayText = _featuresManager.AtomDecay;
             _atomSymbolObjectText = _featuresManager.AtomSymbolObject;
             _particleSystem = _featuresManager.ParticleSystem;
+            _statisticText = _featuresManager.StatisticText;
             _animator = _particleSystem.GetComponentInParent<Animator>();
             _openElements = AIUtility.GetPlayerNumbers;
         }
@@ -58,19 +63,23 @@ namespace Dva
                 {
                     StartCoroutine(AtomNeutronDecay());
                 }
-                else if(_nAmount <= _eAmount - 2)
+                else if (_nAmount <= _eAmount - 2)
                 {
                     StartCoroutine(AtomNeutronDecay());
                 }
 
                 AtomUpgrade(_atomID);
                 CompositionUpdate();
+                _statistic += 10;
+                StatisticUpdate();
             }
             else
             {
                 if (_nAmount == 1 && _eAmount == 1 && _pAmount == 0 || _nAmount == 1 && _eAmount == 0 && _pAmount == 1)
                 {
                     CompositionUpdate();
+                    _statistic += 10;
+                    StatisticUpdate();
                 }
                 else
                 {
@@ -109,6 +118,8 @@ namespace Dva
                     _atomID = AtomDecay();
                     AtomUpgrade(_atomID);
                     CompositionUpdate();
+                    _statistic = (int)(_statistic / 2);
+                    StatisticUpdate();
                     DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
                     _inDecay = false;
                     _toDecay = false;
@@ -123,14 +134,14 @@ namespace Dva
                 if (_pAmount > _eAmount)
                 {
                     _pAmount = _pAmount / 2;
-                    _eAmount = _pAmount-1;
-                    _nAmount = _pAmount-1;
+                    _eAmount = _pAmount - 1;
+                    _nAmount = _pAmount - 1;
                 }
-                else if(_pAmount < _eAmount)
+                else if (_pAmount < _eAmount)
                 {
                     _eAmount = _eAmount / 2;
-                    _pAmount = _eAmount-1;
-                    _nAmount = _eAmount-1;
+                    _pAmount = _eAmount - 1;
+                    _nAmount = _eAmount - 1;
                 }
                 else
                 {
@@ -191,6 +202,8 @@ namespace Dva
                     _inDecay = false;
                     _particleSystem.Play();
                     _atomID = AtomIDUpdate();
+                    _statistic = (int)(_statistic / 1.5);
+                    StatisticUpdate();
                     CompositionUpdate();
                     DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
                 }
@@ -199,7 +212,7 @@ namespace Dva
 
         public void EventAtomUpdate(bool blackHole)
         {
-            if(!blackHole)
+            if (!blackHole)
             {
                 int min = Math.Min(_eAmount, _nAmount);
                 min = Math.Min(min, _pAmount);
@@ -210,10 +223,10 @@ namespace Dva
             }
             else
             {
-                if(_pAmount < _eAmount)
+                if (_pAmount < _eAmount)
                 {
                     _pAmount = _eAmount;
-                    if(_nAmount <= _pAmount - 2)
+                    if (_nAmount <= _pAmount - 2)
                     {
                         _eAmount = _nAmount;
                         _pAmount = _nAmount;
@@ -253,6 +266,8 @@ namespace Dva
             {
                 string name = AIUtility.GetAtomName[atomID];
                 _atomNameText.text = name;
+                _statistic += 100;
+                StatisticUpdate();
             }
             else
             {
@@ -267,6 +282,8 @@ namespace Dva
 
                 if (!_openElements.ContainsKey(atomID))
                 {
+                    _statistic = (int)(_statistic * 1.3f);
+                    StatisticUpdate();
                     _openElements.Add(atomID, level);
                     AIUtility.RewriteXML(level, atomID);
                 }
@@ -292,7 +309,7 @@ namespace Dva
             Destroy(lifesList[lifesList.Count - 1]);
             lifesList.RemoveAt(lifesList.Count - 1);
 
-            if(lifesList.Count == 0)
+            if (lifesList.Count == 0)
             {
                 _gameManager.GetComponent<GameControl>().EndGame();
             }
@@ -355,6 +372,11 @@ namespace Dva
             _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y, _featuresManager.Field.localScale.x);
 
             _gameManager.GetComponent<GameControl>()._maxParticleAmount = (int)(_gameManager.GetComponent<GameControl>()._maxParticleAmount * _multiAmount);
+        }
+
+        private void StatisticUpdate()
+        {
+            _statisticText.text = "Score: " + _statistic;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Dva
         private static Dictionary<int, string> e_SymbolIDDict = new Dictionary<int, string>();
         private static Dictionary<int, int> e_MaterialIDDict = new Dictionary<int, int>();
         private static Dictionary<int, string> e_CompositionIDDict = new Dictionary<int, string>();
-        private static Dictionary<int, int> e_IsotopesIDDict = new Dictionary<int, int>();
+        private static Dictionary<int, int> e_IsotopesNumberDict = new Dictionary<int, int>();
         private static Dictionary<int, int> e_NumberIDDict = new Dictionary<int, int>();
 
         private static Dictionary<int, int> p_Numbers = new Dictionary<int, int>();
@@ -38,7 +38,7 @@ namespace Dva
             var root = XDocument.Load(Application.dataPath + c_ConfigPath).Root;
             ConfigurationAtomData(root);
             root = XDocument.Load(Application.dataPath + c_ElementsConfigPath).Root;
-            //ConfigurationElementsData(root);
+            ConfigurationElementsData(root);
             root = XDocument.Load(Application.dataPath + p_NumbersList).Root;
             ConfigurationPlayerNumbers(root);
 
@@ -76,15 +76,15 @@ namespace Dva
                 var atomSymbolStr = element.Attribute("Symbol").Value;
                 var atomMaterialInt = int.Parse(element.Attribute("Material").Value);
                 var atomCompositionStr = element.Attribute("Composition").Value;
-                var atomNumberInt = int.Parse(element.Attribute("Composition").Value);
-                var atomIsotopesInt = int.Parse(element.Attribute("Composition").Value);
+                var atomNumberInt = int.Parse(element.Attribute("Number").Value);
+                var atomIsotopesInt = int.Parse(element.Attribute("Isotopes").Value);
 
                 e_NameIDDict.Add(atomIDInt, atomNameStr);
                 e_SymbolIDDict.Add(atomIDInt, atomSymbolStr);
                 e_MaterialIDDict.Add(atomIDInt, atomMaterialInt);
                 e_CompositionIDDict.Add(atomIDInt, atomCompositionStr);
                 e_NumberIDDict.Add(atomIDInt, atomNumberInt);
-                e_IsotopesIDDict.Add(atomIDInt, atomIsotopesInt);
+                e_IsotopesNumberDict.Add(atomNumberInt, atomIsotopesInt);
             }
         }
 
@@ -123,7 +123,7 @@ namespace Dva
         public static IReadOnlyDictionary<int, int> GetElementMaterial => e_MaterialIDDict;
         public static IReadOnlyDictionary<int, string> GetElementComposition => e_CompositionIDDict;
         public static IReadOnlyDictionary<int, int> GetElementNumber => e_NumberIDDict;
-        public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesIDDict;
+        public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesNumberDict;
 
         public static Dictionary<int, int> GetPlayerNumbers => p_Numbers;
     }

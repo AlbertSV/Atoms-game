@@ -21,6 +21,7 @@ namespace Dva
         [SerializeField] private TMP_Text _atomSymbol;
         [SerializeField] private TMP_Text _atomDecay;
         [SerializeField] private TMP_Text _atomSymbolObject;
+        [SerializeField] private TMP_Text _statisticText;
         [SerializeField] private ParticleSystem _particleSystem;
 
         public float ParticleSpeed { get { return _particleSpeed; } set { _particleSpeed = value; } }
@@ -36,6 +37,7 @@ namespace Dva
         public TMP_Text AtomSymbol { get { return _atomSymbol; } }
         public TMP_Text AtomDecay { get { return _atomDecay; } }
         public TMP_Text AtomSymbolObject { get { return _atomSymbolObject; } }
+        public TMP_Text StatisticText { get { return _statisticText; } }
         public int FOVRange { get { return _FOVRange; } }
         public ParticleSystem ParticleSystem => _particleSystem;
     }

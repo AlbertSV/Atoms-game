@@ -59,13 +59,16 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
     <Compile Include="Assets/Scripts/Particle.cs" />
+    <Compile Include="Assets/Scripts/MenuPanels/PauseButton.cs" />
     <Compile Include="Assets/Scripts/Struct.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
+    <Compile Include="Assets/Scripts/Knob.cs" />
     <Compile Include="Assets/Scripts/GameControl.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+    <Compile Include="Assets/Scripts/TouchMove/FloatingJoystick.cs" />
     <Compile Include="Assets/Scripts/SpecialParticle.cs" />
     <Compile Include="Assets/Scripts/Enum.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
@@ -92,9 +95,11 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/MenuPanels/PauseMenu.cs" />
+    <Compile Include="Assets/Scripts/Table/ElementsTable.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets/Scripts/TouchMove/TouchMove.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
@@ -108,11 +113,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/Scripts/MenuPanels/Menu/ElementMenu.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
-    <Compile Include="Assets/Scripts/Table/ElementsTable.cs" />
-    <Compile Include="Assets/Scripts/MenuPanels/PauseButton.cs" />
-    <Compile Include="Assets/Scripts/TouchMove/TouchMove.cs" />
-    <Compile Include="Assets/Scripts/Knob.cs" />
-    <Compile Include="Assets/Scripts/TouchMove/FloatingJoystick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -820,6 +820,10 @@
       <Project>{18F96076-7AE6-2CFB-725D-8083780B5188}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{BDC465D1-A5C1-9026-33DA-EE76916835E2}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
       <Project>{22FE7190-B304-99F5-967F-D9195B62318F}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
@@ -883,10 +887,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{17287F1A-28B2-F4C8-C5AA-E9EA004A5ECD}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{BDC465D1-A5C1-9026-33DA-EE76916835E2}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

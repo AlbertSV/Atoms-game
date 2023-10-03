@@ -442,6 +442,16 @@ namespace Dva
         {
             Time.timeScale = 0f;
             _endMenu.SetActive(true);
+            int maxScore = PlayerPrefs.GetInt("Statistic");
+            if (_atom.StatisticScore > maxScore)
+            {
+                PlayerPrefs.SetInt("Statistic", _atom.StatisticScore);
+                _endMenu.transform.GetChild(0).GetComponent<TMP_Text>().text = "New Score: " + _atom.StatisticScore;
+            }
+            else
+            {
+                _endMenu.transform.GetChild(0).GetComponent<TMP_Text>().text = "Score: " + _atom.StatisticScore;
+            }
         }
     }
 }
