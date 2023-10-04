@@ -7,7 +7,8 @@ namespace Dva
     {
         Electron,
         Proton,
-        Neutron
+        Neutron,
+        ElectronOnOrbit
     }
 
     public enum ParticleState

@@ -8,6 +8,7 @@ namespace Dva
     public class FeaturesManager : MonoBehaviour
     {
         [SerializeField] private float _particleSpeed = 1f;
+        [SerializeField] private float _electronOrbitSpeed = 1f;
         [SerializeField] private Transform _leftBoarder;
         [SerializeField] private Transform _rightBoarder;
         [SerializeField] private Transform _topBoarder;
@@ -25,6 +26,7 @@ namespace Dva
         [SerializeField] private ParticleSystem _particleSystem;
 
         public float ParticleSpeed { get { return _particleSpeed; } set { _particleSpeed = value; } }
+        public float ElectronOrbitSpeed => _electronOrbitSpeed;
         public Transform LeftBoarder { get { return _leftBoarder; } set { _leftBoarder = value; } }
         public Transform RightBoarder { get { return _rightBoarder; } set { _rightBoarder = value; } }
         public Transform TopBoarder { get { return _topBoarder; } set { _topBoarder = value; } }

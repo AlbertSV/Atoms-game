@@ -268,6 +268,7 @@ namespace Dva
                 _atomNameText.text = name;
                 _statistic += 100;
                 StatisticUpdate();
+                MaterialUpdate();
             }
             else
             {
@@ -378,5 +379,10 @@ namespace Dva
         {
             _statisticText.text = "Score: " + _statistic;
         }
+
+        private void MaterialUpdate()
+        {
+
+        }    
     }
 }

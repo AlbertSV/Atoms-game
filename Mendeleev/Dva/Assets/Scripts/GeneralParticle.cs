@@ -24,14 +24,14 @@ namespace Dva
 
         private void Update()
         {
-            if (_toPatrol)
-            {
-                TaskPatrol();
-            }
-            else if (_toBlackHole)
-            {
-                BlackHoleGravity();
-            }
+                if (_toPatrol)
+                {
+                    TaskPatrol();
+                }
+                else if (_toBlackHole)
+                {
+                    BlackHoleGravity();
+                }
         }
 
         protected override void TaskPatrol()
@@ -44,14 +44,14 @@ namespace Dva
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed);
+                transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * Time.deltaTime);
             }
         }
 
         private void BlackHoleGravity()
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _gameFeatures.ParticleSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _gameFeatures.ParticleSpeed * Time.deltaTime);
         }
 
         protected override void RemoveEvent()

@@ -25,6 +25,12 @@ namespace Dva
                 _gameControl.EventCall(collision.gameObject.GetComponent<SpecialParticle>().SpecialType);
                 StartCoroutine(SetDestroySpecial(collision.gameObject));
             }
+
+            if(_eAmount <6)
+            {
+                ElectronCreate();
+            }
+
             StartCoroutine(SetDestroy(collision.gameObject));
         }
 
@@ -109,5 +115,38 @@ namespace Dva
             }
 
         }
+
+        private void ElectronCreate()
+        {
+            if (_eAmount == 2)
+            {
+                transform.GetChild(3).gameObject.SetActive(true);
+                transform.GetChild(4).gameObject.SetActive(false);
+            }
+            else if (_eAmount == 3)
+            {
+                transform.GetChild(4).gameObject.SetActive(true);
+                transform.GetChild(5).gameObject.SetActive(false);
+            }
+            else if (_eAmount == 4)
+            {
+                transform.GetChild(5).gameObject.SetActive(true);
+                transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (_eAmount == 5)
+            {
+                transform.GetChild(6).gameObject.SetActive(true);
+                transform.GetChild(7).gameObject.SetActive(false);
+            }
+            else if (_eAmount == 6)
+            {
+                transform.GetChild(7).gameObject.SetActive(true);
+            }
+            else if (_eAmount < 2)
+            {
+                transform.GetChild(3).gameObject.SetActive(false);
+            }
+        }
+
     }
 }
