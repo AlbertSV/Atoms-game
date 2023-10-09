@@ -3339,7 +3339,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: e091c7c430fd8493188656e0f8eb0944, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/1'
@@ -5051,7 +5051,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/3'
@@ -5456,7 +5456,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: fae9b5319332b47dcb9618a98e47954a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/1'
@@ -6105,7 +6105,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: fae9b5319332b47dcb9618a98e47954a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/2'
@@ -6677,7 +6677,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/2'
@@ -8097,7 +8097,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
+      objectReference: {fileID: 2100000, guid: 862d810da5c114290bd834e495aa5bee, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/3'
@@ -9632,7 +9632,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: fae9b5319332b47dcb9618a98e47954a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/1'
@@ -11490,7 +11490,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: fae9b5319332b47dcb9618a98e47954a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/3'
@@ -11675,7 +11675,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: 862d810da5c114290bd834e495aa5bee, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/2'
@@ -12185,7 +12185,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
+      objectReference: {fileID: 2100000, guid: fb2e5faca31844832bf4225519b9d9b4, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/2'
@@ -14274,7 +14274,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/2'
@@ -14813,7 +14813,7 @@ PrefabInstance:
     - target: {fileID: 4194195262491318055, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
+      objectReference: {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
     - target: {fileID: 6313487655850246626, guid: ee5b51f5d3bc94a73921f0062f2279b2, type: 3}
       propertyPath: m_text
       value: 'Isotopes: 0/4'
@@ -16896,7 +16896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2125888349
 RectTransform:
   m_ObjectHideFlags: 0

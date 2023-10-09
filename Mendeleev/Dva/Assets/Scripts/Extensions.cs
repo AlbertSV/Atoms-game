@@ -22,7 +22,7 @@ namespace Dva
 
         private static Dictionary<int, string> e_NameIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> e_SymbolIDDict = new Dictionary<int, string>();
-        private static Dictionary<int, int> e_MaterialIDDict = new Dictionary<int, int>();
+        private static Dictionary<int, int> e_MaterialNumberDict = new Dictionary<int, int>();
         private static Dictionary<int, string> e_CompositionIDDict = new Dictionary<int, string>();
         private static Dictionary<int, int> e_IsotopesNumberDict = new Dictionary<int, int>();
         private static Dictionary<int, int> e_NumberIDDict = new Dictionary<int, int>();
@@ -81,7 +81,7 @@ namespace Dva
 
                 e_NameIDDict.Add(atomIDInt, atomNameStr);
                 e_SymbolIDDict.Add(atomIDInt, atomSymbolStr);
-                e_MaterialIDDict.Add(atomIDInt, atomMaterialInt);
+                e_MaterialNumberDict.Add(atomNumberInt, atomMaterialInt);
                 e_CompositionIDDict.Add(atomIDInt, atomCompositionStr);
                 e_NumberIDDict.Add(atomIDInt, atomNumberInt);
                 e_IsotopesNumberDict.Add(atomNumberInt, atomIsotopesInt);
@@ -120,7 +120,7 @@ namespace Dva
 
         public static IReadOnlyDictionary<int, string> GetElementName => e_NameIDDict;
         public static IReadOnlyDictionary<int, string> GetElementSymbol => e_SymbolIDDict;
-        public static IReadOnlyDictionary<int, int> GetElementMaterial => e_MaterialIDDict;
+        public static IReadOnlyDictionary<int, int> GetElementMaterial => e_MaterialNumberDict;
         public static IReadOnlyDictionary<int, string> GetElementComposition => e_CompositionIDDict;
         public static IReadOnlyDictionary<int, int> GetElementNumber => e_NumberIDDict;
         public static IReadOnlyDictionary<int, int> GetElementIsotopes => e_IsotopesNumberDict;

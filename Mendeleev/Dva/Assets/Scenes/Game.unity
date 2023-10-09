@@ -3766,6 +3766,17 @@ MonoBehaviour:
   _atomSymbolObject: {fileID: 233825872840745163}
   _statisticText: {fileID: 1174454240}
   _particleSystem: {fileID: 27481611}
+  _elementsMaterials:
+  - {fileID: 2100000, guid: 4e52dc6b047c44ce8965f9132d1da07a, type: 2}
+  - {fileID: 2100000, guid: b638e4161503c48f98d01ee42b47eb9f, type: 2}
+  - {fileID: 2100000, guid: fa2707eb3c8874d90bd8026854c09427, type: 2}
+  - {fileID: 2100000, guid: c0925d529f2b24851883264e5f330899, type: 2}
+  - {fileID: 2100000, guid: fb2e5faca31844832bf4225519b9d9b4, type: 2}
+  - {fileID: 2100000, guid: e091c7c430fd8493188656e0f8eb0944, type: 2}
+  - {fileID: 2100000, guid: d4cb4f7c1dda143c7a94a061d6eef80a, type: 2}
+  - {fileID: 2100000, guid: 862d810da5c114290bd834e495aa5bee, type: 2}
+  - {fileID: 2100000, guid: fae9b5319332b47dcb9618a98e47954a, type: 2}
+  - {fileID: 2100000, guid: 8771605f90914405c81f085294468535, type: 2}
 --- !u!1 &1820123753
 GameObject:
   m_ObjectHideFlags: 0

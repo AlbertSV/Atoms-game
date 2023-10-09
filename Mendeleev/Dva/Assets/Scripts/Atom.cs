@@ -33,10 +33,11 @@ namespace Dva
         private float _multiField = 1.1f;
         private float _multiAmount = 1.5f;
         private int _statistic = 0;
-
+        private Player _player;
 
         public int AtomID => _atomID;
         public int StatisticScore => _statistic;
+
 
         void Start()
         {
@@ -52,6 +53,7 @@ namespace Dva
             _statisticText = _featuresManager.StatisticText;
             _animator = _particleSystem.GetComponentInParent<Animator>();
             _openElements = AIUtility.GetPlayerNumbers;
+            _player = FindObjectOfType<Player>();
         }
 
 
@@ -267,12 +269,14 @@ namespace Dva
                 string name = AIUtility.GetAtomName[atomID];
                 _atomNameText.text = name;
                 _statistic += 100;
+                
                 StatisticUpdate();
-                MaterialUpdate();
+                MaterialUpdate(atomID);
             }
             else
             {
                 _atomNameText.text = "Unknown";
+                _player.GetComponent<MeshRenderer>().material = _featuresManager.ElementsMaterials[9];
             }
 
             if (AIUtility.GetAtomSymbol.ContainsKey(atomID))
@@ -380,9 +384,12 @@ namespace Dva
             _statisticText.text = "Score: " + _statistic;
         }
 
-        private void MaterialUpdate()
+        private void MaterialUpdate(int atomID)
         {
+            int elementNumber = (((_atomID - 1000000000) % 1000000) % 1000);
+            int materialNumber = AIUtility.GetElementMaterial[elementNumber];
 
+            _player.GetComponent<MeshRenderer>().material = _featuresManager.ElementsMaterials[materialNumber - 1];
         }    
     }
 }
