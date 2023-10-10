@@ -590,3 +590,6 @@ Received Import Request.
   path: Assets/Materials/ElementsMat/UnknownMat.mat
   artifactKey: Guid(8771605f90914405c81f085294468535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/ElementsMat/UnknownMat.mat using Guid(8771605f90914405c81f085294468535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a05f5ba9d5b44112c1400cb6f703d9') in 0.021806 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
