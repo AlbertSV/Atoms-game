@@ -18,7 +18,7 @@ namespace Dva
         {
             base.Awake();
             _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-    _gameFeatures.TopBoarder.position.z, _gameFeatures.BottomBoarder.position.z);
+    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
             _player = FindObjectOfType<Player>();
         }
 
@@ -40,7 +40,7 @@ namespace Dva
             {
                 transform.position = _pointToGo;
                 _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-                _gameFeatures.TopBoarder.position.z, _gameFeatures.BottomBoarder.position.z);
+                _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
             }
             else
             {

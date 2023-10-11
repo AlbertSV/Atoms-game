@@ -16,10 +16,10 @@ namespace Dva
             _gameControl = FindObjectOfType<GameControl>();
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+            Debug.Log(collision.gameObject);
             if(collision.gameObject.GetComponent<SpecialParticle>() != null)
             {
                 _gameControl.EventCall(collision.gameObject.GetComponent<SpecialParticle>().SpecialType);
@@ -28,7 +28,7 @@ namespace Dva
 
             if(_eAmount <6)
             {
-                ElectronCreate();
+               // ElectronCreate();
             }
 
             StartCoroutine(SetDestroy(collision.gameObject));

@@ -12,7 +12,7 @@ namespace Dva
     {
         [SerializeField] private Vector2 _joystickSize = new Vector2(100, 100);
         [SerializeField] private FloatingJoystick _joystick;
-        [SerializeField] private Rigidbody _player;
+        [SerializeField] private Rigidbody2D _player;
         [SerializeField]
         private float PLAYERSPEED = 0.1f;
 
@@ -106,7 +106,7 @@ namespace Dva
 
         private void  MoveUpdate()
         {
-            Vector3 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector3(_movementAmount.x, 0, _movementAmount.y);
+            Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
             _player.AddForce(scaledMovement);
         }
     }

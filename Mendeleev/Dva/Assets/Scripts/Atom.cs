@@ -276,7 +276,8 @@ namespace Dva
             else
             {
                 _atomNameText.text = "Unknown";
-                _player.GetComponent<MeshRenderer>().material = _featuresManager.ElementsMaterials[9];
+
+                _player.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _featuresManager.ElementsMaterials[9];
             }
 
             if (AIUtility.GetAtomSymbol.ContainsKey(atomID))
@@ -359,22 +360,22 @@ namespace Dva
             Vector3 startField = _featuresManager.Field.localScale;
             float left = _featuresManager.LeftBoarder.transform.position.x;
             float right = _featuresManager.RightBoarder.transform.position.x;
-            float top = _featuresManager.TopBoarder.transform.position.z;
-            float bottom = _featuresManager.BottomBoarder.transform.position.z;
+            float top = _featuresManager.TopBoarder.transform.position.y;
+            float bottom = _featuresManager.BottomBoarder.transform.position.y;
 
             _featuresManager.Field.localScale = new Vector3(startField.x * _multiField, startField.y, startField.z * _multiField);
 
             _featuresManager.LeftBoarder.transform.position = new Vector3(left * _multiField, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
-            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x, _featuresManager.LeftBoarder.localScale.y, _featuresManager.Field.localScale.z);
+            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.Field.localScale.z, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z);
 
             _featuresManager.RightBoarder.transform.position = new Vector3(right * _multiField, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
-            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x, _featuresManager.RightBoarder.localScale.y, _featuresManager.Field.localScale.z);
+            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.Field.localScale.z, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z);
 
-            _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, _featuresManager.TopBoarder.transform.position.y, top * _multiField);
-            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y, _featuresManager.Field.localScale.x);
+            _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, top * _multiField, _featuresManager.TopBoarder.transform.position.z);
+            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.Field.localScale.x, _featuresManager.TopBoarder.localScale.z);
 
-            _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, _featuresManager.BottomBoarder.transform.position.y, bottom * _multiField);
-            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y, _featuresManager.Field.localScale.x);
+            _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, bottom * _multiField, _featuresManager.BottomBoarder.transform.position.y);
+            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.Field.localScale.x, _featuresManager.BottomBoarder.localScale.z);
 
             _gameManager.GetComponent<GameControl>()._maxParticleAmount = (int)(_gameManager.GetComponent<GameControl>()._maxParticleAmount * _multiAmount);
         }
@@ -389,7 +390,7 @@ namespace Dva
             int elementNumber = (((_atomID - 1000000000) % 1000000) % 1000);
             int materialNumber = AIUtility.GetElementMaterial[elementNumber];
 
-            _player.GetComponent<MeshRenderer>().material = _featuresManager.ElementsMaterials[materialNumber - 1];
+            _player.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _featuresManager.ElementsMaterials[materialNumber - 1];
         }    
     }
 }

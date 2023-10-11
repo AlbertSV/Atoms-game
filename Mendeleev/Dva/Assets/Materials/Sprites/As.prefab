@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2930554737789223379}
   - component: {fileID: 2835469088319113656}
   m_Layer: 0
-  m_Name: 4
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,7 +553,7 @@ Transform:
   m_Children:
   - {fileID: 15820991941652051}
   m_Father: {fileID: 8633706004545986516}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7288103005595598290
 SpriteRenderer:
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fb2e5faca31844832bf4225519b9d9b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -700,6 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8633706004545986516}
+  - component: {fileID: 4487139067267276815}
   m_Layer: 0
   m_Name: As
   m_TagString: Untagged
@@ -723,11 +724,31 @@ Transform:
   - {fileID: 6470123438474692729}
   - {fileID: 7737753577611063005}
   - {fileID: 2930554737789223379}
-  - {fileID: 3485006434155094787}
   - {fileID: 1821507072976164530}
+  - {fileID: 3485006434155094787}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4487139067267276815
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353298804315384478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b85b51d473b994ae48407ca190581b28, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2415759727054891388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1096,7 @@ GameObject:
   - component: {fileID: 3609052941745550990}
   - component: {fileID: 2152878769215814378}
   m_Layer: 0
-  m_Name: 7
+  m_Name: Nuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1327,7 +1348,7 @@ GameObject:
   - component: {fileID: 7737753577611063005}
   - component: {fileID: 7375957583214270094}
   m_Layer: 0
-  m_Name: 5
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2767,7 +2788,7 @@ GameObject:
   - component: {fileID: 6470123438474692729}
   - component: {fileID: 2032100447064148168}
   m_Layer: 0
-  m_Name: 6
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3273,7 +3294,7 @@ GameObject:
   - component: {fileID: 1821507072976164530}
   - component: {fileID: 7097078144538493237}
   m_Layer: 0
-  m_Name: 3
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3297,7 +3318,7 @@ Transform:
   - {fileID: 5471044280460990846}
   - {fileID: 9196287662950585564}
   m_Father: {fileID: 8633706004545986516}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7097078144538493237
 SpriteRenderer:
