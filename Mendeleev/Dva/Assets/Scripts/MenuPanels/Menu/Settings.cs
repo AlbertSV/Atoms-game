@@ -8,26 +8,27 @@ namespace Dva
 {
     public class Settings : MonoBehaviour
     {
-        [SerializeField] private Slider _volumeSlider;
         [SerializeField] private Toggle _volumeToggle;
         [SerializeField] private TMP_Dropdown _difficultyDropdown;
         [SerializeField] private GameObject _optionMenuUI;
         [SerializeField] private GameObject _mainMenuUI;
+        [SerializeField] private AudioSource _audio;
         private Animator _animator;
 
         void Start()
         {
             _volumeToggle.isOn = (PlayerPrefs.GetInt("volumeToggle") != 0);
-            _volumeSlider.value = PlayerPrefs.GetFloat("volumeSlider", 20f);
             _difficultyDropdown.value = PlayerPrefs.GetInt("difficulty");
             _animator = gameObject.GetComponent<Animator>();
-            
+            SetVolume();
+            Debug.Log(_volumeToggle);
+            Debug.Log(PlayerPrefs.GetFloat("volumeSlider"));
+            Debug.Log(PlayerPrefs.GetInt("volumeToggle"));
         }
 
         //save the settings parameter
         public void Save()
         {
-            PlayerPrefs.SetFloat("volumeSlider", _volumeSlider.value);
             PlayerPrefs.SetInt("volumeToggle", (_volumeToggle ? 1 : 0));
             PlayerPrefs.SetInt("difficulty", _difficultyDropdown.value);
         }
@@ -45,5 +46,16 @@ namespace Dva
             _mainMenuUI.SetActive(true);
         }
 
+        public void SetVolume()
+        {
+            if (_volumeToggle.isOn)
+            {
+                _audio.Play();
+            }
+            else
+            {
+                _audio.Stop();
+            }
+        }
     }
 }
