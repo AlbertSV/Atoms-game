@@ -22,15 +22,17 @@ namespace Dva
             _animator = gameObject.GetComponent<Animator>();
             SetVolume();
             Debug.Log(_volumeToggle);
-            Debug.Log(PlayerPrefs.GetFloat("volumeSlider"));
             Debug.Log(PlayerPrefs.GetInt("volumeToggle"));
+
         }
 
         //save the settings parameter
         public void Save()
         {
-            PlayerPrefs.SetInt("volumeToggle", (_volumeToggle ? 1 : 0));
+            PlayerPrefs.SetInt("volumeToggle", (_volumeToggle.isOn ? 1 : 0));
             PlayerPrefs.SetInt("difficulty", _difficultyDropdown.value);
+            Debug.Log(PlayerPrefs.GetInt("volumeToggle"));
+            Debug.Log(_volumeToggle.isOn);
         }
 
         public void Back()

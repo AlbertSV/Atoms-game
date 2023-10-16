@@ -6529,7 +6529,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 292c289b01fa84af68f972ed4204e87f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8457,7 +8457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audio: {fileID: 875322611}
-  _volumeSlider: {fileID: 0}
   _volumeToggle: {fileID: 1694250205}
 --- !u!1001 &1133460556
 PrefabInstance:
@@ -12093,7 +12092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1549893970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12583,7 +12582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1573621407
 RectTransform:
   m_ObjectHideFlags: 0

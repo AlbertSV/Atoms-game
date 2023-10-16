@@ -6,32 +6,29 @@ using UnityEngine.UI;
 public class AudioPlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource _audio;
-    [SerializeField] private Slider _volumeSlider;
     [SerializeField] private Toggle _volumeToggle;
 
     void Start()
     {
        if(PlayerPrefs.GetInt("volumeToggle") == 1)
         {
-            _audio.mute = false;
-            _audio.volume = PlayerPrefs.GetFloat("volumeSlider");
+            _audio.Play();
         }
        else
         {
-            _audio.mute = true;
+            _audio.Stop();
         }
     }
 
     public void SetVolume()
     {
-        if(_volumeSlider == false)
+        if(_volumeToggle == false)
         {
-            _audio.mute = true;
+            _audio.Stop();
         }
         else
         {
-            _audio.mute = false;
-            _audio.volume = PlayerPrefs.GetFloat("volumeSlider");
+            _audio.Play();
         }
     }
 

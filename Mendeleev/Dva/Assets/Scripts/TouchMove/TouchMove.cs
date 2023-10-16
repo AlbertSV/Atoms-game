@@ -75,13 +75,16 @@ namespace Dva
 
         private void HandleFingerDown(Finger TouchedFinger)
         {
-            if (_movementFinger == null && TouchedFinger.screenPosition.x <= Screen.width/2f)
+            if(Time.timeScale == 1)
             {
-                _movementFinger = TouchedFinger;
-                _movementAmount = Vector2.zero;
-                _joystick.gameObject.SetActive(true);
-                _joystick._rectTransform.sizeDelta = _joystickSize;
-                _joystick._rectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
+                if (_movementFinger == null && TouchedFinger.screenPosition.x <= Screen.width / 2f)
+                {
+                    _movementFinger = TouchedFinger;
+                    _movementAmount = Vector2.zero;
+                    _joystick.gameObject.SetActive(true);
+                    _joystick._rectTransform.sizeDelta = _joystickSize;
+                    _joystick._rectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
+                }
             }
         }
 

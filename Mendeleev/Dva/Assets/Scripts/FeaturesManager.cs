@@ -25,6 +25,10 @@ namespace Dva
         [SerializeField] private TMP_Text _statisticText;
         [SerializeField] private ParticleSystem _particleSystem;
         [SerializeField] private Material[] _elementsMaterials;
+        [SerializeField] private AudioSource _absorbAudio;
+        [SerializeField] private AudioSource _explodeAudio;
+        [SerializeField] private AudioSource _ticAudio;
+        [SerializeField] private AudioSource _startAudio;
 
         public float ParticleSpeed { get { return _particleSpeed; } set { _particleSpeed = value; } }
         public float ElectronOrbitSpeed => _electronOrbitSpeed;
@@ -44,5 +48,9 @@ namespace Dva
         public int FOVRange { get { return _FOVRange; } }
         public ParticleSystem ParticleSystem => _particleSystem;
         public Material[] ElementsMaterials => _elementsMaterials;
+        public AudioSource AbsorbAudio => _absorbAudio;
+        public AudioSource ExplodeAudio => _explodeAudio;
+        public AudioSource TicAudio => _ticAudio;
+        public AudioSource StartAudio => _startAudio;
     }
 }
