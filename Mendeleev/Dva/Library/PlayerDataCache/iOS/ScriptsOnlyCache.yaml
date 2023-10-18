@@ -207,21 +207,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 3364}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3394}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 3892}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 4108}
+      Script: {instanceID: 4106}
+    - Class: 114
+      Script: {instanceID: 5464}
     - Class: 114
       Script: {instanceID: 5588}
     - Class: 114
@@ -240,8 +242,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8040}
     - Class: 114
       Script: {instanceID: 8248}
-    - Class: 114
-      Script: {instanceID: 99784}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -330,29 +330,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3364}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 3892}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 4298}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4456}
+      Script: {instanceID: 4454}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4466}
     - Class: 114
-      Script: {instanceID: 4530}
+      Script: {instanceID: 4528}
     - Class: 114
-      Script: {instanceID: 4588}
+      Script: {instanceID: 4586}
     - Class: 114
-      Script: {instanceID: 4888}
+      Script: {instanceID: 4886}
     - Class: 114
-      Script: {instanceID: 5182}
+      Script: {instanceID: 5180}
     - Class: 114
       Script: {instanceID: 5588}
     - Class: 114
@@ -1102,6 +1102,12 @@ ScriptsOnlyBuild:
     className: UnityOnBeginDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 06c0a09646f22a0a0d67b2a2dd30adb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Dva
+    className: AudioGameController
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1666,10 +1672,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 06c0a09646f22a0a0d67b2a2dd30adb8
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Dva
-    className: AudioGameController
+    className: CameraMove
   platform: 9
   scenePathNames:
   - Assets/Scenes/Menu.unity

@@ -17,6 +17,8 @@ namespace Dva
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
 
 

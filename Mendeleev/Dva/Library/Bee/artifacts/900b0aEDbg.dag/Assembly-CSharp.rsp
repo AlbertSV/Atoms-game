@@ -361,6 +361,7 @@
 -r:"Library/Bee/artifacts/900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/AudioGameController.cs"
 "Assets/Scripts/AudioPlayer.cs"
+"Assets/Scripts/CameraMove.cs"
 "Assets/Scripts/Enum.cs"
 "Assets/Scripts/Extensions.cs"
 "Assets/Scripts/FeaturesManager.cs"

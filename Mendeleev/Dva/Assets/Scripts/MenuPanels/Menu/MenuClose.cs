@@ -12,6 +12,5 @@ namespace Dva
         {
             _menuPanelUI.SetActive(false);
         }
-  
     }
 }

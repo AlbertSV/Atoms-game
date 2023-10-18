@@ -602,6 +602,7 @@ IL2CPP_EXTERN_C RuntimeClass* AttributePSVIInfoU5BU5D_tC78F3BF4DD87E93F42D8DA640
 IL2CPP_EXTERN_C RuntimeClass* AttributePSVIInfo_t129E2A73E387A2A7C919EF6AF2FE18560004D1FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CachingEventHandler_t3531836C36E56CCAAB45B3B7DA1B4F94742FE74E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DomNameTable_tE4318EC10C55A46FD00324E740BFA7D9CEE2AF45_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DtdParserProxy_tEE899EFE962BA9D7D23D51152CFF64F8CD1A8AC3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EmptyEnumerator_t84EC9187C8460EE98E675ED9258AE4DF2A6776DA_il2cpp_TypeInfo_var;
@@ -2129,6 +2130,23 @@ struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticFields
 {
 	// System.Byte[] System.Char::s_categoryForLatin1
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___s_categoryForLatin1_3;
+};
+
+// System.Xml.DebuggerDisplayXmlNodeProxy
+struct DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07 
+{
+	// System.Xml.XmlNode System.Xml.DebuggerDisplayXmlNodeProxy::node
+	XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___node_0;
+};
+// Native definition for P/Invoke marshalling of System.Xml.DebuggerDisplayXmlNodeProxy
+struct DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07_marshaled_pinvoke
+{
+	XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___node_0;
+};
+// Native definition for COM marshalling of System.Xml.DebuggerDisplayXmlNodeProxy
+struct DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07_marshaled_com
+{
+	XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___node_0;
 };
 
 // System.Decimal
@@ -4933,6 +4951,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNode_AppendChildText_m8C1493DF2F03194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D (StringBuilder_t* __this, const RuntimeMethod* method) ;
 // System.String System.Xml.XmlEntityReference::get_ChildBaseURI()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XmlEntityReference_get_ChildBaseURI_m0436E0491FD7F8D12694E705C57AF11BD59B62A4 (XmlEntityReference_tD24FCCB6AFA9FEBA0265DBA9F6A27FBAC577C684* __this, const RuntimeMethod* method) ;
+// System.Void System.Xml.DebuggerDisplayXmlNodeProxy::.ctor(System.Xml.XmlNode)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebuggerDisplayXmlNodeProxy__ctor_mB9B6D906F2EBADBBDBA79FE184D6860363C32356_inline (DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07* __this, XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___node0, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -14506,7 +14526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XmlDocument_AddIdInfo_mF6E5BE7379C76DA2C
 		XmlName_t0704430D24D202146901D342E34D878246E14F33* L_2 = ___eleName0;
 		NullCheck(L_1);
 		RuntimeObject* L_3;
-		L_3 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
+		L_3 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
 		if (L_3)
 		{
 			goto IL_0038;
@@ -14579,7 +14599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XmlName_t0704430D24D202146901D342E34D878246E1
 		XmlName_t0704430D24D202146901D342E34D878246E14F33* L_8 = V_0;
 		NullCheck(L_7);
 		RuntimeObject* L_9;
-		L_9 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_7, L_8);
+		L_9 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_7, L_8);
 		return ((XmlName_t0704430D24D202146901D342E34D878246E14F33*)CastclassClass((RuntimeObject*)L_9, XmlName_t0704430D24D202146901D342E34D878246E14F33_il2cpp_TypeInfo_var));
 	}
 
@@ -14899,7 +14919,7 @@ IL_004a:
 		String_t* L_15 = ___id0;
 		NullCheck(L_14);
 		RuntimeObject* L_16;
-		L_16 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_14, L_15);
+		L_16 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_14, L_15);
 		V_1 = ((ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A*)CastclassClass((RuntimeObject*)L_16, ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A_il2cpp_TypeInfo_var));
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_17 = V_1;
 		XmlElement_t9A08B533E9A6B3548A1DE35476186F7ECCDF6FF1* L_18 = ___elem1;
@@ -14960,7 +14980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocument_RemoveElementWithId_mD930DEA
 		String_t* L_5 = ___id0;
 		NullCheck(L_4);
 		RuntimeObject* L_6;
-		L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_4, L_5);
+		L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_4, L_5);
 		V_0 = ((ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A*)CastclassClass((RuntimeObject*)L_6, ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A_il2cpp_TypeInfo_var));
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_7 = V_0;
 		XmlElement_t9A08B533E9A6B3548A1DE35476186F7ECCDF6FF1* L_8 = ___elem1;
@@ -14991,7 +15011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlDocument_RemoveElementWithId_mD930DEA
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_15 = __this->___htElementIdMap_5;
 		String_t* L_16 = ___id0;
 		NullCheck(L_15);
-		VirtualActionInvoker1< RuntimeObject* >::Invoke(28 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_15, L_16);
+		VirtualActionInvoker1< RuntimeObject* >::Invoke(29 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_15, L_16);
 	}
 
 IL_004f:
@@ -28876,6 +28896,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlNode_UnnestTextNodes_m2469818048DBF23
 		return;
 	}
 }
+// System.Object System.Xml.XmlNode::get_debuggerDisplayProxy()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlNode_get_debuggerDisplayProxy_m3E2D46C8120C46626198C092C4663DA5FE71F373 (XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07 L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		DebuggerDisplayXmlNodeProxy__ctor_mB9B6D906F2EBADBBDBA79FE184D6860363C32356_inline((&L_0), __this, /*hidden argument*/NULL);
+		DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07 L_1 = L_0;
+		RuntimeObject* L_2 = Box(DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07_il2cpp_TypeInfo_var, &L_1);
+		return L_2;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -29596,6 +29634,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XmlDocument_get_CanReportVal
 	{
 		bool L_0 = __this->___reportValidity_9;
 		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebuggerDisplayXmlNodeProxy__ctor_mB9B6D906F2EBADBBDBA79FE184D6860363C32356_inline (DebuggerDisplayXmlNodeProxy_t75382D048931DB9A7D8EFB35A56EEC1D8241FB07* __this, XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* ___node0, const RuntimeMethod* method) 
+{
+	{
+		XmlNode_t3180B9B3D5C36CD58F5327D9F13458E3B3F030AF* L_0 = ___node0;
+		__this->___node_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___node_0), (void*)L_0);
+		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_mB407E755F3B4C51C54D24338D00A352E5B16E7F3_gshared_inline (Enumerator_t44124D16E0B2F7308FF4069BE06369B5A83896EB* __this, const RuntimeMethod* method) 

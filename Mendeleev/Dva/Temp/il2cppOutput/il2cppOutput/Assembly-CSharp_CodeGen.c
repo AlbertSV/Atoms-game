@@ -562,571 +562,575 @@ extern void AudioGameController_AudioPlay_mB8213239BC676412A39B343D453FB78BA25A0
 extern void AudioGameController_SetVolumeToggle_mADEE19A70516A702CB6D89B676377F500E8AA5CB (void);
 // 0x00000116 System.Void Dva.AudioGameController::.ctor()
 extern void AudioGameController__ctor_m18596DC0D99B6F807E51178B8B1673547A70E905 (void);
-// 0x00000117 System.Void Dva.AIUtility::Configuration()
+// 0x00000117 System.Void Dva.CameraMove::FixedUpdate()
+extern void CameraMove_FixedUpdate_mE0AC4D364CCD7098321D14FD472C281DD2271ED2 (void);
+// 0x00000118 System.Void Dva.CameraMove::DragCamera()
+extern void CameraMove_DragCamera_mA76DD6B1AE8BEFA916295A3EA4F8424FD13A7288 (void);
+// 0x00000119 System.Void Dva.CameraMove::.ctor()
+extern void CameraMove__ctor_mCF674A53DC37E8E0F79074D5F6F1B3CC1AECCCB7 (void);
+// 0x0000011A System.Void Dva.AIUtility::Configuration()
 extern void AIUtility_Configuration_mB13C6AD17B84ECFCC4469774CF06E93F1137D80F (void);
-// 0x00000118 System.Void Dva.AIUtility::ConfigurationAtomData(System.Xml.Linq.XElement)
+// 0x0000011B System.Void Dva.AIUtility::ConfigurationAtomData(System.Xml.Linq.XElement)
 extern void AIUtility_ConfigurationAtomData_m013E2F2785927BE1202BF46E1E8C55DAF092395A (void);
-// 0x00000119 System.Void Dva.AIUtility::ConfigurationElementsData(System.Xml.Linq.XElement)
+// 0x0000011C System.Void Dva.AIUtility::ConfigurationElementsData(System.Xml.Linq.XElement)
 extern void AIUtility_ConfigurationElementsData_m61104CD35D0A1EBA81A81D1A73709241D888CDEE (void);
-// 0x0000011A System.Void Dva.AIUtility::ConfigurationPlayerNumbers(System.Xml.Linq.XElement)
+// 0x0000011D System.Void Dva.AIUtility::ConfigurationPlayerNumbers(System.Xml.Linq.XElement)
 extern void AIUtility_ConfigurationPlayerNumbers_mF382C70220EC41149099E61FAAD352D280D16578 (void);
-// 0x0000011B System.Void Dva.AIUtility::RewriteXML(System.Int32,System.Int32)
+// 0x0000011E System.Void Dva.AIUtility::RewriteXML(System.Int32,System.Int32)
 extern void AIUtility_RewriteXML_mF04DA7C90C9208EB4E4835AFB675E64BFC5E66C4 (void);
-// 0x0000011C System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomName()
+// 0x0000011F System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomName()
 extern void AIUtility_get_GetAtomName_mFA29B0FD0AFE2C3EC8717B74339D4D3350612CB5 (void);
-// 0x0000011D System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomSymbol()
+// 0x00000120 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomSymbol()
 extern void AIUtility_get_GetAtomSymbol_mDC2BD0600C05A01342699273C1218F5ADD94A4BC (void);
-// 0x0000011E System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomMaterial()
+// 0x00000121 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomMaterial()
 extern void AIUtility_get_GetAtomMaterial_mF4BF667237457C01DC79B912B099A06BF6A96358 (void);
-// 0x0000011F System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomComposition()
+// 0x00000122 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetAtomComposition()
 extern void AIUtility_get_GetAtomComposition_m71D7DE2F75B30992D8B31C834CDAEC9461D6D164 (void);
-// 0x00000120 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementName()
+// 0x00000123 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementName()
 extern void AIUtility_get_GetElementName_mFD1E49586E089F0AA030F7E4AC49BF5408686D24 (void);
-// 0x00000121 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementSymbol()
+// 0x00000124 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementSymbol()
 extern void AIUtility_get_GetElementSymbol_m0C35E3FCD7439A65EC3269BED065AB90637D35AC (void);
-// 0x00000122 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementMaterial()
+// 0x00000125 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementMaterial()
 extern void AIUtility_get_GetElementMaterial_m66CD11128DBB28BBBF4B4252612A404EAF4F1E83 (void);
-// 0x00000123 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementComposition()
+// 0x00000126 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.String> Dva.AIUtility::get_GetElementComposition()
 extern void AIUtility_get_GetElementComposition_m465B368BF3D07A6D06E884E2815132E494C58C9A (void);
-// 0x00000124 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementNumber()
+// 0x00000127 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementNumber()
 extern void AIUtility_get_GetElementNumber_mB5E6D5D7B86273CF0F7BF8898644938A3AAA1C83 (void);
-// 0x00000125 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementIsotopes()
+// 0x00000128 System.Collections.Generic.IReadOnlyDictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetElementIsotopes()
 extern void AIUtility_get_GetElementIsotopes_mBFB945666CAF61545D49986AEB91396D77730728 (void);
-// 0x00000126 System.Collections.Generic.Dictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetPlayerNumbers()
+// 0x00000129 System.Collections.Generic.Dictionary`2<System.Int32,System.Int32> Dva.AIUtility::get_GetPlayerNumbers()
 extern void AIUtility_get_GetPlayerNumbers_mFEB4D7E3EB4D8D7F275C082DEE64F8ED87CF9E6D (void);
-// 0x00000127 System.Void Dva.AIUtility::.cctor()
+// 0x0000012A System.Void Dva.AIUtility::.cctor()
 extern void AIUtility__cctor_mBF5960F6EA01F02374A81A7D7D6EE47A11C6DE1D (void);
-// 0x00000128 System.Single Dva.FeaturesManager::get_ParticleSpeed()
+// 0x0000012B System.Single Dva.FeaturesManager::get_ParticleSpeed()
 extern void FeaturesManager_get_ParticleSpeed_m423DE85046253D03B96CA4BDBB9CAFF99BF3B228 (void);
-// 0x00000129 System.Void Dva.FeaturesManager::set_ParticleSpeed(System.Single)
+// 0x0000012C System.Void Dva.FeaturesManager::set_ParticleSpeed(System.Single)
 extern void FeaturesManager_set_ParticleSpeed_m3A415D2A923965FC7F48F68CC6F42405D07D08B3 (void);
-// 0x0000012A System.Single Dva.FeaturesManager::get_ElectronOrbitSpeed()
+// 0x0000012D System.Single Dva.FeaturesManager::get_ElectronOrbitSpeed()
 extern void FeaturesManager_get_ElectronOrbitSpeed_m6C8CA0FBE67C1C031F917F90FCB2A1A0585D33F5 (void);
-// 0x0000012B UnityEngine.Transform Dva.FeaturesManager::get_LeftBoarder()
+// 0x0000012E UnityEngine.Transform Dva.FeaturesManager::get_LeftBoarder()
 extern void FeaturesManager_get_LeftBoarder_mF22E1E1531F61D8442092E77A9861A876EE40655 (void);
-// 0x0000012C System.Void Dva.FeaturesManager::set_LeftBoarder(UnityEngine.Transform)
+// 0x0000012F System.Void Dva.FeaturesManager::set_LeftBoarder(UnityEngine.Transform)
 extern void FeaturesManager_set_LeftBoarder_m90F78C56F9C31666FB9C74248CF17DC2324215C0 (void);
-// 0x0000012D UnityEngine.Transform Dva.FeaturesManager::get_RightBoarder()
+// 0x00000130 UnityEngine.Transform Dva.FeaturesManager::get_RightBoarder()
 extern void FeaturesManager_get_RightBoarder_mA323D4AEBC73BE8D7B3B918F5F099FFBBD03BCEB (void);
-// 0x0000012E System.Void Dva.FeaturesManager::set_RightBoarder(UnityEngine.Transform)
+// 0x00000131 System.Void Dva.FeaturesManager::set_RightBoarder(UnityEngine.Transform)
 extern void FeaturesManager_set_RightBoarder_mE01CAFBC27E27F1B843B5459F244877B2BF6186A (void);
-// 0x0000012F UnityEngine.Transform Dva.FeaturesManager::get_TopBoarder()
+// 0x00000132 UnityEngine.Transform Dva.FeaturesManager::get_TopBoarder()
 extern void FeaturesManager_get_TopBoarder_m6F793E6045F113D78E5F27DB4FDEECCA8A842A21 (void);
-// 0x00000130 System.Void Dva.FeaturesManager::set_TopBoarder(UnityEngine.Transform)
+// 0x00000133 System.Void Dva.FeaturesManager::set_TopBoarder(UnityEngine.Transform)
 extern void FeaturesManager_set_TopBoarder_mD5FA2BA3921D5D88200DB729CF6EC0F4FF73BE52 (void);
-// 0x00000131 UnityEngine.Transform Dva.FeaturesManager::get_BottomBoarder()
+// 0x00000134 UnityEngine.Transform Dva.FeaturesManager::get_BottomBoarder()
 extern void FeaturesManager_get_BottomBoarder_mA34F758D34424C7FC8A2B1D9E5E8A9C1294364F7 (void);
-// 0x00000132 System.Void Dva.FeaturesManager::set_BottomBoarder(UnityEngine.Transform)
+// 0x00000135 System.Void Dva.FeaturesManager::set_BottomBoarder(UnityEngine.Transform)
 extern void FeaturesManager_set_BottomBoarder_m2AC117E2CB21F9D6A7AAB63A1D6ACE32B75C5FE7 (void);
-// 0x00000133 UnityEngine.Transform Dva.FeaturesManager::get_Field()
+// 0x00000136 UnityEngine.Transform Dva.FeaturesManager::get_Field()
 extern void FeaturesManager_get_Field_m1887B010C34CCD2BB769EB24A2AEE57B5EFCD90F (void);
-// 0x00000134 System.Void Dva.FeaturesManager::set_Field(UnityEngine.Transform)
+// 0x00000137 System.Void Dva.FeaturesManager::set_Field(UnityEngine.Transform)
 extern void FeaturesManager_set_Field_m8328144D43F050FA8B9D8EE18F6E8CD2E7936DE4 (void);
-// 0x00000135 System.Int32 Dva.FeaturesManager::get_DecayCountDown()
+// 0x00000138 System.Int32 Dva.FeaturesManager::get_DecayCountDown()
 extern void FeaturesManager_get_DecayCountDown_m84B204678A2F7711504B78EFA80C9CBB91F6E61A (void);
-// 0x00000136 System.Int32 Dva.FeaturesManager::get_EventCountDown()
+// 0x00000139 System.Int32 Dva.FeaturesManager::get_EventCountDown()
 extern void FeaturesManager_get_EventCountDown_m0497FFF97E00C953AE600A64064619F010D70894 (void);
-// 0x00000137 TMPro.TMP_Text Dva.FeaturesManager::get_AtomName()
+// 0x0000013A TMPro.TMP_Text Dva.FeaturesManager::get_AtomName()
 extern void FeaturesManager_get_AtomName_mB57DB1F50702FB091A97E8B61B7E9BF6EFCC8572 (void);
-// 0x00000138 TMPro.TMP_Text Dva.FeaturesManager::get_AtomComposition()
+// 0x0000013B TMPro.TMP_Text Dva.FeaturesManager::get_AtomComposition()
 extern void FeaturesManager_get_AtomComposition_m94F0927782CEF0ABF4758FEB84778887437019A3 (void);
-// 0x00000139 TMPro.TMP_Text Dva.FeaturesManager::get_AtomSymbol()
+// 0x0000013C TMPro.TMP_Text Dva.FeaturesManager::get_AtomSymbol()
 extern void FeaturesManager_get_AtomSymbol_m172FBCAB2B9D6A4F3185184C63ABDFA93BF9012F (void);
-// 0x0000013A TMPro.TMP_Text Dva.FeaturesManager::get_AtomDecay()
+// 0x0000013D TMPro.TMP_Text Dva.FeaturesManager::get_AtomDecay()
 extern void FeaturesManager_get_AtomDecay_m54421B6774E1C9B913D32DD6AE72F41CD6784713 (void);
-// 0x0000013B TMPro.TMP_Text Dva.FeaturesManager::get_AtomSymbolObject()
+// 0x0000013E TMPro.TMP_Text Dva.FeaturesManager::get_AtomSymbolObject()
 extern void FeaturesManager_get_AtomSymbolObject_m99869DD28EEBE20C76966C99EE24D64F1DBE81CE (void);
-// 0x0000013C TMPro.TMP_Text Dva.FeaturesManager::get_StatisticText()
+// 0x0000013F TMPro.TMP_Text Dva.FeaturesManager::get_StatisticText()
 extern void FeaturesManager_get_StatisticText_m520788F8886A01BF43531843A55F700AEBC9079B (void);
-// 0x0000013D System.Int32 Dva.FeaturesManager::get_FOVRange()
+// 0x00000140 System.Int32 Dva.FeaturesManager::get_FOVRange()
 extern void FeaturesManager_get_FOVRange_m24C96433760BD9212EE7E8BD12C92B5695F6ECB4 (void);
-// 0x0000013E UnityEngine.ParticleSystem Dva.FeaturesManager::get_ParticleSystem()
+// 0x00000141 UnityEngine.ParticleSystem Dva.FeaturesManager::get_ParticleSystem()
 extern void FeaturesManager_get_ParticleSystem_m63A537C2523EAFCCD632F37178C306A01DC7AB10 (void);
-// 0x0000013F UnityEngine.Material[] Dva.FeaturesManager::get_ElementsMaterials()
+// 0x00000142 UnityEngine.Material[] Dva.FeaturesManager::get_ElementsMaterials()
 extern void FeaturesManager_get_ElementsMaterials_mA8D4B790BCA82EB1A0E5C2EE92F05C92EC0220A5 (void);
-// 0x00000140 UnityEngine.AudioSource Dva.FeaturesManager::get_AbsorbAudio()
+// 0x00000143 UnityEngine.AudioSource Dva.FeaturesManager::get_AbsorbAudio()
 extern void FeaturesManager_get_AbsorbAudio_m4F1387DD80F25AC4910BCD9A735790B69E21AA26 (void);
-// 0x00000141 UnityEngine.AudioSource Dva.FeaturesManager::get_ExplodeAudio()
+// 0x00000144 UnityEngine.AudioSource Dva.FeaturesManager::get_ExplodeAudio()
 extern void FeaturesManager_get_ExplodeAudio_mC80CDA4DC9E84B23EDB46095CC136D9D2B08BC50 (void);
-// 0x00000142 UnityEngine.AudioSource Dva.FeaturesManager::get_TicAudio()
+// 0x00000145 UnityEngine.AudioSource Dva.FeaturesManager::get_TicAudio()
 extern void FeaturesManager_get_TicAudio_mE9326EDBEA44ACC971AD68201939024578D35B0B (void);
-// 0x00000143 UnityEngine.AudioSource Dva.FeaturesManager::get_StartAudio()
+// 0x00000146 UnityEngine.AudioSource Dva.FeaturesManager::get_StartAudio()
 extern void FeaturesManager_get_StartAudio_m571893EDA73381258A0432963AE1BA4EDE01529D (void);
-// 0x00000144 System.Void Dva.FeaturesManager::.ctor()
+// 0x00000147 System.Void Dva.FeaturesManager::.ctor()
 extern void FeaturesManager__ctor_m43DD9B5847DAA12099002AB1907C70148DB97800 (void);
-// 0x00000145 System.Collections.Generic.List`1<UnityEngine.GameObject> Dva.GameControl::get_ParticleCounter()
+// 0x00000148 System.Collections.Generic.List`1<UnityEngine.GameObject> Dva.GameControl::get_ParticleCounter()
 extern void GameControl_get_ParticleCounter_m35FB8B8EAAEE9E9F7A37C8F3327B1D7A365705A8 (void);
-// 0x00000146 System.Boolean Dva.GameControl::get_IsBlackHoleActive()
+// 0x00000149 System.Boolean Dva.GameControl::get_IsBlackHoleActive()
 extern void GameControl_get_IsBlackHoleActive_m90E7992CDA117EB3D9644C19298382AA9535AD5C (void);
-// 0x00000147 System.Void Dva.GameControl::Awake()
+// 0x0000014A System.Void Dva.GameControl::Awake()
 extern void GameControl_Awake_mD8065A06EF7E71BFFDEDF8A832621E277925466C (void);
-// 0x00000148 System.Void Dva.GameControl::Start()
+// 0x0000014B System.Void Dva.GameControl::Start()
 extern void GameControl_Start_m3DAEBACA62606B08269124B9F3B8E024C1957E8E (void);
-// 0x00000149 System.Void Dva.GameControl::Update()
+// 0x0000014C System.Void Dva.GameControl::Update()
 extern void GameControl_Update_mD61AD39C2CD608FDE4D5DF6D09626C1D49ADCB2E (void);
-// 0x0000014A System.Void Dva.GameControl::ParticleSpawn(UnityEngine.GameObject)
+// 0x0000014D System.Void Dva.GameControl::ParticleSpawn(UnityEngine.GameObject)
 extern void GameControl_ParticleSpawn_mBDFD5851FC625F5DBD0F68F30B8CC6B797CD9BB0 (void);
-// 0x0000014B System.Void Dva.GameControl::SpecialParticleSpawn()
+// 0x0000014E System.Void Dva.GameControl::SpecialParticleSpawn()
 extern void GameControl_SpecialParticleSpawn_m36E846D2C8CB8D2126AE9CF90C4246AAFC8696ED (void);
-// 0x0000014C System.Void Dva.GameControl::InstantiateParticle(UnityEngine.GameObject,System.Collections.Generic.List`1<UnityEngine.GameObject>)
+// 0x0000014F System.Void Dva.GameControl::InstantiateParticle(UnityEngine.GameObject,System.Collections.Generic.List`1<UnityEngine.GameObject>)
 extern void GameControl_InstantiateParticle_mF0562CB8BA883B58358E04DBDCD4D27C097089CC (void);
-// 0x0000014D UnityEngine.Vector3 Dva.GameControl::GetRandomPosition(System.Single,System.Single,System.Single,System.Single)
+// 0x00000150 UnityEngine.Vector3 Dva.GameControl::GetRandomPosition(System.Single,System.Single,System.Single,System.Single)
 extern void GameControl_GetRandomPosition_m842E9857D4FDBD1343F22DF13FB661CFCF721313 (void);
-// 0x0000014E Dva.GeneralParticle Dva.GameControl::GetRandomParticle()
+// 0x00000151 Dva.GeneralParticle Dva.GameControl::GetRandomParticle()
 extern void GameControl_GetRandomParticle_m1A5242403A6CDE589F4F44C237B423A93055B211 (void);
-// 0x0000014F System.Void Dva.GameControl::ParticleRenew()
+// 0x00000152 System.Void Dva.GameControl::ParticleRenew()
 extern void GameControl_ParticleRenew_m681BD3AF8972E53730196AFA9BE98B36C0BB6A85 (void);
-// 0x00000150 System.Void Dva.GameControl::EventCall(Dva.SpecialParticleType)
+// 0x00000153 System.Void Dva.GameControl::EventCall(Dva.SpecialParticleType)
 extern void GameControl_EventCall_mCB886F7EAF9D9E30845BD045EA7A3654097F176C (void);
-// 0x00000151 System.Collections.IEnumerator Dva.GameControl::BlackHoleEvent()
+// 0x00000154 System.Collections.IEnumerator Dva.GameControl::BlackHoleEvent()
 extern void GameControl_BlackHoleEvent_mC788E7558F5A313CA319AEF5AD0D77508EA5508C (void);
-// 0x00000152 System.Collections.IEnumerator Dva.GameControl::SpeedChangeEvent(Dva.SpecialParticleType)
+// 0x00000155 System.Collections.IEnumerator Dva.GameControl::SpeedChangeEvent(Dva.SpecialParticleType)
 extern void GameControl_SpeedChangeEvent_mCCAA79761DF67BF57F38B56AD994F545445FEBE4 (void);
-// 0x00000153 System.Collections.IEnumerator Dva.GameControl::FieldSizeChangeEvent(Dva.SpecialParticleType)
+// 0x00000156 System.Collections.IEnumerator Dva.GameControl::FieldSizeChangeEvent(Dva.SpecialParticleType)
 extern void GameControl_FieldSizeChangeEvent_m8E68D2FBF6E7DE237C14D6EE9F806027EEAAE12D (void);
-// 0x00000154 System.Void Dva.GameControl::FastNeutronEvent()
+// 0x00000157 System.Void Dva.GameControl::FastNeutronEvent()
 extern void GameControl_FastNeutronEvent_mE37E3179681EDD8B5BBE608658D44136C711389A (void);
-// 0x00000155 System.Void Dva.GameControl::LivesEvent()
+// 0x00000158 System.Void Dva.GameControl::LivesEvent()
 extern void GameControl_LivesEvent_m18E190D0B01B86C1F6AA7D463102B139719AC195 (void);
-// 0x00000156 System.Void Dva.GameControl::RemoveForEvent(System.Collections.Generic.List`1<UnityEngine.GameObject>,System.Collections.Generic.List`1<UnityEngine.GameObject>,System.Boolean,System.Collections.Generic.List`1<UnityEngine.GameObject>)
+// 0x00000159 System.Void Dva.GameControl::RemoveForEvent(System.Collections.Generic.List`1<UnityEngine.GameObject>,System.Collections.Generic.List`1<UnityEngine.GameObject>,System.Boolean,System.Collections.Generic.List`1<UnityEngine.GameObject>)
 extern void GameControl_RemoveForEvent_mAD1183B944BEB5B861CD62CE5ABC2A8135D66BAD (void);
-// 0x00000157 System.Void Dva.GameControl::LifesCreation(System.Int32)
+// 0x0000015A System.Void Dva.GameControl::LifesCreation(System.Int32)
 extern void GameControl_LifesCreation_m0D401570CE273D28E97BA194CE52BAA699ECD9A0 (void);
-// 0x00000158 System.Void Dva.GameControl::EndGame()
+// 0x0000015B System.Void Dva.GameControl::EndGame()
 extern void GameControl_EndGame_m8031FF03C8FF53AE97F7D197599B900B529A957B (void);
-// 0x00000159 System.Void Dva.GameControl::.ctor()
+// 0x0000015C System.Void Dva.GameControl::.ctor()
 extern void GameControl__ctor_mA4743D97871578629B423B451129143DBC030DA7 (void);
-// 0x0000015A System.Void Dva.GameControl/<BlackHoleEvent>d__51::.ctor(System.Int32)
+// 0x0000015D System.Void Dva.GameControl/<BlackHoleEvent>d__51::.ctor(System.Int32)
 extern void U3CBlackHoleEventU3Ed__51__ctor_m2A0953C85AF2B01728FD7CB89E8B99A61A797014 (void);
-// 0x0000015B System.Void Dva.GameControl/<BlackHoleEvent>d__51::System.IDisposable.Dispose()
+// 0x0000015E System.Void Dva.GameControl/<BlackHoleEvent>d__51::System.IDisposable.Dispose()
 extern void U3CBlackHoleEventU3Ed__51_System_IDisposable_Dispose_mA1197F954F5F54FB842D89235DF65EA8C1D2E1A0 (void);
-// 0x0000015C System.Boolean Dva.GameControl/<BlackHoleEvent>d__51::MoveNext()
+// 0x0000015F System.Boolean Dva.GameControl/<BlackHoleEvent>d__51::MoveNext()
 extern void U3CBlackHoleEventU3Ed__51_MoveNext_mF7EF58B77D53FA31CA06EEC6264A9F50BE900007 (void);
-// 0x0000015D System.Object Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000160 System.Object Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CBlackHoleEventU3Ed__51_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3E19699B8B488D1359649C94F02FF7980575CF9C (void);
-// 0x0000015E System.Void Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.IEnumerator.Reset()
+// 0x00000161 System.Void Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.IEnumerator.Reset()
 extern void U3CBlackHoleEventU3Ed__51_System_Collections_IEnumerator_Reset_m0879FB3B276B709AD73733647BB1B0BFF68F483E (void);
-// 0x0000015F System.Object Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.IEnumerator.get_Current()
+// 0x00000162 System.Object Dva.GameControl/<BlackHoleEvent>d__51::System.Collections.IEnumerator.get_Current()
 extern void U3CBlackHoleEventU3Ed__51_System_Collections_IEnumerator_get_Current_m9E2DB87E8CC0672E93D0B8A5AE8DCA1FE81B1896 (void);
-// 0x00000160 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::.ctor(System.Int32)
+// 0x00000163 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::.ctor(System.Int32)
 extern void U3CSpeedChangeEventU3Ed__52__ctor_mB6549E88648BD948CE999DAC0E345348E2A52624 (void);
-// 0x00000161 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::System.IDisposable.Dispose()
+// 0x00000164 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::System.IDisposable.Dispose()
 extern void U3CSpeedChangeEventU3Ed__52_System_IDisposable_Dispose_m0BD2B799DE7A722FD2DD98A7FBA6218DD4A17725 (void);
-// 0x00000162 System.Boolean Dva.GameControl/<SpeedChangeEvent>d__52::MoveNext()
+// 0x00000165 System.Boolean Dva.GameControl/<SpeedChangeEvent>d__52::MoveNext()
 extern void U3CSpeedChangeEventU3Ed__52_MoveNext_m19105A06070641F7CEAF0CAE529B5BE27E1BB941 (void);
-// 0x00000163 System.Object Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000166 System.Object Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSpeedChangeEventU3Ed__52_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF6B435A13CD4413E88B55E9ED65F9CE1B885DCDD (void);
-// 0x00000164 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.IEnumerator.Reset()
+// 0x00000167 System.Void Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.IEnumerator.Reset()
 extern void U3CSpeedChangeEventU3Ed__52_System_Collections_IEnumerator_Reset_mA2BBA4FFDDF431487DF97120C2A9DC1B2B6B7AA5 (void);
-// 0x00000165 System.Object Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.IEnumerator.get_Current()
+// 0x00000168 System.Object Dva.GameControl/<SpeedChangeEvent>d__52::System.Collections.IEnumerator.get_Current()
 extern void U3CSpeedChangeEventU3Ed__52_System_Collections_IEnumerator_get_Current_mBD5CB94537CF1C95A05086ADAB780B040E009830 (void);
-// 0x00000166 System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::.ctor(System.Int32)
+// 0x00000169 System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::.ctor(System.Int32)
 extern void U3CFieldSizeChangeEventU3Ed__53__ctor_m52F6C124D5E80EC15F274CB3CF0412B46726197E (void);
-// 0x00000167 System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::System.IDisposable.Dispose()
+// 0x0000016A System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::System.IDisposable.Dispose()
 extern void U3CFieldSizeChangeEventU3Ed__53_System_IDisposable_Dispose_m824F069D181CF170D96E331AA883625E33BABB95 (void);
-// 0x00000168 System.Boolean Dva.GameControl/<FieldSizeChangeEvent>d__53::MoveNext()
+// 0x0000016B System.Boolean Dva.GameControl/<FieldSizeChangeEvent>d__53::MoveNext()
 extern void U3CFieldSizeChangeEventU3Ed__53_MoveNext_m80A12BD69FA7616444E06D549C1DE2EE388824E6 (void);
-// 0x00000169 System.Object Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000016C System.Object Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CFieldSizeChangeEventU3Ed__53_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA51811811437FB3A487D5B33A663746B9319FD88 (void);
-// 0x0000016A System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.IEnumerator.Reset()
+// 0x0000016D System.Void Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.IEnumerator.Reset()
 extern void U3CFieldSizeChangeEventU3Ed__53_System_Collections_IEnumerator_Reset_m5D489ED962DFC76C5A6B0EE4459CE7C7B2B6D626 (void);
-// 0x0000016B System.Object Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.IEnumerator.get_Current()
+// 0x0000016E System.Object Dva.GameControl/<FieldSizeChangeEvent>d__53::System.Collections.IEnumerator.get_Current()
 extern void U3CFieldSizeChangeEventU3Ed__53_System_Collections_IEnumerator_get_Current_m67924C8C21762EFB93E912560800580F6566CC41 (void);
-// 0x0000016C System.Void Dva.GameControl/<>c::.cctor()
+// 0x0000016F System.Void Dva.GameControl/<>c::.cctor()
 extern void U3CU3Ec__cctor_m5AE2C55B6EB89BC29FC3D89DDBEEC2FB73B7AD7F (void);
-// 0x0000016D System.Void Dva.GameControl/<>c::.ctor()
+// 0x00000170 System.Void Dva.GameControl/<>c::.ctor()
 extern void U3CU3Ec__ctor_mB4016A50BE0480580EF55BD0DBDFA7F156706477 (void);
-// 0x0000016E UnityEngine.GameObject Dva.GameControl/<>c::<RemoveForEvent>b__56_0(Dva.GeneralParticle)
+// 0x00000171 UnityEngine.GameObject Dva.GameControl/<>c::<RemoveForEvent>b__56_0(Dva.GeneralParticle)
 extern void U3CU3Ec_U3CRemoveForEventU3Eb__56_0_m67F4E6219CE2A7EEA8DFA3ABFF205703CCEAF522 (void);
-// 0x0000016F UnityEngine.GameObject Dva.GameControl/<>c::<RemoveForEvent>b__56_1(Dva.SpecialParticle)
+// 0x00000172 UnityEngine.GameObject Dva.GameControl/<>c::<RemoveForEvent>b__56_1(Dva.SpecialParticle)
 extern void U3CU3Ec_U3CRemoveForEventU3Eb__56_1_mC83864F45AEB1BA772A72E31F099E83A8977AA0F (void);
-// 0x00000170 System.Void Dva.ElementMenu::Start()
+// 0x00000173 System.Void Dva.ElementMenu::Start()
 extern void ElementMenu_Start_m569D65BACE1D5A58D9D8EA138A7DAD819E68F292 (void);
-// 0x00000171 System.Void Dva.ElementMenu::ElementBack()
+// 0x00000174 System.Void Dva.ElementMenu::ElementBack()
 extern void ElementMenu_ElementBack_mDA19F8ADE36B7127B5D04C4A53F63764511701BE (void);
-// 0x00000172 System.Void Dva.ElementMenu::AnimationElementBack()
+// 0x00000175 System.Void Dva.ElementMenu::AnimationElementBack()
 extern void ElementMenu_AnimationElementBack_m5B05870A66BD6C3ACBC833BE6C20DCBEDE1C00C8 (void);
-// 0x00000173 System.Void Dva.ElementMenu::.ctor()
+// 0x00000176 System.Void Dva.ElementMenu::.ctor()
 extern void ElementMenu__ctor_m417563A4D074C5FEFA733B4639DB23B12F0F1786 (void);
-// 0x00000174 System.Void Dva.MainMenu::Awake()
+// 0x00000177 System.Void Dva.MainMenu::Awake()
 extern void MainMenu_Awake_mF3D5E3781B1520F0FBAE3A911F765DF7F2B8FEB3 (void);
-// 0x00000175 System.Void Dva.MainMenu::PlayGame()
+// 0x00000178 System.Void Dva.MainMenu::PlayGame()
 extern void MainMenu_PlayGame_mD0F7C9AA8A77E83B0EA5959315EE35A3A9C116A9 (void);
-// 0x00000176 System.Void Dva.MainMenu::ElementMenu()
+// 0x00000179 System.Void Dva.MainMenu::ElementMenu()
 extern void MainMenu_ElementMenu_mCA8D714EDB57115DFB138E8B8F71273C2EF278FE (void);
-// 0x00000177 System.Void Dva.MainMenu::OptionMenu()
+// 0x0000017A System.Void Dva.MainMenu::OptionMenu()
 extern void MainMenu_OptionMenu_mCC6C4473EDD2BCE29C14D7AA825C8C75F54CC651 (void);
-// 0x00000178 System.Void Dva.MainMenu::QuitGame()
+// 0x0000017B System.Void Dva.MainMenu::QuitGame()
 extern void MainMenu_QuitGame_m08AAAF79C9F24294C01DA6ADE1E21BE64BA1C22E (void);
-// 0x00000179 System.Void Dva.MainMenu::WaitForAnimationPlay()
+// 0x0000017C System.Void Dva.MainMenu::WaitForAnimationPlay()
 extern void MainMenu_WaitForAnimationPlay_mFC8F7A8423B629B9D241800EEED033398BC3D60A (void);
-// 0x0000017A System.Void Dva.MainMenu::.ctor()
+// 0x0000017D System.Void Dva.MainMenu::.ctor()
 extern void MainMenu__ctor_m25F55DDEF64BED0F0372E07A660CF37058EC37D1 (void);
-// 0x0000017B System.Void Dva.MenuClose::OnStateExit(UnityEngine.Animator,UnityEngine.AnimatorStateInfo,System.Int32)
+// 0x0000017E System.Void Dva.MenuClose::OnStateExit(UnityEngine.Animator,UnityEngine.AnimatorStateInfo,System.Int32)
 extern void MenuClose_OnStateExit_m4E2D69BC3DAD0EB13AB2B438F8EF2ABA490DD010 (void);
-// 0x0000017C System.Void Dva.MenuClose::.ctor()
+// 0x0000017F System.Void Dva.MenuClose::.ctor()
 extern void MenuClose__ctor_m573D903A39B4CB1AC16C025E019CF7CE8E003078 (void);
-// 0x0000017D System.Void Dva.Settings::Start()
+// 0x00000180 System.Void Dva.Settings::Start()
 extern void Settings_Start_m6908C0880CA4326D7E6E30F4C8EAEF408A4665CB (void);
-// 0x0000017E System.Void Dva.Settings::Save()
+// 0x00000181 System.Void Dva.Settings::Save()
 extern void Settings_Save_m91307C762BB8348F31CBE4808CC82E34D9472A30 (void);
-// 0x0000017F System.Void Dva.Settings::Back()
+// 0x00000182 System.Void Dva.Settings::Back()
 extern void Settings_Back_mD07F0CB895D3204C44506C636C176CD9A36FA470 (void);
-// 0x00000180 System.Void Dva.Settings::WaitForAnimationBack()
+// 0x00000183 System.Void Dva.Settings::WaitForAnimationBack()
 extern void Settings_WaitForAnimationBack_mAA01EFCCD03ED04AE42017809AC584C085001907 (void);
-// 0x00000181 System.Void Dva.Settings::SetVolume()
+// 0x00000184 System.Void Dva.Settings::SetVolume()
 extern void Settings_SetVolume_m9E99F5C54D1C7692C86C22F5CEDC707CC3D63797 (void);
-// 0x00000182 System.Void Dva.Settings::.ctor()
+// 0x00000185 System.Void Dva.Settings::.ctor()
 extern void Settings__ctor_m8301B28B4B418215FFD85BEE59D0E86793D2DAE6 (void);
-// 0x00000183 System.Void Dva.PauseButton::Pause()
+// 0x00000186 System.Void Dva.PauseButton::Pause()
 extern void PauseButton_Pause_m1D607FE4839B18195EEF94C879DBF4F8B0EDF778 (void);
-// 0x00000184 System.Void Dva.PauseButton::.ctor()
+// 0x00000187 System.Void Dva.PauseButton::.ctor()
 extern void PauseButton__ctor_m2EBD9F1229F61CF6A93B15654444AE3C7CD45324 (void);
-// 0x00000185 System.Void Dva.PauseMenu::Resume()
+// 0x00000188 System.Void Dva.PauseMenu::Resume()
 extern void PauseMenu_Resume_m39177042115BCA542FB7A5C84C317BDD0BCBEC15 (void);
-// 0x00000186 System.Void Dva.PauseMenu::RestartGame()
+// 0x00000189 System.Void Dva.PauseMenu::RestartGame()
 extern void PauseMenu_RestartGame_m91F46D1122F22FD3FF20944ED9DA11B3584866E7 (void);
-// 0x00000187 System.Void Dva.PauseMenu::MenuGame()
+// 0x0000018A System.Void Dva.PauseMenu::MenuGame()
 extern void PauseMenu_MenuGame_mD7DECE97752597CCC0C4486EA0A70589051D0B2D (void);
-// 0x00000188 System.Void Dva.PauseMenu::WaitForAnimationOpen()
+// 0x0000018B System.Void Dva.PauseMenu::WaitForAnimationOpen()
 extern void PauseMenu_WaitForAnimationOpen_mD4BEC653ACDAC7B2F32C61A0EFB58B24676E3818 (void);
-// 0x00000189 System.Void Dva.PauseMenu::WaitForAnimationClose()
+// 0x0000018C System.Void Dva.PauseMenu::WaitForAnimationClose()
 extern void PauseMenu_WaitForAnimationClose_mAD541B534B412B7065EB1115187A2723F859C719 (void);
-// 0x0000018A System.Void Dva.PauseMenu::.ctor()
+// 0x0000018D System.Void Dva.PauseMenu::.ctor()
 extern void PauseMenu__ctor_m92CF682BA7C1C4DC3504F9E8C68DB968F9C0A4ED (void);
-// 0x0000018B UnityEngine.InputSystem.InputActionAsset Dva.PlayerControl::get_asset()
+// 0x0000018E UnityEngine.InputSystem.InputActionAsset Dva.PlayerControl::get_asset()
 extern void PlayerControl_get_asset_m6459B8C0D1F6531060FD9675B926930AB07A0D52 (void);
-// 0x0000018C System.Void Dva.PlayerControl::.ctor()
+// 0x0000018F System.Void Dva.PlayerControl::.ctor()
 extern void PlayerControl__ctor_mBB061855245F4672177E6820B1F48EE3B8F98711 (void);
-// 0x0000018D System.Void Dva.PlayerControl::Dispose()
+// 0x00000190 System.Void Dva.PlayerControl::Dispose()
 extern void PlayerControl_Dispose_m668361FEAEDBB2DEA01601DF18DA283DB4105057 (void);
-// 0x0000018E System.Nullable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerControl::get_bindingMask()
+// 0x00000191 System.Nullable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerControl::get_bindingMask()
 extern void PlayerControl_get_bindingMask_mA2157326816D84CDD0119D89BA664A64D86926F2 (void);
-// 0x0000018F System.Void Dva.PlayerControl::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
+// 0x00000192 System.Void Dva.PlayerControl::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
 extern void PlayerControl_set_bindingMask_mCE825F25F19571795BC607963A37E1CDDC4DA8F5 (void);
-// 0x00000190 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> Dva.PlayerControl::get_devices()
+// 0x00000193 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> Dva.PlayerControl::get_devices()
 extern void PlayerControl_get_devices_m0BDA4BD15BC17364AFA22952DB6ED5C7D9012680 (void);
-// 0x00000191 System.Void Dva.PlayerControl::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
+// 0x00000194 System.Void Dva.PlayerControl::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
 extern void PlayerControl_set_devices_mB07D25F7B83C5C62D61882D2F32B26D150B39A6C (void);
-// 0x00000192 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> Dva.PlayerControl::get_controlSchemes()
+// 0x00000195 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> Dva.PlayerControl::get_controlSchemes()
 extern void PlayerControl_get_controlSchemes_mFB8BDE354AD55CB82BB0FBDC1A716E7F90BC60E6 (void);
-// 0x00000193 System.Boolean Dva.PlayerControl::Contains(UnityEngine.InputSystem.InputAction)
+// 0x00000196 System.Boolean Dva.PlayerControl::Contains(UnityEngine.InputSystem.InputAction)
 extern void PlayerControl_Contains_m504794C8CF83BCB54B29F62CCCC3C387E9E57542 (void);
-// 0x00000194 System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> Dva.PlayerControl::GetEnumerator()
+// 0x00000197 System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> Dva.PlayerControl::GetEnumerator()
 extern void PlayerControl_GetEnumerator_m2B7246FC079AB2CE44D48C565780737ABB7FB561 (void);
-// 0x00000195 System.Collections.IEnumerator Dva.PlayerControl::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000198 System.Collections.IEnumerator Dva.PlayerControl::System.Collections.IEnumerable.GetEnumerator()
 extern void PlayerControl_System_Collections_IEnumerable_GetEnumerator_m08909CB99ACA66BAEFFA05787B348367C911328F (void);
-// 0x00000196 System.Void Dva.PlayerControl::Enable()
+// 0x00000199 System.Void Dva.PlayerControl::Enable()
 extern void PlayerControl_Enable_m59BAD0CB47ADE2F79AF2E262C3654212AF6C4F8C (void);
-// 0x00000197 System.Void Dva.PlayerControl::Disable()
+// 0x0000019A System.Void Dva.PlayerControl::Disable()
 extern void PlayerControl_Disable_m5F745E2CC4BA856D6298B0DEE4A1314106E1A496 (void);
-// 0x00000198 System.Collections.Generic.IEnumerable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerControl::get_bindings()
+// 0x0000019B System.Collections.Generic.IEnumerable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerControl::get_bindings()
 extern void PlayerControl_get_bindings_m94E6EFE555126B1AC527FE952F7CA2565D24E0F5 (void);
-// 0x00000199 UnityEngine.InputSystem.InputAction Dva.PlayerControl::FindAction(System.String,System.Boolean)
+// 0x0000019C UnityEngine.InputSystem.InputAction Dva.PlayerControl::FindAction(System.String,System.Boolean)
 extern void PlayerControl_FindAction_m536471D11C1B35CE939F9E34F4D5570B102FC2FF (void);
-// 0x0000019A System.Int32 Dva.PlayerControl::FindBinding(UnityEngine.InputSystem.InputBinding,UnityEngine.InputSystem.InputAction&)
+// 0x0000019D System.Int32 Dva.PlayerControl::FindBinding(UnityEngine.InputSystem.InputBinding,UnityEngine.InputSystem.InputAction&)
 extern void PlayerControl_FindBinding_m2A0684F3E4EA980590D1A65512A9D87895DF7949 (void);
-// 0x0000019B Dva.PlayerControl/KeyBoardActions Dva.PlayerControl::get_KeyBoard()
+// 0x0000019E Dva.PlayerControl/KeyBoardActions Dva.PlayerControl::get_KeyBoard()
 extern void PlayerControl_get_KeyBoard_m26A0A6438BDE844F52533DFB511F415244A0CA48 (void);
-// 0x0000019C Dva.PlayerControl/SensorActions Dva.PlayerControl::get_Sensor()
+// 0x0000019F Dva.PlayerControl/SensorActions Dva.PlayerControl::get_Sensor()
 extern void PlayerControl_get_Sensor_m766642719383A7CDBC38BB8421F972AD3E41627E (void);
-// 0x0000019D System.Void Dva.PlayerControl/KeyBoardActions::.ctor(Dva.PlayerControl)
+// 0x000001A0 System.Void Dva.PlayerControl/KeyBoardActions::.ctor(Dva.PlayerControl)
 extern void KeyBoardActions__ctor_m358FF831D8E6A8B1E4F054664A10E331157B3D2B (void);
-// 0x0000019E UnityEngine.InputSystem.InputAction Dva.PlayerControl/KeyBoardActions::get_Move()
+// 0x000001A1 UnityEngine.InputSystem.InputAction Dva.PlayerControl/KeyBoardActions::get_Move()
 extern void KeyBoardActions_get_Move_m2F0CF07953C600B67041FF0DDF32F0E2C369061A (void);
-// 0x0000019F UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/KeyBoardActions::Get()
+// 0x000001A2 UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/KeyBoardActions::Get()
 extern void KeyBoardActions_Get_mE8786ABDDF1BD2F05FE8A44A27F929A0CB62E277 (void);
-// 0x000001A0 System.Void Dva.PlayerControl/KeyBoardActions::Enable()
+// 0x000001A3 System.Void Dva.PlayerControl/KeyBoardActions::Enable()
 extern void KeyBoardActions_Enable_m1115FCB3BDA51A135FEE03C8F844FD31898F4FAD (void);
-// 0x000001A1 System.Void Dva.PlayerControl/KeyBoardActions::Disable()
+// 0x000001A4 System.Void Dva.PlayerControl/KeyBoardActions::Disable()
 extern void KeyBoardActions_Disable_m1F65AE22DA7FBC7483BAB9123E0DBA4D84FB333A (void);
-// 0x000001A2 System.Boolean Dva.PlayerControl/KeyBoardActions::get_enabled()
+// 0x000001A5 System.Boolean Dva.PlayerControl/KeyBoardActions::get_enabled()
 extern void KeyBoardActions_get_enabled_m8AAF5BB7E86DB0CA7717DFA0FC4CAAD2A09BB1B2 (void);
-// 0x000001A3 UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/KeyBoardActions::op_Implicit(Dva.PlayerControl/KeyBoardActions)
+// 0x000001A6 UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/KeyBoardActions::op_Implicit(Dva.PlayerControl/KeyBoardActions)
 extern void KeyBoardActions_op_Implicit_m999CAC6A87C966BB336B94126DAA636010787896 (void);
-// 0x000001A4 System.Void Dva.PlayerControl/KeyBoardActions::SetCallbacks(Dva.PlayerControl/IKeyBoardActions)
+// 0x000001A7 System.Void Dva.PlayerControl/KeyBoardActions::SetCallbacks(Dva.PlayerControl/IKeyBoardActions)
 extern void KeyBoardActions_SetCallbacks_m4E9724579AE773131E369A4748B57807FA76FE65 (void);
-// 0x000001A5 System.Void Dva.PlayerControl/SensorActions::.ctor(Dva.PlayerControl)
+// 0x000001A8 System.Void Dva.PlayerControl/SensorActions::.ctor(Dva.PlayerControl)
 extern void SensorActions__ctor_m66534E0290DD0E92937B3D9581EE6CE2D67E72F8 (void);
-// 0x000001A6 UnityEngine.InputSystem.InputAction Dva.PlayerControl/SensorActions::get_Move()
+// 0x000001A9 UnityEngine.InputSystem.InputAction Dva.PlayerControl/SensorActions::get_Move()
 extern void SensorActions_get_Move_m42ECBFAEF32CAEB72645F8F54874920080A13337 (void);
-// 0x000001A7 UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/SensorActions::Get()
+// 0x000001AA UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/SensorActions::Get()
 extern void SensorActions_Get_m0675CDED1D13D428E26C3177C25E842C5FC23E7E (void);
-// 0x000001A8 System.Void Dva.PlayerControl/SensorActions::Enable()
+// 0x000001AB System.Void Dva.PlayerControl/SensorActions::Enable()
 extern void SensorActions_Enable_m93D07BE1F5D785BFA0170D3AC5ED253C79A46CDA (void);
-// 0x000001A9 System.Void Dva.PlayerControl/SensorActions::Disable()
+// 0x000001AC System.Void Dva.PlayerControl/SensorActions::Disable()
 extern void SensorActions_Disable_m56FECE00E19243B03DCF58C7B1480670D8D85FB7 (void);
-// 0x000001AA System.Boolean Dva.PlayerControl/SensorActions::get_enabled()
+// 0x000001AD System.Boolean Dva.PlayerControl/SensorActions::get_enabled()
 extern void SensorActions_get_enabled_m18F8522EEDAF78F2476DF670232DF5330C58C590 (void);
-// 0x000001AB UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/SensorActions::op_Implicit(Dva.PlayerControl/SensorActions)
+// 0x000001AE UnityEngine.InputSystem.InputActionMap Dva.PlayerControl/SensorActions::op_Implicit(Dva.PlayerControl/SensorActions)
 extern void SensorActions_op_Implicit_mBBC0207D0EF41F7AED779C2198C594579E415760 (void);
-// 0x000001AC System.Void Dva.PlayerControl/SensorActions::SetCallbacks(Dva.PlayerControl/ISensorActions)
+// 0x000001AF System.Void Dva.PlayerControl/SensorActions::SetCallbacks(Dva.PlayerControl/ISensorActions)
 extern void SensorActions_SetCallbacks_mF6BA6319D1535F59DE992ADB29A8F71C26C0239F (void);
-// 0x000001AD System.Void Dva.PlayerControl/IKeyBoardActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x000001AE System.Void Dva.PlayerControl/ISensorActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x000001AF UnityEngine.InputSystem.InputActionAsset Dva.PlayerController::get_asset()
+// 0x000001B0 System.Void Dva.PlayerControl/IKeyBoardActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001B1 System.Void Dva.PlayerControl/ISensorActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001B2 UnityEngine.InputSystem.InputActionAsset Dva.PlayerController::get_asset()
 extern void PlayerController_get_asset_mD30707C32CCD5451D118E39EC2222E67C2BD7AE9 (void);
-// 0x000001B0 System.Void Dva.PlayerController::.ctor()
+// 0x000001B3 System.Void Dva.PlayerController::.ctor()
 extern void PlayerController__ctor_m7F534C20DC31FF0E581534F9501BB66E59EEFA95 (void);
-// 0x000001B1 System.Void Dva.PlayerController::Dispose()
+// 0x000001B4 System.Void Dva.PlayerController::Dispose()
 extern void PlayerController_Dispose_mCBFF5E82527BAE61E00A2AE8882D788D013139DA (void);
-// 0x000001B2 System.Nullable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerController::get_bindingMask()
+// 0x000001B5 System.Nullable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerController::get_bindingMask()
 extern void PlayerController_get_bindingMask_m3D23306D5707383B9663022CA091A5260FD20258 (void);
-// 0x000001B3 System.Void Dva.PlayerController::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
+// 0x000001B6 System.Void Dva.PlayerController::set_bindingMask(System.Nullable`1<UnityEngine.InputSystem.InputBinding>)
 extern void PlayerController_set_bindingMask_mA8961175453B2F43FD6FF1B26CBC8C44BAF15B5A (void);
-// 0x000001B4 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> Dva.PlayerController::get_devices()
+// 0x000001B7 System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>> Dva.PlayerController::get_devices()
 extern void PlayerController_get_devices_m89576049A0D8C4121654AF7E04423A9C2D9ACDB7 (void);
-// 0x000001B5 System.Void Dva.PlayerController::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
+// 0x000001B8 System.Void Dva.PlayerController::set_devices(System.Nullable`1<UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputDevice>>)
 extern void PlayerController_set_devices_mD9ED99200FD9DDEA89C28D335CFD04E576483F08 (void);
-// 0x000001B6 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> Dva.PlayerController::get_controlSchemes()
+// 0x000001B9 UnityEngine.InputSystem.Utilities.ReadOnlyArray`1<UnityEngine.InputSystem.InputControlScheme> Dva.PlayerController::get_controlSchemes()
 extern void PlayerController_get_controlSchemes_mF4F8C0785E3AD3FF835701E523135201AC761F68 (void);
-// 0x000001B7 System.Boolean Dva.PlayerController::Contains(UnityEngine.InputSystem.InputAction)
+// 0x000001BA System.Boolean Dva.PlayerController::Contains(UnityEngine.InputSystem.InputAction)
 extern void PlayerController_Contains_mFA8637120BC1B2900AF97D6261D82C0FFCF68B93 (void);
-// 0x000001B8 System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> Dva.PlayerController::GetEnumerator()
+// 0x000001BB System.Collections.Generic.IEnumerator`1<UnityEngine.InputSystem.InputAction> Dva.PlayerController::GetEnumerator()
 extern void PlayerController_GetEnumerator_mEE209A5B22424722B28E99F84BA1BEE2E1778E50 (void);
-// 0x000001B9 System.Collections.IEnumerator Dva.PlayerController::System.Collections.IEnumerable.GetEnumerator()
+// 0x000001BC System.Collections.IEnumerator Dva.PlayerController::System.Collections.IEnumerable.GetEnumerator()
 extern void PlayerController_System_Collections_IEnumerable_GetEnumerator_m749852CF77909A0719FEBB83CBCD7EA350BCF890 (void);
-// 0x000001BA System.Void Dva.PlayerController::Enable()
+// 0x000001BD System.Void Dva.PlayerController::Enable()
 extern void PlayerController_Enable_mFFD5EA2FD91B4735AB44723D1454033E9F71C2D4 (void);
-// 0x000001BB System.Void Dva.PlayerController::Disable()
+// 0x000001BE System.Void Dva.PlayerController::Disable()
 extern void PlayerController_Disable_m7BBB0470927A6BD9EDBD033131633BE7571621A5 (void);
-// 0x000001BC System.Collections.Generic.IEnumerable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerController::get_bindings()
+// 0x000001BF System.Collections.Generic.IEnumerable`1<UnityEngine.InputSystem.InputBinding> Dva.PlayerController::get_bindings()
 extern void PlayerController_get_bindings_mF5AF76BB93B2CB9338BCC87EC752EDD20322423D (void);
-// 0x000001BD UnityEngine.InputSystem.InputAction Dva.PlayerController::FindAction(System.String,System.Boolean)
+// 0x000001C0 UnityEngine.InputSystem.InputAction Dva.PlayerController::FindAction(System.String,System.Boolean)
 extern void PlayerController_FindAction_m45682D2DB110A8A4148473160DBB76B91D52E604 (void);
-// 0x000001BE System.Int32 Dva.PlayerController::FindBinding(UnityEngine.InputSystem.InputBinding,UnityEngine.InputSystem.InputAction&)
+// 0x000001C1 System.Int32 Dva.PlayerController::FindBinding(UnityEngine.InputSystem.InputBinding,UnityEngine.InputSystem.InputAction&)
 extern void PlayerController_FindBinding_m0C19FFDD8FC3FACCA151BA83832C2623478519EF (void);
-// 0x000001BF Dva.PlayerController/KeyBoardActions Dva.PlayerController::get_KeyBoard()
+// 0x000001C2 Dva.PlayerController/KeyBoardActions Dva.PlayerController::get_KeyBoard()
 extern void PlayerController_get_KeyBoard_m9B549E9909B3DF60892DED23E9C8597FACBE6C91 (void);
-// 0x000001C0 Dva.PlayerController/SensorActions Dva.PlayerController::get_Sensor()
+// 0x000001C3 Dva.PlayerController/SensorActions Dva.PlayerController::get_Sensor()
 extern void PlayerController_get_Sensor_m3CB6C8D5C1E6C29B2796147CFAB9C1A74D3EE197 (void);
-// 0x000001C1 System.Void Dva.PlayerController/KeyBoardActions::.ctor(Dva.PlayerController)
+// 0x000001C4 System.Void Dva.PlayerController/KeyBoardActions::.ctor(Dva.PlayerController)
 extern void KeyBoardActions__ctor_m35D93E84DD1DA05A7A790ED7DF30EC6C8192FB37 (void);
-// 0x000001C2 UnityEngine.InputSystem.InputAction Dva.PlayerController/KeyBoardActions::get_Move()
+// 0x000001C5 UnityEngine.InputSystem.InputAction Dva.PlayerController/KeyBoardActions::get_Move()
 extern void KeyBoardActions_get_Move_mCE130D9DAC29B533CA9144E7D48688FA57FF166F (void);
-// 0x000001C3 UnityEngine.InputSystem.InputActionMap Dva.PlayerController/KeyBoardActions::Get()
+// 0x000001C6 UnityEngine.InputSystem.InputActionMap Dva.PlayerController/KeyBoardActions::Get()
 extern void KeyBoardActions_Get_m5B297B75B1ED27D810E9F31D652F6C83A1E11A31 (void);
-// 0x000001C4 System.Void Dva.PlayerController/KeyBoardActions::Enable()
+// 0x000001C7 System.Void Dva.PlayerController/KeyBoardActions::Enable()
 extern void KeyBoardActions_Enable_m7091509EB68C395DF2334D9CADA8DBE3ECDB5AC4 (void);
-// 0x000001C5 System.Void Dva.PlayerController/KeyBoardActions::Disable()
+// 0x000001C8 System.Void Dva.PlayerController/KeyBoardActions::Disable()
 extern void KeyBoardActions_Disable_mE371AFA6C0835874BB6D31288088047706764D1A (void);
-// 0x000001C6 System.Boolean Dva.PlayerController/KeyBoardActions::get_enabled()
+// 0x000001C9 System.Boolean Dva.PlayerController/KeyBoardActions::get_enabled()
 extern void KeyBoardActions_get_enabled_mD91071B0FF9CF4E14A593957F74BDEE808BA1BB0 (void);
-// 0x000001C7 UnityEngine.InputSystem.InputActionMap Dva.PlayerController/KeyBoardActions::op_Implicit(Dva.PlayerController/KeyBoardActions)
+// 0x000001CA UnityEngine.InputSystem.InputActionMap Dva.PlayerController/KeyBoardActions::op_Implicit(Dva.PlayerController/KeyBoardActions)
 extern void KeyBoardActions_op_Implicit_mC91FDA9DBCFDB2804384D8955D8F8D00832BB503 (void);
-// 0x000001C8 System.Void Dva.PlayerController/KeyBoardActions::SetCallbacks(Dva.PlayerController/IKeyBoardActions)
+// 0x000001CB System.Void Dva.PlayerController/KeyBoardActions::SetCallbacks(Dva.PlayerController/IKeyBoardActions)
 extern void KeyBoardActions_SetCallbacks_m95BF2C6C16E95C412918A66109AAC4A4E9D5DD73 (void);
-// 0x000001C9 System.Void Dva.PlayerController/SensorActions::.ctor(Dva.PlayerController)
+// 0x000001CC System.Void Dva.PlayerController/SensorActions::.ctor(Dva.PlayerController)
 extern void SensorActions__ctor_mAF1770821B17C1AA4F7F43A09216D3E6329F8F5B (void);
-// 0x000001CA UnityEngine.InputSystem.InputAction Dva.PlayerController/SensorActions::get_Move()
+// 0x000001CD UnityEngine.InputSystem.InputAction Dva.PlayerController/SensorActions::get_Move()
 extern void SensorActions_get_Move_m5312CB16248D972AAEE1A9B4E342F1C762E912E8 (void);
-// 0x000001CB UnityEngine.InputSystem.InputActionMap Dva.PlayerController/SensorActions::Get()
+// 0x000001CE UnityEngine.InputSystem.InputActionMap Dva.PlayerController/SensorActions::Get()
 extern void SensorActions_Get_m7F98C276A292C7B5FC2932700E7B0B774BE565C4 (void);
-// 0x000001CC System.Void Dva.PlayerController/SensorActions::Enable()
+// 0x000001CF System.Void Dva.PlayerController/SensorActions::Enable()
 extern void SensorActions_Enable_m6E1877C47B5DA8650301FA28B3F6B6434E3DB6EF (void);
-// 0x000001CD System.Void Dva.PlayerController/SensorActions::Disable()
+// 0x000001D0 System.Void Dva.PlayerController/SensorActions::Disable()
 extern void SensorActions_Disable_m6B8D79F3938FF60ECBDD7DAE135D705A4C293CBC (void);
-// 0x000001CE System.Boolean Dva.PlayerController/SensorActions::get_enabled()
+// 0x000001D1 System.Boolean Dva.PlayerController/SensorActions::get_enabled()
 extern void SensorActions_get_enabled_mC563B37A7E88952BA0CCFCC1E2E07A4A7A3705D5 (void);
-// 0x000001CF UnityEngine.InputSystem.InputActionMap Dva.PlayerController/SensorActions::op_Implicit(Dva.PlayerController/SensorActions)
+// 0x000001D2 UnityEngine.InputSystem.InputActionMap Dva.PlayerController/SensorActions::op_Implicit(Dva.PlayerController/SensorActions)
 extern void SensorActions_op_Implicit_mD24F29F66E02E9E9F02E629A867ACD7B7A1961AD (void);
-// 0x000001D0 System.Void Dva.PlayerController/SensorActions::SetCallbacks(Dva.PlayerController/ISensorActions)
+// 0x000001D3 System.Void Dva.PlayerController/SensorActions::SetCallbacks(Dva.PlayerController/ISensorActions)
 extern void SensorActions_SetCallbacks_mBDC1A8B29090006C73775D039EF07285E3C5CA37 (void);
-// 0x000001D1 System.Void Dva.PlayerController/IKeyBoardActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x000001D2 System.Void Dva.PlayerController/ISensorActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
-// 0x000001D3 System.Void Dva.Progress::Awake()
+// 0x000001D4 System.Void Dva.PlayerController/IKeyBoardActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001D5 System.Void Dva.PlayerController/ISensorActions::OnMove(UnityEngine.InputSystem.InputAction/CallbackContext)
+// 0x000001D6 System.Void Dva.Progress::Awake()
 extern void Progress_Awake_m546AE04659359645D6C6822D471C4A7E04D3FF5F (void);
-// 0x000001D4 System.Void Dva.Progress::CheckAtomID(System.Int32)
+// 0x000001D7 System.Void Dva.Progress::CheckAtomID(System.Int32)
 extern void Progress_CheckAtomID_mF0A09559C72F97A14DC6BD974C9B0511DA18CCF4 (void);
-// 0x000001D5 System.Void Dva.Progress::OpenElemets()
+// 0x000001D8 System.Void Dva.Progress::OpenElemets()
 extern void Progress_OpenElemets_m2F680E778047BE7D0BA8BE5038E4A3D488D54CF5 (void);
-// 0x000001D6 System.Void Dva.Progress::Statistic()
+// 0x000001D9 System.Void Dva.Progress::Statistic()
 extern void Progress_Statistic_m48D3E6890373625DA0CA828C3B61DF8864B39DD6 (void);
-// 0x000001D7 System.Void Dva.Progress::.ctor()
+// 0x000001DA System.Void Dva.Progress::.ctor()
 extern void Progress__ctor_mA6B8DF7597979AE654F8605A5A3B00B9BDE858BC (void);
-// 0x000001D8 System.Void Dva.Progress/<>c::.cctor()
+// 0x000001DB System.Void Dva.Progress/<>c::.cctor()
 extern void U3CU3Ec__cctor_m375DCB3AFC7505F1DE0759DD87CCCA5B280CCE23 (void);
-// 0x000001D9 System.Void Dva.Progress/<>c::.ctor()
+// 0x000001DC System.Void Dva.Progress/<>c::.ctor()
 extern void U3CU3Ec__ctor_m8090CCE0782AA89157F02F1C1129C6542398BC7F (void);
-// 0x000001DA System.String Dva.Progress/<>c::<Awake>b__3_0(Dva.ElementsTable)
+// 0x000001DD System.String Dva.Progress/<>c::<Awake>b__3_0(Dva.ElementsTable)
 extern void U3CU3Ec_U3CAwakeU3Eb__3_0_m1F1D5089D9AC78FD1C9382261AA2996DFCD40A7B (void);
-// 0x000001DB UnityEngine.GameObject Dva.Progress/<>c::<Awake>b__3_1(Dva.ElementsTable)
+// 0x000001DE UnityEngine.GameObject Dva.Progress/<>c::<Awake>b__3_1(Dva.ElementsTable)
 extern void U3CU3Ec_U3CAwakeU3Eb__3_1_mE2C743A02239623135801F32FF28C0FF2BD2DBBC (void);
-// 0x000001DC System.Int32 Dva.Progress/<>c::<OpenElemets>b__5_0(System.Collections.Generic.KeyValuePair`2<System.Int32,System.Int32>)
+// 0x000001DF System.Int32 Dva.Progress/<>c::<OpenElemets>b__5_0(System.Collections.Generic.KeyValuePair`2<System.Int32,System.Int32>)
 extern void U3CU3Ec_U3COpenElemetsU3Eb__5_0_mAC14B9CABC02530DDA28C35C03364BC0AF19E639 (void);
-// 0x000001DD <>f__AnonymousType0`2<System.Int32,System.Int32> Dva.Progress/<>c::<OpenElemets>b__5_1(System.Linq.IGrouping`2<System.Int32,System.Collections.Generic.KeyValuePair`2<System.Int32,System.Int32>>)
+// 0x000001E0 <>f__AnonymousType0`2<System.Int32,System.Int32> Dva.Progress/<>c::<OpenElemets>b__5_1(System.Linq.IGrouping`2<System.Int32,System.Collections.Generic.KeyValuePair`2<System.Int32,System.Int32>>)
 extern void U3CU3Ec_U3COpenElemetsU3Eb__5_1_mD61434D29CA32037A2E5AE9967A52457082D7B60 (void);
-// 0x000001DE System.Void Dva.ElementsTable::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+// 0x000001E1 System.Void Dva.ElementsTable::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
 extern void ElementsTable_OnPointerEnter_m0EFE30D2BED8E7D4DE741DCB1037D6DFB2D10E58 (void);
-// 0x000001DF System.Void Dva.ElementsTable::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+// 0x000001E2 System.Void Dva.ElementsTable::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
 extern void ElementsTable_OnPointerExit_m776E5CB4E4D0F20DC78B7A05A78888886F020CD3 (void);
-// 0x000001E0 System.Void Dva.ElementsTable::UnityEngine.EventSystems.IPointerClickHandler.OnPointerClick(UnityEngine.EventSystems.PointerEventData)
-extern void ElementsTable_UnityEngine_EventSystems_IPointerClickHandler_OnPointerClick_m963EEFE3DCB3AA8ECEBCD514F8C8F244036E5C86 (void);
-// 0x000001E1 System.Void Dva.ElementsTable::.ctor()
+// 0x000001E3 System.Void Dva.ElementsTable::.ctor()
 extern void ElementsTable__ctor_m4B973EFDD1B92FA7A67458C13E4184EA424EBF32 (void);
-// 0x000001E2 System.Void Dva.FloatingJoystick::Awake()
+// 0x000001E4 System.Void Dva.FloatingJoystick::Awake()
 extern void FloatingJoystick_Awake_m54D51523AF40DF06961E8543C49493BF6BEEBC26 (void);
-// 0x000001E3 System.Void Dva.FloatingJoystick::.ctor()
+// 0x000001E5 System.Void Dva.FloatingJoystick::.ctor()
 extern void FloatingJoystick__ctor_mA2D359FA5669360A0C80BF58685E3EA5E2016E03 (void);
-// 0x000001E4 System.Void Dva.TouchMove::Update()
+// 0x000001E6 System.Void Dva.TouchMove::Update()
 extern void TouchMove_Update_m7D2422D1656F10EB9266097E8D90AE43F21DBF8D (void);
-// 0x000001E5 System.Void Dva.TouchMove::OnEnable()
+// 0x000001E7 System.Void Dva.TouchMove::OnEnable()
 extern void TouchMove_OnEnable_mAD6DDA49B5B787CF3E58BDA0D19196EA02582F78 (void);
-// 0x000001E6 System.Void Dva.TouchMove::OnDisable()
+// 0x000001E8 System.Void Dva.TouchMove::OnDisable()
 extern void TouchMove_OnDisable_mB84DB16694DF1CB6D12848E8259EC04BB1B04679 (void);
-// 0x000001E7 System.Void Dva.TouchMove::HandleFingerMove(UnityEngine.InputSystem.EnhancedTouch.Finger)
+// 0x000001E9 System.Void Dva.TouchMove::HandleFingerMove(UnityEngine.InputSystem.EnhancedTouch.Finger)
 extern void TouchMove_HandleFingerMove_mD34910F326310298E63D5CB24DC0A5E19B02A3A1 (void);
-// 0x000001E8 System.Void Dva.TouchMove::HandleLoseFinger(UnityEngine.InputSystem.EnhancedTouch.Finger)
+// 0x000001EA System.Void Dva.TouchMove::HandleLoseFinger(UnityEngine.InputSystem.EnhancedTouch.Finger)
 extern void TouchMove_HandleLoseFinger_m97BC545E5112512C16671502AC5563A8B2CDC5E2 (void);
-// 0x000001E9 System.Void Dva.TouchMove::HandleFingerDown(UnityEngine.InputSystem.EnhancedTouch.Finger)
+// 0x000001EB System.Void Dva.TouchMove::HandleFingerDown(UnityEngine.InputSystem.EnhancedTouch.Finger)
 extern void TouchMove_HandleFingerDown_m5A19B182874CEB5C668DF5A73CA27DDDF94148EB (void);
-// 0x000001EA UnityEngine.Vector2 Dva.TouchMove::ClampStartPosition(UnityEngine.Vector2)
+// 0x000001EC UnityEngine.Vector2 Dva.TouchMove::ClampStartPosition(UnityEngine.Vector2)
 extern void TouchMove_ClampStartPosition_mA10164A927F3487A582CF905C98B119A0D22EDB0 (void);
-// 0x000001EB System.Void Dva.TouchMove::MoveUpdate()
+// 0x000001ED System.Void Dva.TouchMove::MoveUpdate()
 extern void TouchMove_MoveUpdate_m1A6A1A79A8D4E5B20058F52FE4D212FD6F1EEA5F (void);
-// 0x000001EC System.Void Dva.TouchMove::.ctor()
+// 0x000001EE System.Void Dva.TouchMove::.ctor()
 extern void TouchMove__ctor_m40C5B9CDE785F9D51612FA30ACFCC2376BD34017 (void);
-// 0x000001ED System.Int32 Dva.Atom::get_AtomID()
+// 0x000001EF System.Int32 Dva.Atom::get_AtomID()
 extern void Atom_get_AtomID_mA90735A61D1DA0053F4D1E6C5A84FC6EC3E6EDE4 (void);
-// 0x000001EE System.Int32 Dva.Atom::get_StatisticScore()
+// 0x000001F0 System.Int32 Dva.Atom::get_StatisticScore()
 extern void Atom_get_StatisticScore_mDDB2AA04B60951FE4144BE023741CD8AC250181A (void);
-// 0x000001EF System.Void Dva.Atom::Start()
+// 0x000001F1 System.Void Dva.Atom::Start()
 extern void Atom_Start_m8966CC98BCD7A5DCD09DD41E7AB769241EA7C4B2 (void);
-// 0x000001F0 System.Void Dva.Atom::AtomCharge()
+// 0x000001F2 System.Void Dva.Atom::AtomCharge()
 extern void Atom_AtomCharge_m1EBC47189E683F3F2ACB843525588786ED67598F (void);
-// 0x000001F1 System.Collections.IEnumerator Dva.Atom::ParticleStateAmountDecrease()
+// 0x000001F3 System.Collections.IEnumerator Dva.Atom::ParticleStateAmountDecrease()
 extern void Atom_ParticleStateAmountDecrease_m74A9C26025AF7C9DCCDE9747B516EB819F446847 (void);
-// 0x000001F2 System.Int32 Dva.Atom::AtomDecay()
+// 0x000001F4 System.Int32 Dva.Atom::AtomDecay()
 extern void Atom_AtomDecay_m9FF5E409C0DED8770AA618FBBC4BA0FA35D4BF96 (void);
-// 0x000001F3 System.Collections.IEnumerator Dva.Atom::AtomNeutronDecay()
+// 0x000001F5 System.Collections.IEnumerator Dva.Atom::AtomNeutronDecay()
 extern void Atom_AtomNeutronDecay_mDF4089ACEFAA6B01783588774E7261A9B51CE396 (void);
-// 0x000001F4 System.Void Dva.Atom::EventAtomUpdate(System.Boolean)
+// 0x000001F6 System.Void Dva.Atom::EventAtomUpdate(System.Boolean)
 extern void Atom_EventAtomUpdate_m6394C21E2AA141C02EDED5A450F1E4A9C2AB2875 (void);
-// 0x000001F5 System.Void Dva.Atom::CompositionUpdate()
+// 0x000001F7 System.Void Dva.Atom::CompositionUpdate()
 extern void Atom_CompositionUpdate_m53D3235AC2C96F42385AF6268A277A41BBAF3B3B (void);
-// 0x000001F6 System.Void Dva.Atom::AtomUpgrade(System.Int32)
+// 0x000001F8 System.Void Dva.Atom::AtomUpgrade(System.Int32)
 extern void Atom_AtomUpgrade_mD7C4B059B877C13AEF4D094F3556380A862971CE (void);
-// 0x000001F7 System.Int32 Dva.Atom::AtomIDUpdate()
+// 0x000001F9 System.Int32 Dva.Atom::AtomIDUpdate()
 extern void Atom_AtomIDUpdate_m932531E4367A57AAEC549C2A5756BA943B681C69 (void);
-// 0x000001F8 System.Void Dva.Atom::DestroyLife(System.Collections.Generic.List`1<UnityEngine.GameObject>)
+// 0x000001FA System.Void Dva.Atom::DestroyLife(System.Collections.Generic.List`1<UnityEngine.GameObject>)
 extern void Atom_DestroyLife_m512BD0C844DC9DB941FABC36DF3A79383A28E2B6 (void);
-// 0x000001F9 System.Void Dva.Atom::LeveUpgrade(System.Int32)
+// 0x000001FB System.Void Dva.Atom::LeveUpgrade(System.Int32)
 extern void Atom_LeveUpgrade_m4D5288149DE374B641A1B36526989C667F5538D6 (void);
-// 0x000001FA System.Void Dva.Atom::LevelChange()
+// 0x000001FC System.Void Dva.Atom::LevelChange()
 extern void Atom_LevelChange_m2C47123733C25252490F12FE8914D35155B6B673 (void);
-// 0x000001FB System.Void Dva.Atom::StatisticUpdate()
+// 0x000001FD System.Void Dva.Atom::StatisticUpdate()
 extern void Atom_StatisticUpdate_m086197E1A74C805855B20F0B1D0E4DA242361DC0 (void);
-// 0x000001FC System.Void Dva.Atom::MaterialUpdate(System.Int32)
+// 0x000001FE System.Void Dva.Atom::MaterialUpdate(System.Int32)
 extern void Atom_MaterialUpdate_m81EA325E9A5673B0331091982F9E8F181F13C9E4 (void);
-// 0x000001FD System.Void Dva.Atom::.ctor()
+// 0x000001FF System.Void Dva.Atom::.ctor()
 extern void Atom__ctor_m346A9776D9E7C422608C91F69669181C1CE937A6 (void);
-// 0x000001FE System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::.ctor(System.Int32)
+// 0x00000200 System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::.ctor(System.Int32)
 extern void U3CParticleStateAmountDecreaseU3Ed__30__ctor_m608A578F0D5D0F1AD0CADB433C9794988DF092E8 (void);
-// 0x000001FF System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::System.IDisposable.Dispose()
+// 0x00000201 System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::System.IDisposable.Dispose()
 extern void U3CParticleStateAmountDecreaseU3Ed__30_System_IDisposable_Dispose_mDFF766E0898F79F46174FD19FE36E18D5FAF0C45 (void);
-// 0x00000200 System.Boolean Dva.Atom/<ParticleStateAmountDecrease>d__30::MoveNext()
+// 0x00000202 System.Boolean Dva.Atom/<ParticleStateAmountDecrease>d__30::MoveNext()
 extern void U3CParticleStateAmountDecreaseU3Ed__30_MoveNext_m925483D0793468462079515C07E5135D07223D3C (void);
-// 0x00000201 System.Object Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000203 System.Object Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CParticleStateAmountDecreaseU3Ed__30_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF7C9F23F7B4CCF12C6F4FDE953A4F129E99417B9 (void);
-// 0x00000202 System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.IEnumerator.Reset()
+// 0x00000204 System.Void Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.IEnumerator.Reset()
 extern void U3CParticleStateAmountDecreaseU3Ed__30_System_Collections_IEnumerator_Reset_m67EE5E2D52074CC236FAD96EB99CC8EA8A231A24 (void);
-// 0x00000203 System.Object Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.IEnumerator.get_Current()
+// 0x00000205 System.Object Dva.Atom/<ParticleStateAmountDecrease>d__30::System.Collections.IEnumerator.get_Current()
 extern void U3CParticleStateAmountDecreaseU3Ed__30_System_Collections_IEnumerator_get_Current_m31561D4978A6567FE7132FF22618B5C9D187CB75 (void);
-// 0x00000204 System.Void Dva.Atom/<AtomNeutronDecay>d__32::.ctor(System.Int32)
+// 0x00000206 System.Void Dva.Atom/<AtomNeutronDecay>d__32::.ctor(System.Int32)
 extern void U3CAtomNeutronDecayU3Ed__32__ctor_mF08CA47F48C1C11FD0E541180A61D9670650E492 (void);
-// 0x00000205 System.Void Dva.Atom/<AtomNeutronDecay>d__32::System.IDisposable.Dispose()
+// 0x00000207 System.Void Dva.Atom/<AtomNeutronDecay>d__32::System.IDisposable.Dispose()
 extern void U3CAtomNeutronDecayU3Ed__32_System_IDisposable_Dispose_mE2CE98F967969BACECD6C63594E8A47E7E84D92F (void);
-// 0x00000206 System.Boolean Dva.Atom/<AtomNeutronDecay>d__32::MoveNext()
+// 0x00000208 System.Boolean Dva.Atom/<AtomNeutronDecay>d__32::MoveNext()
 extern void U3CAtomNeutronDecayU3Ed__32_MoveNext_m6DEDF7AF7AB04EC891BA5A3FA7DDBB6E2E23C07A (void);
-// 0x00000207 System.Object Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000209 System.Object Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAtomNeutronDecayU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA4492989A0D462DA1BD6AFDDC28CEFB033D899AC (void);
-// 0x00000208 System.Void Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.IEnumerator.Reset()
+// 0x0000020A System.Void Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.IEnumerator.Reset()
 extern void U3CAtomNeutronDecayU3Ed__32_System_Collections_IEnumerator_Reset_m6B963F9CBA5CF0BF706F2A10F40A55C0D8ED3913 (void);
-// 0x00000209 System.Object Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.IEnumerator.get_Current()
+// 0x0000020B System.Object Dva.Atom/<AtomNeutronDecay>d__32::System.Collections.IEnumerator.get_Current()
 extern void U3CAtomNeutronDecayU3Ed__32_System_Collections_IEnumerator_get_Current_mA48A4165F9FC7D8C1017072405047FED3F19FF91 (void);
-// 0x0000020A System.Void Dva.ElectronOrbit::Awake()
+// 0x0000020C System.Void Dva.ElectronOrbit::Awake()
 extern void ElectronOrbit_Awake_m8D5C94270C35DAE5E6A36DC8F809FA75EFC5E1B8 (void);
-// 0x0000020B System.Void Dva.ElectronOrbit::Update()
+// 0x0000020D System.Void Dva.ElectronOrbit::Update()
 extern void ElectronOrbit_Update_mB06F2B9B2613F352840C92F978FE7627842245BF (void);
-// 0x0000020C System.Void Dva.ElectronOrbit::ElectronOrbitMove()
+// 0x0000020E System.Void Dva.ElectronOrbit::ElectronOrbitMove()
 extern void ElectronOrbit_ElectronOrbitMove_mD3B0324B5987D420D6088C744D482451ADF32211 (void);
-// 0x0000020D System.Void Dva.ElectronOrbit::.ctor()
+// 0x0000020F System.Void Dva.ElectronOrbit::.ctor()
 extern void ElectronOrbit__ctor_mD95E4B27B7255C35562194A1135E84CCE598E71F (void);
-// 0x0000020E Dva.GeneralParticleType Dva.GeneralParticle::get_GeneralType()
+// 0x00000210 Dva.GeneralParticleType Dva.GeneralParticle::get_GeneralType()
 extern void GeneralParticle_get_GeneralType_m55DC7A26B0CC4F8A4E380EE1FE9AF6D634DCBF3C (void);
-// 0x0000020F System.Void Dva.GeneralParticle::Awake()
+// 0x00000211 System.Void Dva.GeneralParticle::Awake()
 extern void GeneralParticle_Awake_m86577CB5E65EB101FD3B63C06735E858E95A8AE0 (void);
-// 0x00000210 System.Void Dva.GeneralParticle::Update()
+// 0x00000212 System.Void Dva.GeneralParticle::Update()
 extern void GeneralParticle_Update_mDFDBCD9C3E500B2B5880800B4425891027A90EB0 (void);
-// 0x00000211 System.Void Dva.GeneralParticle::TaskPatrol()
+// 0x00000213 System.Void Dva.GeneralParticle::TaskPatrol()
 extern void GeneralParticle_TaskPatrol_m47F86949C0F8BF1AD1B68B7AEE74DE6F063D564C (void);
-// 0x00000212 System.Void Dva.GeneralParticle::BlackHoleGravity()
+// 0x00000214 System.Void Dva.GeneralParticle::BlackHoleGravity()
 extern void GeneralParticle_BlackHoleGravity_m0A42591DB351A62178122F67909A8681DCE7DF04 (void);
-// 0x00000213 System.Void Dva.GeneralParticle::RemoveEvent()
+// 0x00000215 System.Void Dva.GeneralParticle::RemoveEvent()
 extern void GeneralParticle_RemoveEvent_mDAD101F065CDD2897E51F9C105DB074BEA890331 (void);
-// 0x00000214 System.Void Dva.GeneralParticle::.ctor()
+// 0x00000216 System.Void Dva.GeneralParticle::.ctor()
 extern void GeneralParticle__ctor_m4A31404B3B66B48863688653B7ADDB4EB3077D40 (void);
-// 0x00000215 System.Void Dva.Particle::Awake()
+// 0x00000217 System.Void Dva.Particle::Awake()
 extern void Particle_Awake_mC5025A2C488FE733363E48878A3776AE8B27D0FD (void);
-// 0x00000216 System.Void Dva.Particle::TaskPatrol()
+// 0x00000218 System.Void Dva.Particle::TaskPatrol()
 extern void Particle_TaskPatrol_m62AF8C9A4E84A231435C3A9A58142CDF9CB582C0 (void);
-// 0x00000217 System.Void Dva.Particle::RemoveEvent()
+// 0x00000219 System.Void Dva.Particle::RemoveEvent()
 extern void Particle_RemoveEvent_mD7C991A43D2EB7B436495D24756DEB115A1F1386 (void);
-// 0x00000218 System.Void Dva.Particle::.ctor()
+// 0x0000021A System.Void Dva.Particle::.ctor()
 extern void Particle__ctor_mE20761BBE27FFF639ECF997C06A4980D94B56955 (void);
-// 0x00000219 System.Void Dva.Player::Awake()
+// 0x0000021B System.Void Dva.Player::Awake()
 extern void Player_Awake_mB844F5E025D460E4234A26025DF103CB40DAB076 (void);
-// 0x0000021A System.Void Dva.Player::OnCollisionEnter2D(UnityEngine.Collision2D)
+// 0x0000021C System.Void Dva.Player::OnCollisionEnter2D(UnityEngine.Collision2D)
 extern void Player_OnCollisionEnter2D_m7A03B06316C638AC1908DC0C79D71822D3CD0C8B (void);
-// 0x0000021B System.Collections.IEnumerator Dva.Player::SetDestroy(UnityEngine.GameObject)
+// 0x0000021D System.Collections.IEnumerator Dva.Player::SetDestroy(UnityEngine.GameObject)
 extern void Player_SetDestroy_m32CA22DB966642D0A44A63B0A51857273ACFF3B4 (void);
-// 0x0000021C System.Collections.IEnumerator Dva.Player::SetDestroySpecial(UnityEngine.GameObject)
+// 0x0000021E System.Collections.IEnumerator Dva.Player::SetDestroySpecial(UnityEngine.GameObject)
 extern void Player_SetDestroySpecial_m33A6E9EEAED2C54A373C973CEEC7931B333505F6 (void);
-// 0x0000021D System.Int32 Dva.Player::IDUpdate(UnityEngine.GameObject)
+// 0x0000021F System.Int32 Dva.Player::IDUpdate(UnityEngine.GameObject)
 extern void Player_IDUpdate_mE8A6F99E10636E11FB721C0E99DF725021B4A06A (void);
-// 0x0000021E System.Void Dva.Player::ElectronCreate()
+// 0x00000220 System.Void Dva.Player::ElectronCreate()
 extern void Player_ElectronCreate_m993E59917B327E21756AAE3E2F6FE0E9544BA04C (void);
-// 0x0000021F System.Void Dva.Player::.ctor()
+// 0x00000221 System.Void Dva.Player::.ctor()
 extern void Player__ctor_mBD3F7849A5495E008F87910FB7A1ED5E44A45EAE (void);
-// 0x00000220 System.Void Dva.Player/<SetDestroy>d__3::.ctor(System.Int32)
+// 0x00000222 System.Void Dva.Player/<SetDestroy>d__3::.ctor(System.Int32)
 extern void U3CSetDestroyU3Ed__3__ctor_m1BDCB4E950759AF058FA39052F47692F13D409CB (void);
-// 0x00000221 System.Void Dva.Player/<SetDestroy>d__3::System.IDisposable.Dispose()
+// 0x00000223 System.Void Dva.Player/<SetDestroy>d__3::System.IDisposable.Dispose()
 extern void U3CSetDestroyU3Ed__3_System_IDisposable_Dispose_m71F86563D5D925EBB1877332649C812A6D1FAE0B (void);
-// 0x00000222 System.Boolean Dva.Player/<SetDestroy>d__3::MoveNext()
+// 0x00000224 System.Boolean Dva.Player/<SetDestroy>d__3::MoveNext()
 extern void U3CSetDestroyU3Ed__3_MoveNext_m93387B60BD184E7535D3CE7702969A8AB611C14C (void);
-// 0x00000223 System.Object Dva.Player/<SetDestroy>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000225 System.Object Dva.Player/<SetDestroy>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSetDestroyU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m95175B1BBC5CF98A008ECFDEAABCC1B1ACABA3C1 (void);
-// 0x00000224 System.Void Dva.Player/<SetDestroy>d__3::System.Collections.IEnumerator.Reset()
+// 0x00000226 System.Void Dva.Player/<SetDestroy>d__3::System.Collections.IEnumerator.Reset()
 extern void U3CSetDestroyU3Ed__3_System_Collections_IEnumerator_Reset_mE5181AD9BABB50DEB2439F62E4E12E03949930F2 (void);
-// 0x00000225 System.Object Dva.Player/<SetDestroy>d__3::System.Collections.IEnumerator.get_Current()
+// 0x00000227 System.Object Dva.Player/<SetDestroy>d__3::System.Collections.IEnumerator.get_Current()
 extern void U3CSetDestroyU3Ed__3_System_Collections_IEnumerator_get_Current_m0E9836C907F1F2D23A243FC7218F7E805FBC0ACB (void);
-// 0x00000226 System.Void Dva.Player/<SetDestroySpecial>d__4::.ctor(System.Int32)
+// 0x00000228 System.Void Dva.Player/<SetDestroySpecial>d__4::.ctor(System.Int32)
 extern void U3CSetDestroySpecialU3Ed__4__ctor_mF7C792AA2885DD18EB7497CFB289049BE67CB02F (void);
-// 0x00000227 System.Void Dva.Player/<SetDestroySpecial>d__4::System.IDisposable.Dispose()
+// 0x00000229 System.Void Dva.Player/<SetDestroySpecial>d__4::System.IDisposable.Dispose()
 extern void U3CSetDestroySpecialU3Ed__4_System_IDisposable_Dispose_mD19BDCF6F21161AD0857366A89BC20CE09886C73 (void);
-// 0x00000228 System.Boolean Dva.Player/<SetDestroySpecial>d__4::MoveNext()
+// 0x0000022A System.Boolean Dva.Player/<SetDestroySpecial>d__4::MoveNext()
 extern void U3CSetDestroySpecialU3Ed__4_MoveNext_m201CEB193C066FE45D12B848011DC6FBE458E987 (void);
-// 0x00000229 System.Object Dva.Player/<SetDestroySpecial>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000022B System.Object Dva.Player/<SetDestroySpecial>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSetDestroySpecialU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m30AA7F6D9E4F5844022109406DFD14A2B69C3AAB (void);
-// 0x0000022A System.Void Dva.Player/<SetDestroySpecial>d__4::System.Collections.IEnumerator.Reset()
+// 0x0000022C System.Void Dva.Player/<SetDestroySpecial>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CSetDestroySpecialU3Ed__4_System_Collections_IEnumerator_Reset_mFE50BC374D37E4438B822A9984702D61AACD6C0F (void);
-// 0x0000022B System.Object Dva.Player/<SetDestroySpecial>d__4::System.Collections.IEnumerator.get_Current()
+// 0x0000022D System.Object Dva.Player/<SetDestroySpecial>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CSetDestroySpecialU3Ed__4_System_Collections_IEnumerator_get_Current_m780D106DBF8E3832A99ED640AB886C342B9DBBB9 (void);
-// 0x0000022C Dva.SpecialParticleType Dva.SpecialParticle::get_SpecialType()
+// 0x0000022E Dva.SpecialParticleType Dva.SpecialParticle::get_SpecialType()
 extern void SpecialParticle_get_SpecialType_m37F65C1CD0AEFCB224D546588A5D759B56E176AC (void);
-// 0x0000022D System.Void Dva.SpecialParticle::Awake()
+// 0x0000022F System.Void Dva.SpecialParticle::Awake()
 extern void SpecialParticle_Awake_m2DA1801CA735E43475DF9640F1FDF69C2130BFF3 (void);
-// 0x0000022E System.Void Dva.SpecialParticle::Start()
+// 0x00000230 System.Void Dva.SpecialParticle::Start()
 extern void SpecialParticle_Start_m600B12722194CF61087E7CEE7CF1D4E08778FD03 (void);
-// 0x0000022F System.Void Dva.SpecialParticle::Update()
+// 0x00000231 System.Void Dva.SpecialParticle::Update()
 extern void SpecialParticle_Update_m96313C9B27476286AF5C540720C7C6FE612B4B55 (void);
-// 0x00000230 System.Void Dva.SpecialParticle::TaskPatrol()
+// 0x00000232 System.Void Dva.SpecialParticle::TaskPatrol()
 extern void SpecialParticle_TaskPatrol_m2BEAFC8656139FD9CBDCB38EB62061773AB1188E (void);
-// 0x00000231 System.Void Dva.SpecialParticle::RemoveEvent()
+// 0x00000233 System.Void Dva.SpecialParticle::RemoveEvent()
 extern void SpecialParticle_RemoveEvent_m23015AB0BDCC819CEEB484BBB59F9B38726F5F97 (void);
-// 0x00000232 System.Void Dva.SpecialParticle::.ctor()
+// 0x00000234 System.Void Dva.SpecialParticle::.ctor()
 extern void SpecialParticle__ctor_mAF58E30E4394732E896753E69BCB3AB15D5415CF (void);
-static Il2CppMethodPointer s_methodPointers[562] = 
+static Il2CppMethodPointer s_methodPointers[564] = 
 {
 	NULL,
 	NULL,
@@ -1406,6 +1410,9 @@ static Il2CppMethodPointer s_methodPointers[562] =
 	AudioGameController_AudioPlay_mB8213239BC676412A39B343D453FB78BA25A0B16,
 	AudioGameController_SetVolumeToggle_mADEE19A70516A702CB6D89B676377F500E8AA5CB,
 	AudioGameController__ctor_m18596DC0D99B6F807E51178B8B1673547A70E905,
+	CameraMove_FixedUpdate_mE0AC4D364CCD7098321D14FD472C281DD2271ED2,
+	CameraMove_DragCamera_mA76DD6B1AE8BEFA916295A3EA4F8424FD13A7288,
+	CameraMove__ctor_mCF674A53DC37E8E0F79074D5F6F1B3CC1AECCCB7,
 	AIUtility_Configuration_mB13C6AD17B84ECFCC4469774CF06E93F1137D80F,
 	AIUtility_ConfigurationAtomData_m013E2F2785927BE1202BF46E1E8C55DAF092395A,
 	AIUtility_ConfigurationElementsData_m61104CD35D0A1EBA81A81D1A73709241D888CDEE,
@@ -1607,7 +1614,6 @@ static Il2CppMethodPointer s_methodPointers[562] =
 	U3CU3Ec_U3COpenElemetsU3Eb__5_1_mD61434D29CA32037A2E5AE9967A52457082D7B60,
 	ElementsTable_OnPointerEnter_m0EFE30D2BED8E7D4DE741DCB1037D6DFB2D10E58,
 	ElementsTable_OnPointerExit_m776E5CB4E4D0F20DC78B7A05A78888886F020CD3,
-	ElementsTable_UnityEngine_EventSystems_IPointerClickHandler_OnPointerClick_m963EEFE3DCB3AA8ECEBCD514F8C8F244036E5C86,
 	ElementsTable__ctor_m4B973EFDD1B92FA7A67458C13E4184EA424EBF32,
 	FloatingJoystick_Awake_m54D51523AF40DF06961E8543C49493BF6BEEBC26,
 	FloatingJoystick__ctor_mA2D359FA5669360A0C80BF58685E3EA5E2016E03,
@@ -1721,36 +1727,36 @@ extern void SensorActions_get_enabled_mC563B37A7E88952BA0CCFCC1E2E07A4A7A3705D5_
 extern void SensorActions_SetCallbacks_mBDC1A8B29090006C73775D039EF07285E3C5CA37_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[28] = 
 {
-	{ 0x0600019D, KeyBoardActions__ctor_m358FF831D8E6A8B1E4F054664A10E331157B3D2B_AdjustorThunk },
-	{ 0x0600019E, KeyBoardActions_get_Move_m2F0CF07953C600B67041FF0DDF32F0E2C369061A_AdjustorThunk },
-	{ 0x0600019F, KeyBoardActions_Get_mE8786ABDDF1BD2F05FE8A44A27F929A0CB62E277_AdjustorThunk },
-	{ 0x060001A0, KeyBoardActions_Enable_m1115FCB3BDA51A135FEE03C8F844FD31898F4FAD_AdjustorThunk },
-	{ 0x060001A1, KeyBoardActions_Disable_m1F65AE22DA7FBC7483BAB9123E0DBA4D84FB333A_AdjustorThunk },
-	{ 0x060001A2, KeyBoardActions_get_enabled_m8AAF5BB7E86DB0CA7717DFA0FC4CAAD2A09BB1B2_AdjustorThunk },
-	{ 0x060001A4, KeyBoardActions_SetCallbacks_m4E9724579AE773131E369A4748B57807FA76FE65_AdjustorThunk },
-	{ 0x060001A5, SensorActions__ctor_m66534E0290DD0E92937B3D9581EE6CE2D67E72F8_AdjustorThunk },
-	{ 0x060001A6, SensorActions_get_Move_m42ECBFAEF32CAEB72645F8F54874920080A13337_AdjustorThunk },
-	{ 0x060001A7, SensorActions_Get_m0675CDED1D13D428E26C3177C25E842C5FC23E7E_AdjustorThunk },
-	{ 0x060001A8, SensorActions_Enable_m93D07BE1F5D785BFA0170D3AC5ED253C79A46CDA_AdjustorThunk },
-	{ 0x060001A9, SensorActions_Disable_m56FECE00E19243B03DCF58C7B1480670D8D85FB7_AdjustorThunk },
-	{ 0x060001AA, SensorActions_get_enabled_m18F8522EEDAF78F2476DF670232DF5330C58C590_AdjustorThunk },
-	{ 0x060001AC, SensorActions_SetCallbacks_mF6BA6319D1535F59DE992ADB29A8F71C26C0239F_AdjustorThunk },
-	{ 0x060001C1, KeyBoardActions__ctor_m35D93E84DD1DA05A7A790ED7DF30EC6C8192FB37_AdjustorThunk },
-	{ 0x060001C2, KeyBoardActions_get_Move_mCE130D9DAC29B533CA9144E7D48688FA57FF166F_AdjustorThunk },
-	{ 0x060001C3, KeyBoardActions_Get_m5B297B75B1ED27D810E9F31D652F6C83A1E11A31_AdjustorThunk },
-	{ 0x060001C4, KeyBoardActions_Enable_m7091509EB68C395DF2334D9CADA8DBE3ECDB5AC4_AdjustorThunk },
-	{ 0x060001C5, KeyBoardActions_Disable_mE371AFA6C0835874BB6D31288088047706764D1A_AdjustorThunk },
-	{ 0x060001C6, KeyBoardActions_get_enabled_mD91071B0FF9CF4E14A593957F74BDEE808BA1BB0_AdjustorThunk },
-	{ 0x060001C8, KeyBoardActions_SetCallbacks_m95BF2C6C16E95C412918A66109AAC4A4E9D5DD73_AdjustorThunk },
-	{ 0x060001C9, SensorActions__ctor_mAF1770821B17C1AA4F7F43A09216D3E6329F8F5B_AdjustorThunk },
-	{ 0x060001CA, SensorActions_get_Move_m5312CB16248D972AAEE1A9B4E342F1C762E912E8_AdjustorThunk },
-	{ 0x060001CB, SensorActions_Get_m7F98C276A292C7B5FC2932700E7B0B774BE565C4_AdjustorThunk },
-	{ 0x060001CC, SensorActions_Enable_m6E1877C47B5DA8650301FA28B3F6B6434E3DB6EF_AdjustorThunk },
-	{ 0x060001CD, SensorActions_Disable_m6B8D79F3938FF60ECBDD7DAE135D705A4C293CBC_AdjustorThunk },
-	{ 0x060001CE, SensorActions_get_enabled_mC563B37A7E88952BA0CCFCC1E2E07A4A7A3705D5_AdjustorThunk },
-	{ 0x060001D0, SensorActions_SetCallbacks_mBDC1A8B29090006C73775D039EF07285E3C5CA37_AdjustorThunk },
+	{ 0x060001A0, KeyBoardActions__ctor_m358FF831D8E6A8B1E4F054664A10E331157B3D2B_AdjustorThunk },
+	{ 0x060001A1, KeyBoardActions_get_Move_m2F0CF07953C600B67041FF0DDF32F0E2C369061A_AdjustorThunk },
+	{ 0x060001A2, KeyBoardActions_Get_mE8786ABDDF1BD2F05FE8A44A27F929A0CB62E277_AdjustorThunk },
+	{ 0x060001A3, KeyBoardActions_Enable_m1115FCB3BDA51A135FEE03C8F844FD31898F4FAD_AdjustorThunk },
+	{ 0x060001A4, KeyBoardActions_Disable_m1F65AE22DA7FBC7483BAB9123E0DBA4D84FB333A_AdjustorThunk },
+	{ 0x060001A5, KeyBoardActions_get_enabled_m8AAF5BB7E86DB0CA7717DFA0FC4CAAD2A09BB1B2_AdjustorThunk },
+	{ 0x060001A7, KeyBoardActions_SetCallbacks_m4E9724579AE773131E369A4748B57807FA76FE65_AdjustorThunk },
+	{ 0x060001A8, SensorActions__ctor_m66534E0290DD0E92937B3D9581EE6CE2D67E72F8_AdjustorThunk },
+	{ 0x060001A9, SensorActions_get_Move_m42ECBFAEF32CAEB72645F8F54874920080A13337_AdjustorThunk },
+	{ 0x060001AA, SensorActions_Get_m0675CDED1D13D428E26C3177C25E842C5FC23E7E_AdjustorThunk },
+	{ 0x060001AB, SensorActions_Enable_m93D07BE1F5D785BFA0170D3AC5ED253C79A46CDA_AdjustorThunk },
+	{ 0x060001AC, SensorActions_Disable_m56FECE00E19243B03DCF58C7B1480670D8D85FB7_AdjustorThunk },
+	{ 0x060001AD, SensorActions_get_enabled_m18F8522EEDAF78F2476DF670232DF5330C58C590_AdjustorThunk },
+	{ 0x060001AF, SensorActions_SetCallbacks_mF6BA6319D1535F59DE992ADB29A8F71C26C0239F_AdjustorThunk },
+	{ 0x060001C4, KeyBoardActions__ctor_m35D93E84DD1DA05A7A790ED7DF30EC6C8192FB37_AdjustorThunk },
+	{ 0x060001C5, KeyBoardActions_get_Move_mCE130D9DAC29B533CA9144E7D48688FA57FF166F_AdjustorThunk },
+	{ 0x060001C6, KeyBoardActions_Get_m5B297B75B1ED27D810E9F31D652F6C83A1E11A31_AdjustorThunk },
+	{ 0x060001C7, KeyBoardActions_Enable_m7091509EB68C395DF2334D9CADA8DBE3ECDB5AC4_AdjustorThunk },
+	{ 0x060001C8, KeyBoardActions_Disable_mE371AFA6C0835874BB6D31288088047706764D1A_AdjustorThunk },
+	{ 0x060001C9, KeyBoardActions_get_enabled_mD91071B0FF9CF4E14A593957F74BDEE808BA1BB0_AdjustorThunk },
+	{ 0x060001CB, KeyBoardActions_SetCallbacks_m95BF2C6C16E95C412918A66109AAC4A4E9D5DD73_AdjustorThunk },
+	{ 0x060001CC, SensorActions__ctor_mAF1770821B17C1AA4F7F43A09216D3E6329F8F5B_AdjustorThunk },
+	{ 0x060001CD, SensorActions_get_Move_m5312CB16248D972AAEE1A9B4E342F1C762E912E8_AdjustorThunk },
+	{ 0x060001CE, SensorActions_Get_m7F98C276A292C7B5FC2932700E7B0B774BE565C4_AdjustorThunk },
+	{ 0x060001CF, SensorActions_Enable_m6E1877C47B5DA8650301FA28B3F6B6434E3DB6EF_AdjustorThunk },
+	{ 0x060001D0, SensorActions_Disable_m6B8D79F3938FF60ECBDD7DAE135D705A4C293CBC_AdjustorThunk },
+	{ 0x060001D1, SensorActions_get_enabled_mC563B37A7E88952BA0CCFCC1E2E07A4A7A3705D5_AdjustorThunk },
+	{ 0x060001D3, SensorActions_SetCallbacks_mBDC1A8B29090006C73775D039EF07285E3C5CA37_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[562] = 
+static const int32_t s_InvokerIndices[564] = 
 {
 	0,
 	0,
@@ -1758,562 +1764,564 @@ static const int32_t s_InvokerIndices[562] =
 	0,
 	0,
 	0,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5164,
-	5164,
-	5164,
-	5164,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	1091,
-	5164,
-	1091,
-	5164,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5164,
-	5164,
-	4111,
-	4111,
-	2353,
-	2353,
-	1223,
-	1223,
-	1243,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	3649,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	3649,
-	3649,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5059,
-	5059,
-	5164,
-	7774,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4089,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	4089,
-	5164,
-	5164,
-	5164,
-	2353,
-	2353,
-	1223,
-	1223,
-	1243,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	4111,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5164,
-	4111,
-	4111,
-	4111,
-	4111,
-	4089,
-	5164,
-	5164,
-	5164,
-	5164,
-	4089,
-	5164,
-	5164,
-	5164,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	5059,
-	5164,
-	5164,
-	1599,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	3649,
-	5059,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	1886,
-	5164,
-	5164,
-	7774,
-	7594,
-	7594,
-	7594,
-	7036,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7737,
-	7774,
-	5100,
-	4147,
-	5100,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5059,
-	4111,
-	5034,
-	5034,
-	5059,
-	5059,
-	5059,
-	5059,
-	5059,
-	5059,
-	5034,
-	5059,
-	5059,
-	5059,
-	5059,
-	5059,
-	5059,
-	5164,
-	5059,
-	4972,
-	5164,
-	5164,
-	5164,
-	4111,
-	5164,
-	2304,
-	753,
-	5059,
-	5164,
-	4089,
-	5059,
-	3643,
-	3643,
-	5164,
-	5164,
-	864,
-	4089,
-	5164,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	7774,
-	5164,
-	3649,
-	3649,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	1208,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5059,
-	5164,
-	5164,
-	4869,
-	3940,
-	4866,
-	3937,
-	4879,
-	2908,
-	5059,
-	5059,
-	5164,
-	5164,
-	5059,
-	1795,
-	1588,
-	5235,
-	5236,
-	4111,
-	5059,
-	5059,
-	5164,
-	5164,
-	4972,
-	7436,
-	4111,
-	4111,
-	5059,
-	5059,
-	5164,
-	5164,
-	4972,
-	7437,
-	4111,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5226,
+	5226,
+	5226,
+	5226,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	1093,
+	5226,
+	1093,
+	5226,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5226,
+	5226,
+	4146,
+	4146,
+	2363,
+	2363,
+	1225,
+	1225,
+	1245,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	3674,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	3674,
+	3674,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5120,
+	5120,
+	5226,
+	7918,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4124,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	4124,
+	5226,
+	5226,
+	5226,
+	2363,
+	2363,
+	1225,
+	1225,
+	1245,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	4146,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5226,
+	4146,
+	4146,
+	4146,
+	4146,
+	4124,
+	5226,
+	5226,
+	5226,
+	5226,
+	4124,
+	5226,
+	5226,
+	5226,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	5120,
+	5226,
+	5226,
+	1605,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	3674,
+	5120,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	1892,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	7918,
+	7724,
+	7724,
+	7724,
+	7148,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7881,
+	7918,
+	5161,
+	4182,
+	5161,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5120,
+	4146,
+	5095,
+	5095,
+	5120,
+	5120,
+	5120,
+	5120,
+	5120,
+	5120,
+	5095,
+	5120,
+	5120,
+	5120,
+	5120,
+	5120,
+	5120,
+	5226,
+	5120,
+	5033,
+	5226,
+	5226,
+	5226,
+	4146,
+	5226,
+	2314,
+	754,
+	5120,
+	5226,
+	4124,
+	5120,
+	3668,
+	3668,
+	5226,
+	5226,
+	865,
+	4124,
+	5226,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	7918,
+	5226,
+	3674,
+	3674,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	1210,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5120,
+	5226,
+	5226,
+	4930,
+	3970,
+	4927,
+	3967,
+	4940,
+	2927,
+	5120,
+	5120,
+	5226,
+	5226,
+	5120,
+	1801,
+	1594,
+	5302,
+	5303,
+	4146,
+	5120,
+	5120,
+	5226,
+	5226,
+	5033,
+	7566,
+	4146,
+	4146,
+	5120,
+	5120,
+	5226,
+	5226,
+	5033,
+	7567,
+	4146,
 	0,
 	0,
-	5059,
-	5164,
-	5164,
-	4869,
-	3940,
-	4866,
-	3937,
-	4879,
-	2908,
-	5059,
-	5059,
-	5164,
-	5164,
-	5059,
-	1795,
-	1588,
-	5237,
-	5238,
-	4111,
-	5059,
-	5059,
-	5164,
-	5164,
-	4972,
-	7438,
-	4111,
-	4111,
-	5059,
-	5059,
-	5164,
-	5164,
-	4972,
-	7439,
-	4111,
+	5120,
+	5226,
+	5226,
+	4930,
+	3970,
+	4927,
+	3967,
+	4940,
+	2927,
+	5120,
+	5120,
+	5226,
+	5226,
+	5120,
+	1801,
+	1594,
+	5304,
+	5305,
+	4146,
+	5120,
+	5120,
+	5226,
+	5226,
+	5033,
+	7568,
+	4146,
+	4146,
+	5120,
+	5120,
+	5226,
+	5226,
+	5033,
+	7569,
+	4146,
 	0,
 	0,
-	5164,
-	4089,
-	5164,
-	5164,
-	5164,
-	7774,
-	5164,
-	3649,
-	3649,
-	3261,
-	3649,
-	4111,
-	4111,
-	4111,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	4111,
-	4111,
-	3795,
-	5164,
-	5164,
-	5034,
-	5034,
-	5164,
-	5164,
-	5059,
-	5034,
-	5059,
-	4023,
-	5164,
-	4089,
-	5034,
-	4111,
-	4089,
-	5164,
-	5164,
-	4089,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5164,
-	5164,
-	5164,
-	5164,
-	5034,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	4111,
-	3649,
-	3649,
-	3419,
-	5164,
-	5164,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	4089,
-	5164,
-	4972,
-	5059,
-	5164,
-	5059,
-	5034,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
-	5164,
+	5226,
+	4124,
+	5226,
+	5226,
+	5226,
+	7918,
+	5226,
+	3674,
+	3674,
+	3283,
+	3674,
+	4146,
+	4146,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	4146,
+	4146,
+	3820,
+	5226,
+	5226,
+	5095,
+	5095,
+	5226,
+	5226,
+	5120,
+	5095,
+	5120,
+	4058,
+	5226,
+	4124,
+	5095,
+	4146,
+	4124,
+	5226,
+	5226,
+	4124,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5226,
+	5226,
+	5226,
+	5226,
+	5095,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	4146,
+	3674,
+	3674,
+	3441,
+	5226,
+	5226,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	4124,
+	5226,
+	5033,
+	5120,
+	5226,
+	5120,
+	5095,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
+	5226,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
@@ -2356,7 +2364,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	562,
+	564,
 	s_methodPointers,
 	28,
 	s_adjustorThunks,
