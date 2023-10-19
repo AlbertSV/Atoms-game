@@ -17,7 +17,10 @@ namespace Dva
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            if(collision.gameObject.GetComponent<CircleCollider2D>() != false)
+            {
+                collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            }
 
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
 
@@ -26,18 +29,21 @@ namespace Dva
             {
                 _audioController.AudioPlay(true, _featuresManager.AbsorbAudio);
             }
+
             if(collision.gameObject.GetComponent<SpecialParticle>() != null)
             {
                 _gameControl.EventCall(collision.gameObject.GetComponent<SpecialParticle>().SpecialType);
                 StartCoroutine(SetDestroySpecial(collision.gameObject));
+            }
+            else
+            {
+                StartCoroutine(SetDestroy(collision.gameObject));
             }
 
             if(_eAmount <6)
             {
                // ElectronCreate();
             }
-
-            StartCoroutine(SetDestroy(collision.gameObject));
         }
 
         public IEnumerator SetDestroy(GameObject objectTriggered)

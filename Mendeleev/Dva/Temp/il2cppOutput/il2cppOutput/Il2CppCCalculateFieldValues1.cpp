@@ -31544,10 +31544,12 @@ struct TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1  : public MonoBehavio
 	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ____player_6;
 	// System.Single Dva.TouchMove::PLAYERSPEED
 	float ___PLAYERSPEED_7;
+	// System.Single Dva.TouchMove::_maxSpeed
+	float ____maxSpeed_8;
 	// UnityEngine.InputSystem.EnhancedTouch.Finger Dva.TouchMove::_movementFinger
-	Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* ____movementFinger_8;
+	Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* ____movementFinger_9;
 	// UnityEngine.Vector2 Dva.TouchMove::_movementAmount
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____movementAmount_9;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____movementAmount_10;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -38045,9 +38047,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5229[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5230[2] = 
 {
 	static_cast<int32_t>(offsetof(FloatingJoystick_tC7E327A70AD2F71C9982C867283DCEE608C0028B, ____rectTransform_4)),static_cast<int32_t>(offsetof(FloatingJoystick_tC7E327A70AD2F71C9982C867283DCEE608C0028B, ____knob_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5231[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5231[7] = 
 {
-	static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____joystickSize_4)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____joystick_5)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____player_6)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ___PLAYERSPEED_7)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____movementFinger_8)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____movementAmount_9)),};
+	static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____joystickSize_4)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____joystick_5)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____player_6)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ___PLAYERSPEED_7)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____maxSpeed_8)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____movementFinger_9)),static_cast<int32_t>(offsetof(TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1, ____movementAmount_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5232[4] = 
 {
 	static_cast<int32_t>(offsetof(U3CParticleStateAmountDecreaseU3Ed__30_t51866612C95376A5D48F5C969ACA49A66FB4DBD6, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CParticleStateAmountDecreaseU3Ed__30_t51866612C95376A5D48F5C969ACA49A66FB4DBD6, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CParticleStateAmountDecreaseU3Ed__30_t51866612C95376A5D48F5C969ACA49A66FB4DBD6, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CParticleStateAmountDecreaseU3Ed__30_t51866612C95376A5D48F5C969ACA49A66FB4DBD6, ___U3CiU3E5__1_3)),};

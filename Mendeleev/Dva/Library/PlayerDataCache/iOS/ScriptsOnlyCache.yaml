@@ -1396,7 +1396,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c5ce37a9bb35e7f287632741c77be3a0
+      Hash: bdf0fe53d63d3e5b837f47284b8f4b68
     assemblyName: Assembly-CSharp.dll
     namespaceName: Dva
     className: TouchMove

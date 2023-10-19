@@ -2422,6 +2422,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody2D_AddForce_Injected();
 		Register_UnityEngine_Rigidbody2D_AddForce_Injected();
 
+		//System.Void UnityEngine.Rigidbody2D::get_velocity_Injected(UnityEngine.Vector2&)
+		void Register_UnityEngine_Rigidbody2D_get_velocity_Injected();
+		Register_UnityEngine_Rigidbody2D_get_velocity_Injected();
+
 		//System.Void UnityEngine.Rigidbody2D::set_velocity_Injected(UnityEngine.Vector2&)
 		void Register_UnityEngine_Rigidbody2D_set_velocity_Injected();
 		Register_UnityEngine_Rigidbody2D_set_velocity_Injected();

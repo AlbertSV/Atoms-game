@@ -614,6 +614,7 @@ IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_i
 IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70_il2cpp_TypeInfo_var;
@@ -4523,10 +4524,12 @@ struct TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1  : public MonoBehavio
 	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ____player_6;
 	// System.Single Dva.TouchMove::PLAYERSPEED
 	float ___PLAYERSPEED_7;
+	// System.Single Dva.TouchMove::_maxSpeed
+	float ____maxSpeed_8;
 	// UnityEngine.InputSystem.EnhancedTouch.Finger Dva.TouchMove::_movementFinger
-	Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* ____movementFinger_8;
+	Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* ____movementFinger_9;
 	// UnityEngine.Vector2 Dva.TouchMove::_movementAmount
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____movementAmount_9;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____movementAmount_10;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -6870,6 +6873,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m01A3102DE71EE1FBEA
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_mC53581E703768BA2512A7C65283657C331994353_inline (float ___d0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rigidbody2D::AddForce(UnityEngine.Vector2)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_AddForce_mC635C76F94D56891007700CA0E653EB269E955CB (Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___force0, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.Rigidbody2D::get_velocity()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rigidbody2D_get_velocity_mBD8AC6F93F0E24CC41D2361BCEF74F81303720EF (Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* __this, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector2::get_magnitude()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.Vector2::ClampMagnitude(UnityEngine.Vector2,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vector0, float ___maxLength1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rigidbody2D::set_velocity(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_velocity_m9335C5883B218F6FCDF7E229AC96232FCBAC4CE6 (Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method) ;
 // T UnityEngine.Object::FindObjectOfType<Dva.GameControl>()
 inline GameControl_tBFB7FDACDBF1E0A7563FA9E845232E70BB6A341A* Object_FindObjectOfType_TisGameControl_tBFB7FDACDBF1E0A7563FA9E845232E70BB6A341A_m68C501DFFEED95837D175E7BD0C11CBD9EC2E263 (const RuntimeMethod* method)
 {
@@ -6974,14 +6985,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_mEF8349CC39674236CFC694189AFD36E31F89AC8F_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector2::Normalize()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2_Normalize_m56DABCAB5967DF37A6B96710477D3660D800C652_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Vector2::get_sqrMagnitude()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
 // System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___array0, int32_t ___index1, int32_t ___length2, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Vector3::Magnitude(UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D951393A3D7CE92CE40049A0E7F76544D1B_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
-// System.Single UnityEngine.Vector2::get_magnitude()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -19991,7 +20002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_HandleFingerMove_mD34910F32631
 	{
 		// if(MovedFinger == _movementFinger)
 		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_0 = ___MovedFinger0;
-		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_1 = __this->____movementFinger_8;
+		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_1 = __this->____movementFinger_9;
 		V_0 = (bool)((((RuntimeObject*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)L_0) == ((RuntimeObject*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)L_1))? 1 : 0);
 		bool L_2 = V_0;
 		if (!L_2)
@@ -20081,7 +20092,7 @@ IL_009f:
 		float L_31 = V_2;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_32;
 		L_32 = Vector2_op_Division_m57A2DCD71E0CE7420851D705D1951F9238902AAB_inline(L_30, L_31, NULL);
-		__this->____movementAmount_9 = L_32;
+		__this->____movementAmount_10 = L_32;
 	}
 
 IL_00bf:
@@ -20097,7 +20108,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_HandleLoseFinger_m97BC545E5112
 	{
 		// if(LostFinger == _movementFinger)
 		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_0 = ___LostFinger0;
-		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_1 = __this->____movementFinger_8;
+		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_1 = __this->____movementFinger_9;
 		V_0 = (bool)((((RuntimeObject*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)L_0) == ((RuntimeObject*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)L_1))? 1 : 0);
 		bool L_2 = V_0;
 		if (!L_2)
@@ -20107,8 +20118,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_HandleLoseFinger_m97BC545E5112
 	}
 	{
 		// _movementFinger = null;
-		__this->____movementFinger_8 = (Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____movementFinger_8), (void*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)NULL);
+		__this->____movementFinger_9 = (Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____movementFinger_9), (void*)(Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A*)NULL);
 		// _joystick._knob.anchoredPosition = Vector2.zero;
 		FloatingJoystick_tC7E327A70AD2F71C9982C867283DCEE608C0028B* L_3 = __this->____joystick_5;
 		NullCheck(L_3);
@@ -20127,7 +20138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_HandleLoseFinger_m97BC545E5112
 		// _movementAmount = Vector2.zero;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		L_8 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
-		__this->____movementAmount_9 = L_8;
+		__this->____movementAmount_10 = L_8;
 	}
 
 IL_004a:
@@ -20155,7 +20166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_HandleFingerDown_m5A19B182874C
 	}
 	{
 		// if (_movementFinger == null && TouchedFinger.screenPosition.x <= Screen.width / 2f)
-		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_2 = __this->____movementFinger_8;
+		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_2 = __this->____movementFinger_9;
 		if (L_2)
 		{
 			goto IL_003b;
@@ -20190,12 +20201,12 @@ IL_003c:
 	{
 		// _movementFinger = TouchedFinger;
 		Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* L_8 = ___TouchedFinger0;
-		__this->____movementFinger_8 = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____movementFinger_8), (void*)L_8);
+		__this->____movementFinger_9 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____movementFinger_9), (void*)L_8);
 		// _movementAmount = Vector2.zero;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9;
 		L_9 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
-		__this->____movementAmount_9 = L_9;
+		__this->____movementAmount_10 = L_9;
 		// _joystick.gameObject.SetActive(true);
 		FloatingJoystick_tC7E327A70AD2F71C9982C867283DCEE608C0028B* L_10 = __this->____joystick_5;
 		NullCheck(L_10);
@@ -20327,16 +20338,26 @@ IL_00ba:
 // System.Void Dva.TouchMove::MoveUpdate()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_MoveUpdate_m1A6A1A79A8D4E5B20058F52FE4D212FD6F1EEA5F (TouchMove_t1E2F5BAD30C0DE17A6A0C32FD54CFA8AA85BCAC1* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	{
 		// Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
 		float L_0 = __this->___PLAYERSPEED_7;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_2 = (&__this->____movementAmount_9);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_2 = (&__this->____movementAmount_10);
 		float L_3 = L_2->___x_0;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_4 = (&__this->____movementAmount_9);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_4 = (&__this->____movementAmount_10);
 		float L_5 = L_4->___y_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6;
 		memset((&L_6), 0, sizeof(L_6));
@@ -20349,6 +20370,50 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchMove_MoveUpdate_m1A6A1A79A8D4E5B200
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_0;
 		NullCheck(L_8);
 		Rigidbody2D_AddForce_mC635C76F94D56891007700CA0E653EB269E955CB(L_8, L_9, NULL);
+		// if(_player.velocity.magnitude > _maxSpeed)
+		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_10 = __this->____player_6;
+		NullCheck(L_10);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11;
+		L_11 = Rigidbody2D_get_velocity_mBD8AC6F93F0E24CC41D2361BCEF74F81303720EF(L_10, NULL);
+		V_2 = L_11;
+		float L_12;
+		L_12 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_2), NULL);
+		float L_13 = __this->____maxSpeed_8;
+		V_1 = (bool)((((float)L_12) > ((float)L_13))? 1 : 0);
+		bool L_14 = V_1;
+		if (!L_14)
+		{
+			goto IL_007e;
+		}
+	}
+	{
+		// _player.velocity = Vector2.ClampMagnitude(_player.velocity, _maxSpeed);
+		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_15 = __this->____player_6;
+		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_16 = __this->____player_6;
+		NullCheck(L_16);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17;
+		L_17 = Rigidbody2D_get_velocity_mBD8AC6F93F0E24CC41D2361BCEF74F81303720EF(L_16, NULL);
+		float L_18 = __this->____maxSpeed_8;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19;
+		L_19 = Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9_inline(L_17, L_18, NULL);
+		NullCheck(L_15);
+		Rigidbody2D_set_velocity_m9335C5883B218F6FCDF7E229AC96232FCBAC4CE6(L_15, L_19, NULL);
+	}
+
+IL_007e:
+	{
+		// Debug.Log(_player.velocity.magnitude);
+		Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* L_20 = __this->____player_6;
+		NullCheck(L_20);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21;
+		L_21 = Rigidbody2D_get_velocity_mBD8AC6F93F0E24CC41D2361BCEF74F81303720EF(L_20, NULL);
+		V_2 = L_21;
+		float L_22;
+		L_22 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_2), NULL);
+		float L_23 = L_22;
+		RuntimeObject* L_24 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_23);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_24, NULL);
 		// }
 		return;
 	}
@@ -23643,6 +23708,100 @@ IL_0019:
 		return L_7;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___x_0;
+		float L_1 = __this->___x_0;
+		float L_2 = __this->___y_1;
+		float L_3 = __this->___y_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_4;
+		L_4 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3))))));
+		V_0 = ((float)L_4);
+		goto IL_0026;
+	}
+
+IL_0026:
+	{
+		float L_5 = V_0;
+		return L_5;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vector0, float ___maxLength1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	{
+		float L_0;
+		L_0 = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline((&___vector0), NULL);
+		V_0 = L_0;
+		float L_1 = V_0;
+		float L_2 = ___maxLength1;
+		float L_3 = ___maxLength1;
+		V_1 = (bool)((((float)L_1) > ((float)((float)il2cpp_codegen_multiply(L_2, L_3))))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		float L_5 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_6;
+		L_6 = sqrt(((double)L_5));
+		V_2 = ((float)L_6);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7 = ___vector0;
+		float L_8 = L_7.___x_0;
+		float L_9 = V_2;
+		V_3 = ((float)(L_8/L_9));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = ___vector0;
+		float L_11 = L_10.___y_1;
+		float L_12 = V_2;
+		V_4 = ((float)(L_11/L_12));
+		float L_13 = V_3;
+		float L_14 = ___maxLength1;
+		float L_15 = V_4;
+		float L_16 = ___maxLength1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17;
+		memset((&L_17), 0, sizeof(L_17));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_17), ((float)il2cpp_codegen_multiply(L_13, L_14)), ((float)il2cpp_codegen_multiply(L_15, L_16)), /*hidden argument*/NULL);
+		V_5 = L_17;
+		goto IL_0045;
+	}
+
+IL_0040:
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_18 = ___vector0;
+		V_5 = L_18;
+		goto IL_0045;
+	}
+
+IL_0045:
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19 = V_5;
+		return L_19;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* FeaturesManager_get_ParticleSystem_m63A537C2523EAFCCD632F37178C306A01DC7AB10_inline (FeaturesManager_t7D35B67E6B04E98EFFC53AD5D29E27FC9F84D2E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24021,6 +24180,24 @@ IL_0033:
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->___x_0;
+		float L_1 = __this->___x_0;
+		float L_2 = __this->___y_1;
+		float L_3 = __this->___y_1;
+		V_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3))));
+		goto IL_001f;
+	}
+
+IL_001f:
+	{
+		float L_4 = V_0;
+		return L_4;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D951393A3D7CE92CE40049A0E7F76544D1B_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vector0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24076,32 +24253,5 @@ IL_0009:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	float V_0 = 0.0f;
-	{
-		float L_0 = __this->___x_0;
-		float L_1 = __this->___x_0;
-		float L_2 = __this->___y_1;
-		float L_3 = __this->___y_1;
-		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		double L_4;
-		L_4 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_0, L_1)), ((float)il2cpp_codegen_multiply(L_2, L_3))))));
-		V_0 = ((float)L_4);
-		goto IL_0026;
-	}
-
-IL_0026:
-	{
-		float L_5 = V_0;
-		return L_5;
 	}
 }

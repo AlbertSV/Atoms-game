@@ -15,6 +15,7 @@ namespace Dva
         [SerializeField] private Rigidbody2D _player;
         [SerializeField]
         private float PLAYERSPEED = 0.1f;
+        [SerializeField] private float _maxSpeed;
 
         private Finger _movementFinger;
         private Vector2 _movementAmount;
@@ -111,6 +112,12 @@ namespace Dva
         {
             Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
             _player.AddForce(scaledMovement);
+
+            if(_player.velocity.magnitude > _maxSpeed)
+            {
+                _player.velocity = Vector2.ClampMagnitude(_player.velocity, _maxSpeed);
+            }
+            Debug.Log(_player.velocity.magnitude);
         }
     }
 }
