@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Dva
 {
+    //main game mechanics
     public class GameControl : MonoBehaviour
     {
         [Header("Balance values")]
@@ -95,6 +96,7 @@ namespace Dva
             _livesTimeRest -= Time.deltaTime;
         }
 
+        //spawn particle on random places on field
         private void ParticleSpawn(GameObject particle)
         {
             if (_particlesCounter.Count >= _maxParticleAmount) return;
@@ -102,6 +104,7 @@ namespace Dva
             InstantiateParticle(particle, _particlesCounter);
         }
 
+        //special particle spawn after reaching certain level of atom
         private void SpecialParticleSpawn()
         { 
             int level = (((_atom.AtomID - 1000000000) % 1000000) % 1000);
@@ -156,12 +159,14 @@ namespace Dva
 
         }
 
+        //create particle
         private void InstantiateParticle(GameObject particleType, List<GameObject> particleList)
         {
             GameObject particle = Instantiate(particleType, GetRandomPosition(_featuresManager.LeftBoarder.position.x, _featuresManager.RightBoarder.position.x,
                 _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y), particleType.transform.rotation, _particleParent);
             particleList.Add(particle);
         }
+
 
         public Vector3 GetRandomPosition(float leftBoarder, float rightBoarder, float topBoarder, float bottomBoarder)
         {
@@ -192,6 +197,7 @@ namespace Dva
                 }
         }
 
+        //destroy random particle
         private void ParticleRenew()
         {
             _count -= Time.deltaTime;
@@ -206,7 +212,7 @@ namespace Dva
             }
         }
 
-
+        //special particle eventcall
         public void EventCall(SpecialParticleType particle)
         {
             if (particle == SpecialParticleType.BlackHole)
@@ -232,6 +238,7 @@ namespace Dva
 
         }
 
+        //creatinf a zone around the atom where all particles draging into atom
         private IEnumerator BlackHoleEvent()
         {
           
@@ -261,7 +268,7 @@ namespace Dva
             _isBlackHoleActive = false;
         }
 
-
+        //increase/decrease speed of particles for certain amount of time
         private IEnumerator SpeedChangeEvent(SpecialParticleType particle)
         {
             float startSpeed = _featuresManager.ParticleSpeed;
@@ -283,6 +290,7 @@ namespace Dva
             _featuresManager.ParticleSpeed = _featuresManager.ParticleSpeed / multiplier;
         }
 
+        //increase/decrease the size of the field for certain amount of time
         private IEnumerator FieldSizeChangeEvent(SpecialParticleType particle)
         {
             //нужно разрушить старые частицы и заново сделать и также после завершения
@@ -385,6 +393,7 @@ namespace Dva
 
         }
 
+        //hit the atom by the fast neutron (just making the atom to decay)
         private void FastNeutronEvent()
         {
             _atom.EventAtomUpdate(false);
@@ -404,7 +413,7 @@ namespace Dva
             }
         }
 
-
+        //renew all particles after event start/end
         private void RemoveForEvent(List<GameObject> particles, List<GameObject> specials, bool isSpecials, List<GameObject> list)
         {
             if (!isSpecials)
@@ -427,6 +436,7 @@ namespace Dva
             }
         }
 
+        //add lives to the field
         private void LifesCreation(int lifeAmount)
         {
             for(int i=0; i< lifeAmount; i++)
@@ -438,6 +448,7 @@ namespace Dva
             }
         }
 
+        //ending game if amount of lives = 0
         public void EndGame()
         {
             Time.timeScale = 0f;

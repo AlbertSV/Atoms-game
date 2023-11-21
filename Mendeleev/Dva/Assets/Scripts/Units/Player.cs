@@ -15,6 +15,7 @@ namespace Dva
             _gameControl = FindObjectOfType<GameControl>();
         }
 
+        //actions when the particles hits the atom
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if(collision.gameObject.GetComponent<CircleCollider2D>() != false)
@@ -46,6 +47,7 @@ namespace Dva
             }
         }
 
+        //destroy hitted particle
         public IEnumerator SetDestroy(GameObject objectTriggered)
         {
             if (objectTriggered.GetComponent<GeneralParticle>() != null)
@@ -58,6 +60,7 @@ namespace Dva
             }
         }
 
+        //destroy special particle
         public IEnumerator SetDestroySpecial(GameObject objectTriggered)
         {
             if (objectTriggered.GetComponent<SpecialParticle>() != null)
@@ -128,6 +131,7 @@ namespace Dva
 
         }
 
+        //create electron on atoms orbit
         private void ElectronCreate()
         {
             if (_eAmount == 2)

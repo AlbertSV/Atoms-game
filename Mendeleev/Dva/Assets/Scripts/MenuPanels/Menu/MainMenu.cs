@@ -29,6 +29,7 @@ namespace Dva
 
         }
 
+        //going to elements menu
         public void ElementMenu()
         {
             _mainMenuUI.SetActive(false);
@@ -36,6 +37,7 @@ namespace Dva
             _elementMenuUI.GetComponent<Animator>().Play("ElementMenu");
         }
 
+        //going to option menu
         public void OptionMenu()
         {
             _mainMenuUI.SetActive(false);

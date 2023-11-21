@@ -7,6 +7,7 @@ namespace Dva
 {
     public class FeaturesManager : MonoBehaviour
     {
+        //scipt for keeping features using in game
         [SerializeField] private float _particleSpeed = 1f;
         [SerializeField] private float _electronOrbitSpeed = 1f;
         [SerializeField] private Transform _leftBoarder;

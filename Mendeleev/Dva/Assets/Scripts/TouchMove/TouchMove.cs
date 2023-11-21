@@ -41,6 +41,7 @@ namespace Dva
             EnhancedTouchSupport.Disable();
         }
 
+        //catch the direction and max movement speed
         private void HandleFingerMove(Finger MovedFinger)
         {
             if(MovedFinger == _movementFinger)
@@ -63,6 +64,8 @@ namespace Dva
             }
         }
 
+
+        //the action if the finger is not touching the screen
         private void HandleLoseFinger(Finger LostFinger)
         {
             if(LostFinger == _movementFinger)
@@ -74,6 +77,7 @@ namespace Dva
             }
         }
 
+        //spot the place where the finger touched the screen
         private void HandleFingerDown(Finger TouchedFinger)
         {
             if(Time.timeScale == 1)
@@ -89,6 +93,7 @@ namespace Dva
             }
         }
 
+        //making start position set into left part of the screen
         private Vector2 ClampStartPosition(Vector2 StartPosition)
         {
              if(StartPosition.x <_joystickSize.x /2)
@@ -108,6 +113,7 @@ namespace Dva
             return StartPosition;
         }
 
+        //making player move
         private void  MoveUpdate()
         {
             Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
@@ -117,7 +123,6 @@ namespace Dva
             {
                 _player.velocity = Vector2.ClampMagnitude(_player.velocity, _maxSpeed);
             }
-            Debug.Log(_player.velocity.magnitude);
         }
     }
 }

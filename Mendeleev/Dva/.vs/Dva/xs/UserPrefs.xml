@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{F8C94AED-C78A-0428-7DB4-6971AC44851B}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/PauseMenu.cs" relfile="Assets/Scripts/MenuPanels/PauseMenu.cs" line="46" column="1" />
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/MenuPanels/Menu/Settings.cs" relfile="Assets/Scripts/MenuPanels/Menu/Settings.cs" line="33" column="1" />
       <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/Units/Atom.cs" relfile="Assets/Scripts/Units/Atom.cs" line="65" column="1" />
-      <Breakpoint file="/Users/albertsafin/github/Dva/Mendeleev/Dva/Assets/Scripts/Units/Player.cs" relfile="Assets/Scripts/Units/Player.cs" line="16" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c3803e4d-f03e-4ce4-a01c-1db88089f29e" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuPanels/Menu/MenuClose.cs">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0b881d04-89d7-4e88-a1d7-420e6433415e" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameControl.cs" />
+      <File FileName="Assets/Scripts/GameControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/FeaturesManager.cs" />
       <File FileName="Assets/Scripts/Extensions.cs" />
       <File FileName="Assets/Resources/PlayerConfig.xml" />
@@ -19,9 +18,9 @@
       <File FileName="Assets/Scripts/Struct.cs" />
       <File FileName="Assets/Resources/Config.xml" />
       <File FileName="Assets/Scripts/MenuPanels/Menu/MainMenu.cs" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/MenuClose.cs" Line="13" Column="43" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/MenuClose.cs" />
       <File FileName="Assets/Scripts/Table/ElementsTable.cs" />
-      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" Line="35" Column="43" />
+      <File FileName="Assets/Scripts/MenuPanels/Menu/Settings.cs" />
       <File FileName="Assets/Scripts/Progress.cs" />
       <File FileName="Assets/Scripts/MenuPanels/Menu/ElementMenu.cs" />
       <File FileName="Assets/Scripts/MenuPanels/PauseButton.cs" />
@@ -31,11 +30,14 @@
       <File FileName="Assets/Scripts/TouchMove/TouchMove.cs" />
       <File FileName="Assets/Scripts/AudioPlayer.cs" />
       <File FileName="Assets/Scripts/AudioGameController.cs" />
+      <File FileName="Assets/Scripts/CameraMove.cs" />
+      <File FileName="Assets/Scripts/Units/Player.cs" />
+      <File FileName="Assets/Scripts/Units/GeneralParticle.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Dva" expanded="True" selected="True">
+          <Node name="Dva">
             <Node name="Assets" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="Scripts" expanded="True">
@@ -45,13 +47,17 @@
                 <Node name="Table" expanded="True" />
                 <Node name="TouchMove" expanded="True" />
                 <Node name="Units" expanded="True" />
+                <Node name="GameControl.cs" selected="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

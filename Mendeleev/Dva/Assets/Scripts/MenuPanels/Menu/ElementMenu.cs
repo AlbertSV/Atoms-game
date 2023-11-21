@@ -20,6 +20,7 @@ namespace Dva
             _animator.SetTrigger("Back");
         }
 
+        //getting back to main menu after button clicked
         private void AnimationElementBack()
         {
             _elementMenuUI.transform.localScale = new Vector3(1f, 1f, 1f);

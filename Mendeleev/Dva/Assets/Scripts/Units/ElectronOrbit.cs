@@ -21,6 +21,7 @@ namespace Dva
             ElectronOrbitMove();
         }
 
+        //rotate the electrons around the atom
         private void ElectronOrbitMove()
         {
             transform.RotateAround(_player.transform.position, _orbit, _features.ElectronOrbitSpeed * Time.deltaTime);

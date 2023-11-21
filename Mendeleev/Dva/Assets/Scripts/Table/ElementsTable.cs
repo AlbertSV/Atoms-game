@@ -10,20 +10,17 @@ namespace Dva
         Vector3 _startPosition;
         private GameObject _zoomObject;
 
+        //creating bigger version of the element above the table, when the player pointing at it
         public void OnPointerEnter(PointerEventData eventData)
         {
-            //transform.localScale *= 5f;
-            //_startPosition = transform.localPosition;
-            //transform.localPosition = new Vector3(0, 320, 0);
 
             _zoomObject = Instantiate(gameObject, new Vector3(0, 17, 95), gameObject.transform.rotation);
             _zoomObject.transform.localScale /= 6f;
         }
 
+        //destroying the bigger version
         public void OnPointerExit(PointerEventData eventData)
         {
-            //transform.localScale /= 5f;
-            //transform.localPosition = _startPosition;
             Destroy(_zoomObject);
         }
 

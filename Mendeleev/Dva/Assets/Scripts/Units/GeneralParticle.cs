@@ -34,6 +34,8 @@ namespace Dva
                 }
         }
 
+
+        //get the coordinate for particle where to move
         protected override void TaskPatrol()
         {
             if (Vector3.Distance(transform.position, _pointToGo) < 0.01f)
@@ -48,12 +50,14 @@ namespace Dva
             }
         }
 
+        //go to the player, if it has black hole event and the particle if radius of it
         private void BlackHoleGravity()
         {
 
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _gameFeatures.ParticleSpeed * Time.deltaTime);
         }
 
+        //remove particle after hitting the atom
         protected override void RemoveEvent()
         {
             Destroy(gameObject);

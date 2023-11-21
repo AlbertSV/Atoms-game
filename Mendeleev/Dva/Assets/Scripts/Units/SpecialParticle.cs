@@ -35,7 +35,7 @@ namespace Dva
             TaskPatrol();
         }
 
-
+        //coordinate for particle to move
         protected override void TaskPatrol()
         {
             if (_specialType != SpecialParticleType.FastNeutron)

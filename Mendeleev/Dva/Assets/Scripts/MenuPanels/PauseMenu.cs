@@ -15,6 +15,7 @@ namespace Dva
             _pauseMenuUI.GetComponent<Animator>().SetBool("Open", false);
         }
 
+        //restarting game from the beginning
         public void RestartGame()
         {
             Time.timeScale = 1f;
@@ -23,28 +24,21 @@ namespace Dva
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        //getting into main menu
         public void MenuGame()
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            //GameObject menu = FindObjectOfType<MainMenu>().gameObject;
-            //menu.GetComponent<Animator>().Play("MainMenu");
 
-//            Application.Quit();
-
-//#if UNITY_EDITOR
-//            if (UnityEditor.EditorApplication.isPlaying)
-//            {
-//                UnityEditor.EditorApplication.isPlaying = false;
-//            }
-//#endif
         }
 
+        //event after game put on pause
         private void WaitForAnimationOpen()
         {
             Time.timeScale = 0f;   
         }
 
+        //event after game started again
         private void WaitForAnimationClose()
         {
             _pauseMenuUI.GetComponent<Animator>().SetTrigger("Close");

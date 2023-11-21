@@ -24,21 +24,7 @@ namespace Dva
 
         }
 
-        public void CheckAtomID(int atomID)
-        {
-            if(AIUtility.GetAtomName.ContainsKey(atomID))
-            {
-                int number = (((atomID - 1000000000) % 1000000) % 1000);
-                int nAmount = (atomID - 1000000000) / 1000000;
-
-                if (!_openElemenets.ContainsKey(atomID))
-                {
-                    _openElemenets[atomID] = number;
-                }
-
-            }
-        }
-
+        //creating list of atoms discovered by player based on saved data in xml file
         private void OpenElemets()
         {
             var listOfAtoms = AIUtility.GetPlayerNumbers.GroupBy(x => x.Value).Select(x => new

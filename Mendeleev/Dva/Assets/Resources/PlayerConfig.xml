@@ -10,5 +10,21 @@
     <PlayerElements ID="1003003003" Number="3" />
     <PlayerElements ID="1005004004" Number="4" />
     <PlayerElements ID="1006005005" Number="5" />
+    <PlayerElements ID="1005005005" Number="5" />
+    <PlayerElements ID="1008007007" Number="7" />
+    <PlayerElements ID="1008008008" Number="8" />
+    <PlayerElements ID="1009008008" Number="8" />
+    <PlayerElements ID="1007006006" Number="6" />
+    <PlayerElements ID="1007007007" Number="7" />
+    <PlayerElements ID="1010008008" Number="8" />
+    <PlayerElements ID="1012010010" Number="10" />
+    <PlayerElements ID="1014012012" Number="12" />
+    <PlayerElements ID="1014013013" Number="13" />
+    <PlayerElements ID="1014014014" Number="14" />
+    <PlayerElements ID="1015014014" Number="14" />
+    <PlayerElements ID="1016014014" Number="14" />
+    <PlayerElements ID="1016015015" Number="15" />
+    <PlayerElements ID="1018016016" Number="16" />
+    <PlayerElements ID="1020017017" Number="17" />
   </Atom>
 </Units>

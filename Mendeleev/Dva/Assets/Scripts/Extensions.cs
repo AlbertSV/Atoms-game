@@ -30,7 +30,7 @@ namespace Dva
         private static Dictionary<int, int> p_Numbers = new Dictionary<int, int>();
         private static XDocument _fileToWrite;
 
-        //Запускается автоматически
+        
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Configuration()
         {
@@ -44,13 +44,14 @@ namespace Dva
 
         }
 
+        //data from config file with all existing atoms
         private static void ConfigurationAtomData(XElement root)
         {
-            //Проходка по группам действий
+            //going through each elemtnts
             foreach (var element in root.Element("Atom").Elements("AtomStructure"))
             {
 
-                //Получение значения перечисления для игрока
+                //getting values
                 var atomIDInt = int.Parse(element.Attribute("ID").Value);
                 var atomNameStr = element.Attribute("Name").Value;
                 var atomSymbolStr = element.Attribute("Symbol").Value;
@@ -64,6 +65,7 @@ namespace Dva
             }
         }
 
+        //data from elementsconfig file with unique atoms
         private static void ConfigurationElementsData(XElement root)
         {
             //Проходка по группам действий
@@ -88,6 +90,7 @@ namespace Dva
             }
         }
 
+        //data from playerconfig file with atoms discovered by player
         private static void ConfigurationPlayerNumbers(XElement root)
         {
             //Проходка по группам действий
@@ -110,9 +113,7 @@ namespace Dva
             _fileToWrite.Save(Application.dataPath + p_NumbersList);
         }
 
-        /// <summary>
-        /// Возвращает коллекцию для чтения с коэффициентами изменения приоритетов действий бота по действиям игрока
-        /// </summary>
+        /// getting back dictionary with data of elements
         public static IReadOnlyDictionary<int, string> GetAtomName => _NameIDDict;
         public static IReadOnlyDictionary<int, string> GetAtomSymbol => _SymbolIDDict;
         public static IReadOnlyDictionary<int, string> GetAtomMaterial => _MaterialIDDict;

@@ -24,6 +24,7 @@ namespace Dva
             }
         }
 
+        //check if the audio after changes in options
         public void AudioPlay(bool toPlay, AudioSource audio)
         {
 
@@ -48,6 +49,7 @@ namespace Dva
                
         }
 
+        //check if the volume after changes in options
         public void SetVolumeToggle()
         {
             PlayerPrefs.SetInt("volumeToggle", (_volumeToggle.isOn ? 1 : 0));

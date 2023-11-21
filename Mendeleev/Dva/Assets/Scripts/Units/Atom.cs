@@ -60,6 +60,7 @@ namespace Dva
         }
 
 
+        //check the charge of the atom, if it's not eaqual atom should decay
         protected void AtomCharge()
         {
             if (_eAmount == _pAmount)
@@ -93,6 +94,7 @@ namespace Dva
             }
         }
 
+        //atom decay process
         private IEnumerator ParticleStateAmountDecrease()
         {
             if (!_inDecay)
@@ -100,6 +102,7 @@ namespace Dva
                 _toDecay = true;
                 _inDecay = true;
 
+                //counter before atom decay, the player has chance to save the atom
                 for (int i = _decayCount; i >= 0;)
                 {
                     _atomDecayText.text = "Decay in " + i;
@@ -107,6 +110,8 @@ namespace Dva
                     _audioController.AudioPlay(true, _featuresManager.TicAudio);
                     yield return new WaitForSeconds(1f);
                     i--;
+
+                    //in case the charge back to normal
                     if (_eAmount == _pAmount && _nAmount >= _eAmount - 2)
                     {
                         _audioController.AudioPlay(false, _featuresManager.TicAudio);
@@ -118,7 +123,9 @@ namespace Dva
                         break;
                     }
                 }
+
                 _atomDecayText.text = "";
+                //if player coudn't save the atom
                 if (_toDecay)
                 {
                     _audioController.AudioPlay(false, _featuresManager.TicAudio);
@@ -137,6 +144,7 @@ namespace Dva
             }
         }
 
+        //set the amount of particles after decay
         private int AtomDecay()
         {
             {
@@ -167,6 +175,7 @@ namespace Dva
             return atomID;
         }
 
+        //decay if player got to many/not enough of neutrons
         protected IEnumerator AtomNeutronDecay()
         {
             if (!_inDecay)
@@ -174,6 +183,7 @@ namespace Dva
                 _toDecay = true;
                 _inDecay = true;
 
+                //counter before decay
                 for (int i = _decayCount; i >= 0;)
                 {
                     _audioController.AudioPlay(true, _featuresManager.TicAudio);
@@ -181,6 +191,8 @@ namespace Dva
                     _atomDecayText.text = "Decay in " + i;
                     yield return new WaitForSeconds(1f);
                     i--;
+
+                    //in case if n amount is enough
                     if (_eAmount == _pAmount)
                     {
                         if (_nAmount < _eAmount * 2 && _nAmount >= _eAmount - 2)
@@ -197,6 +209,7 @@ namespace Dva
 
                 _atomDecayText.text = "";
 
+                //in case if player didn't save the atom
                 if (_toDecay)
                 {
                     if (_nAmount > _eAmount * 2)
@@ -224,8 +237,10 @@ namespace Dva
             }
         }
 
+        //in case if player got event from special particles
         public void EventAtomUpdate(bool blackHole)
         {
+            //if atom hitted by fast neutron
             if (!blackHole)
             {
                 int min = Math.Min(_eAmount, _nAmount);
@@ -235,6 +250,7 @@ namespace Dva
                 _eAmount = min / 2;
                 _nAmount = min / 2;
             }
+            //in case if the time of black hole event ended
             else
             {
                 if (_pAmount < _eAmount)
@@ -263,6 +279,7 @@ namespace Dva
             AtomUpgrade(_atomID);
         }
 
+        //updating the text of atom composition after decay
         protected void CompositionUpdate()
         {
             _nAmount = (_atomID - 1000000000) / 1000000;
@@ -271,12 +288,14 @@ namespace Dva
             _atomCompositionText.text = _nAmount + "n" + _eAmount + "e" + _pAmount + "p";
         }
 
+        //upgrade the atom if it has enough amoun of e/p/n
         protected void AtomUpgrade(int atomID)
         {
             int level = ((atomID - 1000000000) % 1000000) % 1000;
 
             LeveUpgrade(level);
 
+            //get the name of new atom, if it's exist in the element table
             if (AIUtility.GetAtomName.ContainsKey(atomID))
             {
                 string name = AIUtility.GetAtomName[atomID];
@@ -293,6 +312,7 @@ namespace Dva
                 _player.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _featuresManager.ElementsMaterials[9];
             }
 
+            //if this atom discovered for the first time by this player
             if (AIUtility.GetAtomSymbol.ContainsKey(atomID))
             {
                 string symbol = AIUtility.GetAtomSymbol[atomID];
@@ -316,12 +336,14 @@ namespace Dva
 
         }
 
+        //update current atom ID
         protected int AtomIDUpdate()
         {
             _atomID = 1000000000 + _nAmount * 1000000 + _eAmount * 1000 + _pAmount;
             return _atomID;
         }
 
+        //lost the live if the atom has been decayed
         private void DestroyLife(List<GameObject> lifesList)
         {
 
@@ -334,6 +356,7 @@ namespace Dva
             }
         }
 
+        //check if the player increase atom level
         private void LeveUpgrade(int level)
         {
             if (level > 20 && _upgradeCounter == 0)
@@ -368,6 +391,7 @@ namespace Dva
             }
         }
 
+        //increase the field and particles amount after atom's new level
         private void LevelChange()
         {
             Vector3 startField = _featuresManager.Field.localScale;
@@ -393,11 +417,13 @@ namespace Dva
             _gameManager.GetComponent<GameControl>()._maxParticleAmount = (int)(_gameManager.GetComponent<GameControl>()._maxParticleAmount * _multiAmount);
         }
 
+        //update game statistic
         private void StatisticUpdate()
         {
             _statisticText.text = "Score: " + _statistic;
         }
 
+        //change the color of atom
         private void MaterialUpdate(int atomID)
         {
             int elementNumber = (((_atomID - 1000000000) % 1000000) % 1000);
