@@ -53,5 +53,38 @@ namespace Dva
         public AudioSource ExplodeAudio => _explodeAudio;
         public AudioSource TicAudio => _ticAudio;
         public AudioSource StartAudio => _startAudio;
+
+        //temporarily rescale the borders around their original position (and back again with 1/multiplier)
+        public void ScaleBorders(float originalLeft, float originalRight, float originalTop, float originalBottom, float multiplier)
+        {
+            _leftBoarder.position = new Vector3(originalLeft * multiplier, _leftBoarder.position.y, _leftBoarder.position.z);
+            _rightBoarder.position = new Vector3(originalRight * multiplier, _rightBoarder.position.y, _rightBoarder.position.z);
+            _topBoarder.position = new Vector3(_topBoarder.position.x, originalTop * multiplier, _topBoarder.position.z);
+            _bottomBoarder.position = new Vector3(_bottomBoarder.position.x, originalBottom * multiplier, _bottomBoarder.position.z);
+
+            _leftBoarder.localScale = new Vector3(_leftBoarder.localScale.x * multiplier, _leftBoarder.localScale.y, _leftBoarder.localScale.z);
+            _rightBoarder.localScale = new Vector3(_rightBoarder.localScale.x * multiplier, _rightBoarder.localScale.y, _rightBoarder.localScale.z);
+            _topBoarder.localScale = new Vector3(_topBoarder.localScale.x, _topBoarder.localScale.y * multiplier, _topBoarder.localScale.z);
+            _bottomBoarder.localScale = new Vector3(_bottomBoarder.localScale.x, _bottomBoarder.localScale.y * multiplier, _bottomBoarder.localScale.z);
+        }
+
+        //permanently grow the field and borders on a level-up; border scale tracks the field's opposite-axis scale
+        public void GrowField(float multiplier, float originalLeft, float originalRight, float originalTop, float originalBottom)
+        {
+            Vector3 startField = _field.localScale;
+            _field.localScale = new Vector3(startField.x * multiplier, startField.y, startField.z * multiplier);
+
+            _leftBoarder.position = new Vector3(originalLeft * multiplier, _leftBoarder.position.y, _leftBoarder.position.z);
+            _leftBoarder.localScale = new Vector3(_field.localScale.z, _leftBoarder.localScale.y, _leftBoarder.localScale.z);
+
+            _rightBoarder.position = new Vector3(originalRight * multiplier, _rightBoarder.position.y, _rightBoarder.position.z);
+            _rightBoarder.localScale = new Vector3(_field.localScale.z, _rightBoarder.localScale.y, _rightBoarder.localScale.z);
+
+            _topBoarder.position = new Vector3(_topBoarder.position.x, originalTop * multiplier, _topBoarder.position.z);
+            _topBoarder.localScale = new Vector3(_topBoarder.localScale.x, _field.localScale.x, _topBoarder.localScale.z);
+
+            _bottomBoarder.position = new Vector3(_bottomBoarder.position.x, originalBottom * multiplier, _bottomBoarder.position.y);
+            _bottomBoarder.localScale = new Vector3(_bottomBoarder.localScale.x, _field.localScale.x, _bottomBoarder.localScale.z);
+        }
     }
 }

@@ -63,31 +63,31 @@ namespace Dva
             {
                 if(objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.BlackHole)
                 {
-                    _gameControl._blackHolesCounter.Remove(objectTriggered);
+                    _gameControl.BlackHolesCounter.Remove(objectTriggered);
                 }
                 else if(objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.TimeFast)
                 {
-                    _gameControl._timeFastCounter.Remove(objectTriggered);
+                    _gameControl.TimeFastCounter.Remove(objectTriggered);
                 }
                 else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.TimeSlow)
                 {
-                    _gameControl._timeSlowCounter.Remove(objectTriggered);
+                    _gameControl.TimeSlowCounter.Remove(objectTriggered);
                 }
                 else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.FiledShrink)
                 {
-                    _gameControl._fieldSmallerCounter.Remove(objectTriggered);
+                    _gameControl.FieldSmallerCounter.Remove(objectTriggered);
                 }
                 else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.FieldRise)
                 {
-                    _gameControl._fieldBiggerCounter.Remove(objectTriggered);
+                    _gameControl.FieldBiggerCounter.Remove(objectTriggered);
                 }
                 else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.Lives)
                 {
-                    _gameControl._livesCounter.Remove(objectTriggered);
+                    _gameControl.LivesCounter.Remove(objectTriggered);
                 }
                 else
                 {
-                    _gameControl._neutronFastCounter.Remove(objectTriggered);
+                    _gameControl.NeutronFastCounter.Remove(objectTriggered);
                 }
 
                 Animator animator = objectTriggered.GetComponent<Animator>();

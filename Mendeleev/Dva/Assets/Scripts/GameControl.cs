@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Dva
 {
@@ -12,7 +13,8 @@ namespace Dva
     {
         [Header("Balance values")]
         [SerializeField] private Transform _particleParent;
-        [SerializeField] public int _maxParticleAmount = 10;
+        [FormerlySerializedAs("_maxParticleAmount")]
+        [SerializeField] public int MaxParticleAmount = 10;
         [SerializeField] private int _maxSpecialAmount = 2;
         [SerializeField] private int _particleRenewTime = 15;
         [SerializeField] private int _livesAmount = 3;
@@ -37,24 +39,33 @@ namespace Dva
         private float _count;
         private float _livesTimeRest = 0f;
 
+        [FormerlySerializedAs("_particlesCounter")]
         [HideInInspector]
-        public List<GameObject> _particlesCounter;
+        public List<GameObject> ParticlesCounter;
+        [FormerlySerializedAs("_blackHolesCounter")]
         [HideInInspector]
-        public List<GameObject> _blackHolesCounter;
+        public List<GameObject> BlackHolesCounter;
+        [FormerlySerializedAs("_timeFastCounter")]
         [HideInInspector]
-        public List<GameObject> _timeFastCounter;
+        public List<GameObject> TimeFastCounter;
+        [FormerlySerializedAs("_timeSlowCounter")]
         [HideInInspector]
-        public List<GameObject> _timeSlowCounter;
+        public List<GameObject> TimeSlowCounter;
+        [FormerlySerializedAs("_fieldBiggerCounter")]
         [HideInInspector]
-        public List<GameObject> _fieldBiggerCounter;
+        public List<GameObject> FieldBiggerCounter;
+        [FormerlySerializedAs("_fieldSmallerCounter")]
         [HideInInspector]
-        public List<GameObject> _fieldSmallerCounter;
+        public List<GameObject> FieldSmallerCounter;
+        [FormerlySerializedAs("_neutronFastCounter")]
         [HideInInspector]
-        public List<GameObject> _neutronFastCounter;
+        public List<GameObject> NeutronFastCounter;
+        [FormerlySerializedAs("_livesCounter")]
         [HideInInspector]
-        public List<GameObject> _livesCounter;
+        public List<GameObject> LivesCounter;
+        [FormerlySerializedAs("_livesList")]
         [HideInInspector]
-        public List<GameObject> _livesList;
+        public List<GameObject> LivesList;
 
         private FeaturesManager _featuresManager;
         private Player _player;
@@ -63,7 +74,7 @@ namespace Dva
         private bool _isBlackHoleActive = false;
         private float _liveStepCanvas = 0.1f;
 
-        public List<GameObject> ParticleCounter => _particlesCounter;
+        public List<GameObject> ParticleCounter => ParticlesCounter;
 
         public bool IsBlackHoleActive => _isBlackHoleActive;
 
@@ -74,14 +85,14 @@ namespace Dva
         }
         void Start()
         {
-            _particlesCounter = new List<GameObject>();
-            _blackHolesCounter = new List<GameObject>();
-            _timeFastCounter = new List<GameObject>();
-            _timeSlowCounter = new List<GameObject>();
-            _fieldBiggerCounter = new List<GameObject>();
-            _fieldSmallerCounter = new List<GameObject>();
-            _neutronFastCounter = new List<GameObject>();
-            _livesList = new List<GameObject>();
+            ParticlesCounter = new List<GameObject>();
+            BlackHolesCounter = new List<GameObject>();
+            TimeFastCounter = new List<GameObject>();
+            TimeSlowCounter = new List<GameObject>();
+            FieldBiggerCounter = new List<GameObject>();
+            FieldSmallerCounter = new List<GameObject>();
+            NeutronFastCounter = new List<GameObject>();
+            LivesList = new List<GameObject>();
             _player = FindObjectOfType<Player>();
             _count = _particleRenewTime;
             LifesCreation(_livesAmount);
@@ -98,58 +109,58 @@ namespace Dva
         //spawn particle on random places on field
         private void ParticleSpawn(GameObject particle)
         {
-            if (_particlesCounter.Count >= _maxParticleAmount) return;
+            if (ParticlesCounter.Count >= MaxParticleAmount) return;
 
-            InstantiateParticle(particle, _particlesCounter);
+            InstantiateParticle(particle, ParticlesCounter);
         }
 
         //special particle spawn after reaching certain level of atom
         private void SpecialParticleSpawn()
-        { 
-            int level = (((_atom.AtomID - 1000000000) % 1000000) % 1000);
+        {
+            AtomId.Decode(_atom.AtomID, out _, out _, out int level);
 
             if(level >= 20)
             {
-                if (_neutronFastCounter.Count < _maxLivesInField)
+                if (NeutronFastCounter.Count < _maxLivesInField)
                 {
-                    InstantiateParticle(_fastNeutronParticle.gameObject, _neutronFastCounter);
+                    InstantiateParticle(_fastNeutronParticle.gameObject, NeutronFastCounter);
                 }
 
-                if (_livesCounter.Count < _maxLivesInField)
+                if (LivesCounter.Count < _maxLivesInField)
                 {
                     if (_livesTimeRest <= 0)
                     {
-                        InstantiateParticle(_lives.gameObject, _livesCounter);
+                        InstantiateParticle(_lives.gameObject, LivesCounter);
                     }
                 }
 
                 if (level >= 40)
                 {
-                    if (_timeFastCounter.Count < _maxSpecialAmount)
+                    if (TimeFastCounter.Count < _maxSpecialAmount)
                     {
-                        InstantiateParticle(_timeFastParticle.gameObject, _timeFastCounter);
+                        InstantiateParticle(_timeFastParticle.gameObject, TimeFastCounter);
                     }
-                    if (_timeSlowCounter.Count < _maxSpecialAmount)
+                    if (TimeSlowCounter.Count < _maxSpecialAmount)
                     {
-                        InstantiateParticle(_timeSlowParticle.gameObject, _timeSlowCounter);
+                        InstantiateParticle(_timeSlowParticle.gameObject, TimeSlowCounter);
                     }
 
                     if (level >= 60)
                     {
-                        if (_fieldBiggerCounter.Count < _maxSpecialAmount)
+                        if (FieldBiggerCounter.Count < _maxSpecialAmount)
                         {
-                            InstantiateParticle(_fieldBiggerParticle.gameObject, _fieldBiggerCounter);
+                            InstantiateParticle(_fieldBiggerParticle.gameObject, FieldBiggerCounter);
                         }
-                        if (_fieldSmallerCounter.Count < _maxSpecialAmount)
+                        if (FieldSmallerCounter.Count < _maxSpecialAmount)
                         {
-                            InstantiateParticle(_fieldSmallerParticle.gameObject, _fieldSmallerCounter);
+                            InstantiateParticle(_fieldSmallerParticle.gameObject, FieldSmallerCounter);
                         }
 
                         if(level >= 80)
                         {
-                            if (_blackHolesCounter.Count < _maxSpecialAmount)
+                            if (BlackHolesCounter.Count < _maxSpecialAmount)
                             {
-                                InstantiateParticle(_blackHole.gameObject, _blackHolesCounter);
+                                InstantiateParticle(_blackHole.gameObject, BlackHolesCounter);
                             }
                         }
                     }
@@ -179,21 +190,20 @@ namespace Dva
         private GeneralParticle GetRandomParticle()
         {
             Array values = Enum.GetValues(typeof(GeneralParticleType));
-            System.Random random = new System.Random();
-            GeneralParticleType randomParticle = (GeneralParticleType)values.GetValue(random.Next(values.Length));
+            GeneralParticleType randomParticle = (GeneralParticleType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
 
-                if (randomParticle == GeneralParticleType.Electron)
-                {
-                    return _electron;
-                }
-                else if (randomParticle == GeneralParticleType.Proton)
-                {
-                    return _proton;
-                }
-                else
-                {
-                    return _neutron;
-                }
+            if (randomParticle == GeneralParticleType.Electron)
+            {
+                return _electron;
+            }
+            else if (randomParticle == GeneralParticleType.Proton)
+            {
+                return _proton;
+            }
+            else
+            {
+                return _neutron;
+            }
         }
 
         //destroy random particle
@@ -203,7 +213,7 @@ namespace Dva
 
             if(_count <= 0)
             {
-                int randomIndex = UnityEngine.Random.Range(0, _maxParticleAmount - 1);
+                int randomIndex = UnityEngine.Random.Range(0, MaxParticleAmount - 1);
                 GameObject particleToDestroy = ParticleCounter[randomIndex];
                 ParticleCounter.RemoveAt(randomIndex);
                 Destroy(particleToDestroy);
@@ -292,16 +302,13 @@ namespace Dva
         //increase/decrease the size of the field for certain amount of time
         private IEnumerator FieldSizeChangeEvent(SpecialParticleType particle)
         {
-            //нужно разрушить старые частицы и заново сделать и также после завершения
+            //need to destroy the old particles and respawn them, both now and again once the event ends
             float sizeMultiplier;
-            Vector3 startField = _featuresManager.Field.localScale;
             float left = _featuresManager.LeftBoarder.transform.position.x;
             float right = _featuresManager.RightBoarder.transform.position.x;
             float top = _featuresManager.TopBoarder.transform.position.y;
             float bottom = _featuresManager.BottomBoarder.transform.position.y;
             Animator _fieldAnimator = _featuresManager.Field.GetComponent<Animator>();
-            List<GameObject> _particlesToRemove = new List<GameObject>();
-            List<GameObject> specialsToRemove = new List<GameObject>();
 
             if (particle == SpecialParticleType.FiledShrink)
             {
@@ -327,24 +334,15 @@ namespace Dva
                     {
                         _fieldAnimator.SetBool("Bigger", true);
                     }
-    
-                    _featuresManager.LeftBoarder.transform.position = new Vector3(left * sizeMultiplier, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
-                    _featuresManager.RightBoarder.transform.position = new Vector3(right * sizeMultiplier, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
-                    _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, top * sizeMultiplier, _featuresManager.TopBoarder.transform.position.z);
-                    _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, bottom * sizeMultiplier, _featuresManager.BottomBoarder.transform.position.z);
+                    _featuresManager.ScaleBorders(left, right, top, bottom, sizeMultiplier);
 
-                    _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x * sizeMultiplier, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z);
-                    _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x * sizeMultiplier, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z);
-                    _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y * sizeMultiplier, _featuresManager.TopBoarder.localScale.z);
-                    _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y * sizeMultiplier, _featuresManager.BottomBoarder.localScale.z);
-
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, false, _particlesCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _timeFastCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _timeSlowCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _blackHolesCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _fieldBiggerCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _fieldSmallerCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _neutronFastCounter);
+                    RemoveForEvent(false, ParticlesCounter);
+                    RemoveForEvent(true, TimeFastCounter);
+                    RemoveForEvent(true, TimeSlowCounter);
+                    RemoveForEvent(true, BlackHolesCounter);
+                    RemoveForEvent(true, FieldBiggerCounter);
+                    RemoveForEvent(true, FieldSmallerCounter);
+                    RemoveForEvent(true, NeutronFastCounter);
 
                     _needToRemove = false;
                 }
@@ -354,16 +352,7 @@ namespace Dva
             }
 
 
-            _featuresManager.LeftBoarder.transform.position = new Vector3(left / sizeMultiplier, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
-            _featuresManager.RightBoarder.transform.position = new Vector3(right / sizeMultiplier, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
-            _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, top / sizeMultiplier, _featuresManager.TopBoarder.transform.position.z);
-            _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, bottom / sizeMultiplier, _featuresManager.BottomBoarder.transform.position.z);
-
-            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.LeftBoarder.localScale.x / sizeMultiplier, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z);
-            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.RightBoarder.localScale.x / sizeMultiplier, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z);
-            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.TopBoarder.localScale.y / sizeMultiplier, _featuresManager.TopBoarder.localScale.z);
-            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.BottomBoarder.localScale.y / sizeMultiplier, _featuresManager.BottomBoarder.localScale.z);
-
+            _featuresManager.ScaleBorders(left, right, top, bottom, 1f / sizeMultiplier);
 
             if (particle == SpecialParticleType.FieldRise)
             {
@@ -374,13 +363,13 @@ namespace Dva
 
                 if (_needToRemove)
                 {
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, false, _particlesCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _timeFastCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _timeSlowCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _blackHolesCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _fieldBiggerCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _fieldSmallerCounter);
-                    RemoveForEvent(_particlesToRemove, specialsToRemove, true, _neutronFastCounter);
+                    RemoveForEvent(false, ParticlesCounter);
+                    RemoveForEvent(true, TimeFastCounter);
+                    RemoveForEvent(true, TimeSlowCounter);
+                    RemoveForEvent(true, BlackHolesCounter);
+                    RemoveForEvent(true, FieldBiggerCounter);
+                    RemoveForEvent(true, FieldSmallerCounter);
+                    RemoveForEvent(true, NeutronFastCounter);
 
                     _needToRemove = false;
                 }
@@ -401,23 +390,23 @@ namespace Dva
         private void LivesEvent()
         {
 
-            if (_livesList.Count < 5)
+            if (LivesList.Count < 5)
             {
-                Transform lastLifePosition = _livesList[_livesList.Count - 1].gameObject.transform;
+                Transform lastLifePosition = LivesList[LivesList.Count - 1].gameObject.transform;
                 GameObject life = Instantiate(_livesCanvas, new Vector3(lastLifePosition.position.x + _liveStepCanvas, _livesHolder.position.y, _livesHolder.position.z)
                         , _livesCanvas.transform.rotation, _livesHolder);
 
-                _livesList.Add(life);
+                LivesList.Add(life);
                 _livesTimeRest = _livesTimeAppear;
             }
         }
 
         //renew all particles after event start/end
-        private void RemoveForEvent(List<GameObject> particles, List<GameObject> specials, bool isSpecials, List<GameObject> list)
+        private void RemoveForEvent(bool isSpecials, List<GameObject> list)
         {
             if (!isSpecials)
             {
-                particles = FindObjectsOfType<GeneralParticle>().Select(stat => stat.gameObject).ToList(); 
+                List<GameObject> particles = FindObjectsOfType<GeneralParticle>().Select(stat => stat.gameObject).ToList();
                 foreach (GameObject particle in particles)
                 {
                     list.Remove(particle.gameObject);
@@ -426,7 +415,7 @@ namespace Dva
             }
             else
             {
-                specials = FindObjectsOfType<SpecialParticle>().Select(stat => stat.gameObject).ToList(); ;
+                List<GameObject> specials = FindObjectsOfType<SpecialParticle>().Select(stat => stat.gameObject).ToList();
                 foreach (GameObject special in specials)
                 {
                     list.Remove(special.gameObject);
@@ -443,7 +432,7 @@ namespace Dva
                 GameObject life = Instantiate(_livesCanvas, new Vector3(_livesHolder.position.x + i * _liveStepCanvas, _livesHolder.position.y, _livesHolder.position.z)
                     , _livesCanvas.transform.rotation, _livesHolder);
 
-                _livesList.Add(life);
+                LivesList.Add(life);
             }
         }
 

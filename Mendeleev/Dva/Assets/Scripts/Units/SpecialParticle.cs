@@ -53,7 +53,7 @@ namespace Dva
             {
                 if (Vector3.Distance(transform.position, _pointToGo) < 0.05f)
                 {
-                    _gameManager._neutronFastCounter.Remove(gameObject);
+                    _gameManager.NeutronFastCounter.Remove(gameObject);
                     Destroy(gameObject);
                 }
                 else

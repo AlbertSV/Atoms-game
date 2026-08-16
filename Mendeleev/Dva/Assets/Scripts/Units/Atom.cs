@@ -134,7 +134,7 @@ namespace Dva
                     CompositionUpdate();
                     _statistic = (int)(_statistic / 2);
                     StatisticUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
+                    DestroyLife(_gameManager.GetComponent<GameControl>().LivesList);
                     _inDecay = false;
                     _toDecay = false;
                 }
@@ -229,7 +229,7 @@ namespace Dva
                     _statistic = (int)(_statistic / 1.5);
                     StatisticUpdate();
                     CompositionUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>()._livesList);
+                    DestroyLife(_gameManager.GetComponent<GameControl>().LivesList);
                 }
             }
         }
@@ -279,16 +279,14 @@ namespace Dva
         //updating the text of atom composition after decay
         protected void CompositionUpdate()
         {
-            _nAmount = (_atomID - 1000000000) / 1000000;
-            _eAmount = ((_atomID - 1000000000) % 1000000) / 1000;
-            _pAmount = (((_atomID - 1000000000) % 1000000) % 1000);
+            AtomId.Decode(_atomID, out _nAmount, out _eAmount, out _pAmount);
             _atomCompositionText.text = _nAmount + "n" + _eAmount + "e" + _pAmount + "p";
         }
 
         //upgrade the atom if it has enough amoun of e/p/n
         protected void AtomUpgrade(int atomID)
         {
-            int level = ((atomID - 1000000000) % 1000000) % 1000;
+            AtomId.Decode(atomID, out _, out _, out int level);
 
             LeveUpgrade(level);
 
@@ -336,7 +334,7 @@ namespace Dva
         //update current atom ID
         protected int AtomIDUpdate()
         {
-            _atomID = 1000000000 + _nAmount * 1000000 + _eAmount * 1000 + _pAmount;
+            _atomID = AtomId.Encode(_nAmount, _eAmount, _pAmount);
             return _atomID;
         }
 
@@ -391,27 +389,14 @@ namespace Dva
         //increase the field and particles amount after atom's new level
         private void LevelChange()
         {
-            Vector3 startField = _featuresManager.Field.localScale;
             float left = _featuresManager.LeftBoarder.transform.position.x;
             float right = _featuresManager.RightBoarder.transform.position.x;
             float top = _featuresManager.TopBoarder.transform.position.y;
             float bottom = _featuresManager.BottomBoarder.transform.position.y;
 
-            _featuresManager.Field.localScale = new Vector3(startField.x * _multiField, startField.y, startField.z * _multiField);
+            _featuresManager.GrowField(_multiField, left, right, top, bottom);
 
-            _featuresManager.LeftBoarder.transform.position = new Vector3(left * _multiField, _featuresManager.LeftBoarder.transform.position.y, _featuresManager.LeftBoarder.transform.position.z);
-            _featuresManager.LeftBoarder.transform.localScale = new Vector3(_featuresManager.Field.localScale.z, _featuresManager.LeftBoarder.localScale.y, _featuresManager.LeftBoarder.localScale.z);
-
-            _featuresManager.RightBoarder.transform.position = new Vector3(right * _multiField, _featuresManager.RightBoarder.transform.position.y, _featuresManager.RightBoarder.transform.position.z);
-            _featuresManager.RightBoarder.transform.localScale = new Vector3(_featuresManager.Field.localScale.z, _featuresManager.RightBoarder.localScale.y, _featuresManager.RightBoarder.localScale.z);
-
-            _featuresManager.TopBoarder.transform.position = new Vector3(_featuresManager.TopBoarder.transform.position.x, top * _multiField, _featuresManager.TopBoarder.transform.position.z);
-            _featuresManager.TopBoarder.transform.localScale = new Vector3(_featuresManager.TopBoarder.localScale.x, _featuresManager.Field.localScale.x, _featuresManager.TopBoarder.localScale.z);
-
-            _featuresManager.BottomBoarder.transform.position = new Vector3(_featuresManager.BottomBoarder.transform.position.x, bottom * _multiField, _featuresManager.BottomBoarder.transform.position.y);
-            _featuresManager.BottomBoarder.transform.localScale = new Vector3(_featuresManager.BottomBoarder.localScale.x, _featuresManager.Field.localScale.x, _featuresManager.BottomBoarder.localScale.z);
-
-            _gameManager.GetComponent<GameControl>()._maxParticleAmount = (int)(_gameManager.GetComponent<GameControl>()._maxParticleAmount * _multiAmount);
+            _gameManager.GetComponent<GameControl>().MaxParticleAmount = (int)(_gameManager.GetComponent<GameControl>().MaxParticleAmount * _multiAmount);
         }
 
         //update game statistic
@@ -423,7 +408,7 @@ namespace Dva
         //change the color of atom
         private void MaterialUpdate(int atomID)
         {
-            int elementNumber = (((_atomID - 1000000000) % 1000000) % 1000);
+            AtomId.Decode(_atomID, out _, out _, out int elementNumber);
             int materialNumber = AIUtility.GetElementMaterial[elementNumber];
 
             _player.transform.GetChild(1).GetComponent<SpriteRenderer>().material = _featuresManager.ElementsMaterials[materialNumber - 1];

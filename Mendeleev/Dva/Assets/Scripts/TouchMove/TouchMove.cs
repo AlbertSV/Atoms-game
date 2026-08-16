@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.Serialization;
 using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 
 namespace Dva
@@ -11,8 +12,9 @@ namespace Dva
         [SerializeField] private Vector2 _joystickSize = new Vector2(100, 100);
         [SerializeField] private FloatingJoystick _joystick;
         [SerializeField] private Rigidbody2D _player;
+        [FormerlySerializedAs("PLAYERSPEED")]
         [SerializeField]
-        private float PLAYERSPEED = 0.1f;
+        private float _playerSpeed = 0.1f;
         [SerializeField] private float _maxSpeed;
 
         private Finger _movementFinger;
@@ -114,7 +116,7 @@ namespace Dva
         //making player move
         private void  MoveUpdate()
         {
-            Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
+            Vector2 scaledMovement = _playerSpeed * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
             _player.AddForce(scaledMovement);
 
             if(_player.velocity.magnitude > _maxSpeed)
