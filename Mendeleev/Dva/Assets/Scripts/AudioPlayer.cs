@@ -22,7 +22,7 @@ public class AudioPlayer : MonoBehaviour
 
     public void SetVolume()
     {
-        if(_volumeToggle == false)
+        if(!_volumeToggle.isOn)
         {
             _audio.Stop();
         }

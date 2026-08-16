@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 namespace Dva
@@ -246,11 +245,11 @@ namespace Dva
             {
                 _isBlackHoleActive = true;
 
-                Collider[] colliders = Physics.OverlapSphere(_player.transform.position, _featuresManager.FOVRange);
-                
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(_player.transform.position, _featuresManager.FOVRange);
+
                 if (colliders.Length > 0)
                 {
-                    foreach (Collider collider in colliders)
+                    foreach (Collider2D collider in colliders)
                     {
                         if (collider.gameObject.GetComponent<GeneralParticle>() != null)
                         {
