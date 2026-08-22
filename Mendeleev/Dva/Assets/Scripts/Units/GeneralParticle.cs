@@ -57,10 +57,10 @@ namespace Dva
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _gameFeatures.ParticleSpeed * Time.deltaTime);
         }
 
-        //remove particle after hitting the atom
+        //remove particle after hitting the atom (returned to the pool, not destroyed)
         protected override void RemoveEvent()
         {
-            Destroy(gameObject);
+            _gameManager.ReturnGeneralParticle(GeneralType, gameObject);
         }
     }
 }

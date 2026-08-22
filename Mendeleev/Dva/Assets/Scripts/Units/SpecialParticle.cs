@@ -54,7 +54,7 @@ namespace Dva
                 if (Vector3.Distance(transform.position, _pointToGo) < 0.05f)
                 {
                     _gameManager.NeutronFastCounter.Remove(gameObject);
-                    Destroy(gameObject);
+                    _gameManager.ReturnSpecialParticle(_specialType, gameObject);
                 }
                 else
                 {
@@ -63,9 +63,10 @@ namespace Dva
             }
         }
 
+        //remove particle after hitting the atom (returned to the pool, not destroyed)
         protected override void RemoveEvent()
         {
-            Destroy(gameObject);
+            _gameManager.ReturnSpecialParticle(_specialType, gameObject);
         }
     }
 }

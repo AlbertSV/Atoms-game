@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -169,12 +168,104 @@ namespace Dva
 
         }
 
-        //create particle
+        //create particle (pulled from the pool for its prefab when possible, instantiated on a pool miss)
         private void InstantiateParticle(GameObject particleType, List<GameObject> particleList)
         {
-            GameObject particle = Instantiate(particleType, GetRandomPosition(_featuresManager.LeftBoarder.position.x, _featuresManager.RightBoarder.position.x,
-                _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y), particleType.transform.rotation, _particleParent);
+            Vector3 position = GetRandomPosition(_featuresManager.LeftBoarder.position.x, _featuresManager.RightBoarder.position.x,
+                _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y);
+            GameObject particle = SpawnFromPool(particleType, position);
             particleList.Add(particle);
+        }
+
+        //particles are Instantiate/Destroy-churned constantly (pickups, periodic renewal, field-resize
+        //events) and their count can run into the hundreds at high levels, so reuse instances per-prefab
+        //instead of destroying them
+        private readonly Dictionary<GameObject, Queue<GameObject>> _particlePools = new Dictionary<GameObject, Queue<GameObject>>();
+
+        private GameObject GetGeneralPrefab(GeneralParticleType type)
+        {
+            switch (type)
+            {
+                case GeneralParticleType.Electron: return _electron.gameObject;
+                case GeneralParticleType.Proton: return _proton.gameObject;
+                default: return _neutron.gameObject;
+            }
+        }
+
+        private GameObject GetSpecialPrefab(SpecialParticleType type)
+        {
+            switch (type)
+            {
+                case SpecialParticleType.BlackHole: return _blackHole.gameObject;
+                case SpecialParticleType.TimeFast: return _timeFastParticle.gameObject;
+                case SpecialParticleType.TimeSlow: return _timeSlowParticle.gameObject;
+                case SpecialParticleType.FieldRise: return _fieldBiggerParticle.gameObject;
+                case SpecialParticleType.FiledShrink: return _fieldSmallerParticle.gameObject;
+                case SpecialParticleType.FastNeutron: return _fastNeutronParticle.gameObject;
+                default: return _lives.gameObject;
+            }
+        }
+
+        public void ReturnGeneralParticle(GeneralParticleType type, GameObject instance)
+        {
+            ReturnToPool(GetGeneralPrefab(type), instance);
+        }
+
+        public void ReturnSpecialParticle(SpecialParticleType type, GameObject instance)
+        {
+            ReturnToPool(GetSpecialPrefab(type), instance);
+        }
+
+        private void ReturnToPool(GameObject prefab, GameObject instance)
+        {
+            instance.SetActive(false);
+
+            if (!_particlePools.TryGetValue(prefab, out Queue<GameObject> pool))
+            {
+                pool = new Queue<GameObject>();
+                _particlePools[prefab] = pool;
+            }
+            pool.Enqueue(instance);
+        }
+
+        private GameObject SpawnFromPool(GameObject prefab, Vector3 position)
+        {
+            GameObject instance;
+            if (_particlePools.TryGetValue(prefab, out Queue<GameObject> pool) && pool.Count > 0)
+            {
+                instance = pool.Dequeue();
+                instance.transform.SetPositionAndRotation(position, prefab.transform.rotation);
+            }
+            else
+            {
+                instance = Instantiate(prefab, position, prefab.transform.rotation, _particleParent);
+            }
+
+            ResetForSpawn(instance);
+            instance.SetActive(true);
+            return instance;
+        }
+
+        //pooled particles can carry a disabled collider (from being picked up) and leftover animator
+        //state (mid/end of the removal animation) from their previous life - reset both before reuse
+        private void ResetForSpawn(GameObject instance)
+        {
+            if (instance.TryGetComponent(out Collider2D particleCollider))
+            {
+                particleCollider.enabled = true;
+            }
+
+            if (instance.TryGetComponent(out Animator animator))
+            {
+                animator.Rebind();
+                animator.Update(0f);
+            }
+
+            if (instance.TryGetComponent(out GeneralParticle generalParticle))
+            {
+                generalParticle._toPatrol = true;
+                generalParticle._toBlackHole = false;
+            }
         }
 
 
@@ -207,7 +298,7 @@ namespace Dva
             }
         }
 
-        //destroy random particle
+        //renew random particle (returned to the pool, not destroyed)
         private void ParticleRenew()
         {
             _count -= Time.deltaTime;
@@ -215,9 +306,12 @@ namespace Dva
             if(_count <= 0)
             {
                 int randomIndex = UnityEngine.Random.Range(0, MaxParticleAmount - 1);
-                GameObject particleToDestroy = ParticleCounter[randomIndex];
+                GameObject particleToRenew = ParticleCounter[randomIndex];
                 ParticleCounter.RemoveAt(randomIndex);
-                Destroy(particleToDestroy);
+                if (particleToRenew.TryGetComponent(out GeneralParticle generalParticle))
+                {
+                    ReturnGeneralParticle(generalParticle.GeneralType, particleToRenew);
+                }
                 _count = _particleRenewTime;
             }
         }
@@ -401,25 +495,23 @@ namespace Dva
             }
         }
 
-        //renew all particles after event start/end
+        //renew all particles after event start/end (returned to the pool, not destroyed)
         private void RemoveForEvent(bool isSpecials, List<GameObject> list)
         {
             if (!isSpecials)
             {
-                List<GameObject> particles = FindObjectsOfType<GeneralParticle>().Select(stat => stat.gameObject).ToList();
-                foreach (GameObject particle in particles)
+                foreach (GeneralParticle particle in FindObjectsOfType<GeneralParticle>())
                 {
                     list.Remove(particle.gameObject);
-                    Destroy(particle.gameObject);
+                    ReturnGeneralParticle(particle.GeneralType, particle.gameObject);
                 }
             }
             else
             {
-                List<GameObject> specials = FindObjectsOfType<SpecialParticle>().Select(stat => stat.gameObject).ToList();
-                foreach (GameObject special in specials)
+                foreach (SpecialParticle special in FindObjectsOfType<SpecialParticle>())
                 {
                     list.Remove(special.gameObject);
-                    Destroy(special.gameObject);
+                    ReturnSpecialParticle(special.SpecialType, special.gameObject);
                 }
             }
         }
