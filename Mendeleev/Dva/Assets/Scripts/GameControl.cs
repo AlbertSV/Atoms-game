@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -35,43 +34,26 @@ namespace Dva
         [SerializeField] private Transform _livesHolder;
         [SerializeField] private GameObject _endMenu;
 
-        private float _count;
-        private float _livesTimeRest = 0f;
-
-        [FormerlySerializedAs("_particlesCounter")]
-        [HideInInspector]
-        public List<GameObject> ParticlesCounter;
-        [FormerlySerializedAs("_blackHolesCounter")]
-        [HideInInspector]
-        public List<GameObject> BlackHolesCounter;
-        [FormerlySerializedAs("_timeFastCounter")]
-        [HideInInspector]
-        public List<GameObject> TimeFastCounter;
-        [FormerlySerializedAs("_timeSlowCounter")]
-        [HideInInspector]
-        public List<GameObject> TimeSlowCounter;
-        [FormerlySerializedAs("_fieldBiggerCounter")]
-        [HideInInspector]
-        public List<GameObject> FieldBiggerCounter;
-        [FormerlySerializedAs("_fieldSmallerCounter")]
-        [HideInInspector]
-        public List<GameObject> FieldSmallerCounter;
-        [FormerlySerializedAs("_neutronFastCounter")]
-        [HideInInspector]
-        public List<GameObject> NeutronFastCounter;
-        [FormerlySerializedAs("_livesCounter")]
-        [HideInInspector]
-        public List<GameObject> LivesCounter;
         [FormerlySerializedAs("_livesList")]
         [HideInInspector]
         public List<GameObject> LivesList;
 
+        private ParticleSpawner _particleSpawner;
         private FeaturesManager _featuresManager;
         private Player _player;
         private Atom _atom;
         private bool _needToRemove;
         private bool _isBlackHoleActive = false;
         private float _liveStepCanvas = 0.1f;
+
+        public List<GameObject> ParticlesCounter => _particleSpawner.ParticlesCounter;
+        public List<GameObject> BlackHolesCounter => _particleSpawner.BlackHolesCounter;
+        public List<GameObject> TimeFastCounter => _particleSpawner.TimeFastCounter;
+        public List<GameObject> TimeSlowCounter => _particleSpawner.TimeSlowCounter;
+        public List<GameObject> FieldBiggerCounter => _particleSpawner.FieldBiggerCounter;
+        public List<GameObject> FieldSmallerCounter => _particleSpawner.FieldSmallerCounter;
+        public List<GameObject> NeutronFastCounter => _particleSpawner.NeutronFastCounter;
+        public List<GameObject> LivesCounter => _particleSpawner.LivesCounter;
 
         public List<GameObject> ParticleCounter => ParticlesCounter;
 
@@ -81,193 +63,34 @@ namespace Dva
         {
             _featuresManager = FindObjectOfType<FeaturesManager>();
             _atom = FindObjectOfType<Atom>();
+            _particleSpawner = new ParticleSpawner(this, _featuresManager, _atom, _particleParent,
+                _neutron, _electron, _proton, _blackHole, _timeFastParticle, _timeSlowParticle,
+                _fieldBiggerParticle, _fieldSmallerParticle, _fastNeutronParticle, _lives,
+                _maxSpecialAmount, _particleRenewTime, _maxLivesInField, _livesTimeAppear);
         }
         void Start()
         {
-            ParticlesCounter = new List<GameObject>();
-            BlackHolesCounter = new List<GameObject>();
-            TimeFastCounter = new List<GameObject>();
-            TimeSlowCounter = new List<GameObject>();
-            FieldBiggerCounter = new List<GameObject>();
-            FieldSmallerCounter = new List<GameObject>();
-            NeutronFastCounter = new List<GameObject>();
             LivesList = new List<GameObject>();
             _player = FindObjectOfType<Player>();
-            _count = _particleRenewTime;
             LifesCreation(_livesAmount);
         }
 
         void Update()
         {
-            ParticleSpawn();
-            SpecialParticleSpawn();
-            ParticleRenew();
-            _livesTimeRest -= Time.deltaTime;
-        }
-
-        //spawn particle on random places on field
-        private void ParticleSpawn()
-        {
-            if (ParticlesCounter.Count >= MaxParticleAmount) return;
-
-            InstantiateParticle(GetRandomParticle().gameObject, ParticlesCounter);
-        }
-
-        //special particle spawn after reaching certain level of atom
-        private void SpecialParticleSpawn()
-        {
-            AtomId.Decode(_atom.AtomID, out _, out _, out int level);
-
-            if(level >= 20)
-            {
-                if (NeutronFastCounter.Count < _maxLivesInField)
-                {
-                    InstantiateParticle(_fastNeutronParticle.gameObject, NeutronFastCounter);
-                }
-
-                if (LivesCounter.Count < _maxLivesInField)
-                {
-                    if (_livesTimeRest <= 0)
-                    {
-                        InstantiateParticle(_lives.gameObject, LivesCounter);
-                    }
-                }
-
-                if (level >= 40)
-                {
-                    if (TimeFastCounter.Count < _maxSpecialAmount)
-                    {
-                        InstantiateParticle(_timeFastParticle.gameObject, TimeFastCounter);
-                    }
-                    if (TimeSlowCounter.Count < _maxSpecialAmount)
-                    {
-                        InstantiateParticle(_timeSlowParticle.gameObject, TimeSlowCounter);
-                    }
-
-                    if (level >= 60)
-                    {
-                        if (FieldBiggerCounter.Count < _maxSpecialAmount)
-                        {
-                            InstantiateParticle(_fieldBiggerParticle.gameObject, FieldBiggerCounter);
-                        }
-                        if (FieldSmallerCounter.Count < _maxSpecialAmount)
-                        {
-                            InstantiateParticle(_fieldSmallerParticle.gameObject, FieldSmallerCounter);
-                        }
-
-                        if(level >= 80)
-                        {
-                            if (BlackHolesCounter.Count < _maxSpecialAmount)
-                            {
-                                InstantiateParticle(_blackHole.gameObject, BlackHolesCounter);
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-
-        //create particle (pulled from the pool for its prefab when possible, instantiated on a pool miss)
-        private void InstantiateParticle(GameObject particleType, List<GameObject> particleList)
-        {
-            Vector3 position = GetRandomPosition(_featuresManager.LeftBoarder.position.x, _featuresManager.RightBoarder.position.x,
-                _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y);
-            GameObject particle = SpawnFromPool(particleType, position);
-            particleList.Add(particle);
-        }
-
-        //particles are Instantiate/Destroy-churned constantly (pickups, periodic renewal, field-resize
-        //events) and their count can run into the hundreds at high levels, so reuse instances per-prefab
-        //instead of destroying them
-        private readonly Dictionary<GameObject, Queue<GameObject>> _particlePools = new Dictionary<GameObject, Queue<GameObject>>();
-
-        private GameObject GetGeneralPrefab(GeneralParticleType type)
-        {
-            switch (type)
-            {
-                case GeneralParticleType.Electron: return _electron.gameObject;
-                case GeneralParticleType.Proton: return _proton.gameObject;
-                default: return _neutron.gameObject;
-            }
-        }
-
-        private GameObject GetSpecialPrefab(SpecialParticleType type)
-        {
-            switch (type)
-            {
-                case SpecialParticleType.BlackHole: return _blackHole.gameObject;
-                case SpecialParticleType.TimeFast: return _timeFastParticle.gameObject;
-                case SpecialParticleType.TimeSlow: return _timeSlowParticle.gameObject;
-                case SpecialParticleType.FieldRise: return _fieldBiggerParticle.gameObject;
-                case SpecialParticleType.FiledShrink: return _fieldSmallerParticle.gameObject;
-                case SpecialParticleType.FastNeutron: return _fastNeutronParticle.gameObject;
-                default: return _lives.gameObject;
-            }
+            _particleSpawner.ParticleSpawn();
+            _particleSpawner.SpecialParticleSpawn();
+            _particleSpawner.ParticleRenew();
         }
 
         public void ReturnGeneralParticle(GeneralParticleType type, GameObject instance)
         {
-            ReturnToPool(GetGeneralPrefab(type), instance);
+            _particleSpawner.ReturnGeneralParticle(type, instance);
         }
 
         public void ReturnSpecialParticle(SpecialParticleType type, GameObject instance)
         {
-            ReturnToPool(GetSpecialPrefab(type), instance);
+            _particleSpawner.ReturnSpecialParticle(type, instance);
         }
-
-        private void ReturnToPool(GameObject prefab, GameObject instance)
-        {
-            instance.SetActive(false);
-
-            if (!_particlePools.TryGetValue(prefab, out Queue<GameObject> pool))
-            {
-                pool = new Queue<GameObject>();
-                _particlePools[prefab] = pool;
-            }
-            pool.Enqueue(instance);
-        }
-
-        private GameObject SpawnFromPool(GameObject prefab, Vector3 position)
-        {
-            GameObject instance;
-            if (_particlePools.TryGetValue(prefab, out Queue<GameObject> pool) && pool.Count > 0)
-            {
-                instance = pool.Dequeue();
-                instance.transform.SetPositionAndRotation(position, prefab.transform.rotation);
-            }
-            else
-            {
-                instance = Instantiate(prefab, position, prefab.transform.rotation, _particleParent);
-            }
-
-            ResetForSpawn(instance);
-            instance.SetActive(true);
-            return instance;
-        }
-
-        //pooled particles can carry a disabled collider (from being picked up) and leftover animator
-        //state (mid/end of the removal animation) from their previous life - reset both before reuse
-        private void ResetForSpawn(GameObject instance)
-        {
-            if (instance.TryGetComponent(out Collider2D particleCollider))
-            {
-                particleCollider.enabled = true;
-            }
-
-            if (instance.TryGetComponent(out Animator animator))
-            {
-                animator.Rebind();
-                animator.Update(0f);
-            }
-
-            if (instance.TryGetComponent(out GeneralParticle generalParticle))
-            {
-                generalParticle._toPatrol = true;
-                generalParticle._toBlackHole = false;
-            }
-        }
-
 
         public Vector3 GetRandomPosition(float leftBoarder, float rightBoarder, float topBoarder, float bottomBoarder)
         {
@@ -276,44 +99,6 @@ namespace Dva
             float z = -1;
 
             return new Vector3(x, y, z);
-        }
-
-        private static readonly GeneralParticleType[] s_generalParticleTypes = (GeneralParticleType[])Enum.GetValues(typeof(GeneralParticleType));
-
-        private GeneralParticle GetRandomParticle()
-        {
-            GeneralParticleType randomParticle = s_generalParticleTypes[UnityEngine.Random.Range(0, s_generalParticleTypes.Length)];
-
-            if (randomParticle == GeneralParticleType.Electron)
-            {
-                return _electron;
-            }
-            else if (randomParticle == GeneralParticleType.Proton)
-            {
-                return _proton;
-            }
-            else
-            {
-                return _neutron;
-            }
-        }
-
-        //renew random particle (returned to the pool, not destroyed)
-        private void ParticleRenew()
-        {
-            _count -= Time.deltaTime;
-
-            if(_count <= 0)
-            {
-                int randomIndex = UnityEngine.Random.Range(0, MaxParticleAmount - 1);
-                GameObject particleToRenew = ParticleCounter[randomIndex];
-                ParticleCounter.RemoveAt(randomIndex);
-                if (particleToRenew.TryGetComponent(out GeneralParticle generalParticle))
-                {
-                    ReturnGeneralParticle(generalParticle.GeneralType, particleToRenew);
-                }
-                _count = _particleRenewTime;
-            }
         }
 
         //special particle eventcall
@@ -345,7 +130,7 @@ namespace Dva
         //creatinf a zone around the atom where all particles draging into atom
         private IEnumerator BlackHoleEvent()
         {
-          
+
             for (int i = _featuresManager.EventCountDown*10; i > 0;)
             {
                 _isBlackHoleActive = true;
@@ -491,29 +276,14 @@ namespace Dva
                         , _livesCanvas.transform.rotation, _livesHolder);
 
                 LivesList.Add(life);
-                _livesTimeRest = _livesTimeAppear;
+                _particleSpawner.ResetLivesTimer();
             }
         }
 
         //renew all particles after event start/end (returned to the pool, not destroyed)
         private void RemoveForEvent(bool isSpecials, List<GameObject> list)
         {
-            if (!isSpecials)
-            {
-                foreach (GeneralParticle particle in FindObjectsOfType<GeneralParticle>())
-                {
-                    list.Remove(particle.gameObject);
-                    ReturnGeneralParticle(particle.GeneralType, particle.gameObject);
-                }
-            }
-            else
-            {
-                foreach (SpecialParticle special in FindObjectsOfType<SpecialParticle>())
-                {
-                    list.Remove(special.gameObject);
-                    ReturnSpecialParticle(special.SpecialType, special.gameObject);
-                }
-            }
+            _particleSpawner.RemoveForEvent(isSpecials, list);
         }
 
         //add lives to the field
