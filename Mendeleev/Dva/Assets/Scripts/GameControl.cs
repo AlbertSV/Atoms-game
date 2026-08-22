@@ -33,16 +33,12 @@ namespace Dva
         [SerializeField] private Transform _livesHolder;
         [SerializeField] private GameObject _endMenu;
 
-        [FormerlySerializedAs("_livesList")]
-        [HideInInspector]
-        public List<GameObject> LivesList;
-
         private ParticleSpawner _particleSpawner;
         private FieldEventRunner _fieldEventRunner;
+        private LivesController _livesController;
         private FeaturesManager _featuresManager;
         private Player _player;
         private Atom _atom;
-        private float _liveStepCanvas = 0.1f;
 
         public List<GameObject> ParticlesCounter => _particleSpawner.ParticlesCounter;
         public List<GameObject> BlackHolesCounter => _particleSpawner.BlackHolesCounter;
@@ -54,6 +50,7 @@ namespace Dva
         public List<GameObject> LivesCounter => _particleSpawner.LivesCounter;
 
         public List<GameObject> ParticleCounter => ParticlesCounter;
+        public List<GameObject> LivesList => _livesController.LivesList;
 
         public bool IsBlackHoleActive => _fieldEventRunner.IsBlackHoleActive;
 
@@ -70,8 +67,7 @@ namespace Dva
         }
         void Start()
         {
-            LivesList = new List<GameObject>();
-            LifesCreation(_livesAmount);
+            _livesController = new LivesController(_particleSpawner, _livesCanvas, _livesHolder, _livesAmount);
         }
 
         void Update()
@@ -105,37 +101,11 @@ namespace Dva
         {
             if (particle == SpecialParticleType.Lives)
             {
-                LivesEvent();
+                _livesController.LivesEvent();
             }
             else
             {
                 _fieldEventRunner.Trigger(particle);
-            }
-        }
-
-        private void LivesEvent()
-        {
-
-            if (LivesList.Count < 5)
-            {
-                Transform lastLifePosition = LivesList[LivesList.Count - 1].gameObject.transform;
-                GameObject life = Instantiate(_livesCanvas, new Vector3(lastLifePosition.position.x + _liveStepCanvas, _livesHolder.position.y, _livesHolder.position.z)
-                        , _livesCanvas.transform.rotation, _livesHolder);
-
-                LivesList.Add(life);
-                _particleSpawner.ResetLivesTimer();
-            }
-        }
-
-        //add lives to the field
-        private void LifesCreation(int lifeAmount)
-        {
-            for(int i=0; i< lifeAmount; i++)
-            {
-                GameObject life = Instantiate(_livesCanvas, new Vector3(_livesHolder.position.x + i * _liveStepCanvas, _livesHolder.position.y, _livesHolder.position.z)
-                    , _livesCanvas.transform.rotation, _livesHolder);
-
-                LivesList.Add(life);
             }
         }
 
