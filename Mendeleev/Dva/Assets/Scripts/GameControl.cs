@@ -100,18 +100,18 @@ namespace Dva
 
         void Update()
         {
-            ParticleSpawn(GetRandomParticle().gameObject);
+            ParticleSpawn();
             SpecialParticleSpawn();
             ParticleRenew();
             _livesTimeRest -= Time.deltaTime;
         }
 
         //spawn particle on random places on field
-        private void ParticleSpawn(GameObject particle)
+        private void ParticleSpawn()
         {
             if (ParticlesCounter.Count >= MaxParticleAmount) return;
 
-            InstantiateParticle(particle, ParticlesCounter);
+            InstantiateParticle(GetRandomParticle().gameObject, ParticlesCounter);
         }
 
         //special particle spawn after reaching certain level of atom
@@ -187,10 +187,11 @@ namespace Dva
             return new Vector3(x, y, z);
         }
 
+        private static readonly GeneralParticleType[] s_generalParticleTypes = (GeneralParticleType[])Enum.GetValues(typeof(GeneralParticleType));
+
         private GeneralParticle GetRandomParticle()
         {
-            Array values = Enum.GetValues(typeof(GeneralParticleType));
-            GeneralParticleType randomParticle = (GeneralParticleType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
+            GeneralParticleType randomParticle = s_generalParticleTypes[UnityEngine.Random.Range(0, s_generalParticleTypes.Length)];
 
             if (randomParticle == GeneralParticleType.Electron)
             {
