@@ -262,11 +262,10 @@ namespace Dva
                 {
                     foreach (Collider2D collider in colliders)
                     {
-                        if (collider.gameObject.GetComponent<GeneralParticle>() != null)
+                        if (collider.gameObject.TryGetComponent(out GeneralParticle particle))
                         {
-                            collider.gameObject.GetComponent<GeneralParticle>()._toPatrol = false;
-                            collider.gameObject.GetComponent<GeneralParticle>()._toBlackHole = true;
-
+                            particle._toPatrol = false;
+                            particle._toBlackHole = true;
                         }
                     }
                 }
