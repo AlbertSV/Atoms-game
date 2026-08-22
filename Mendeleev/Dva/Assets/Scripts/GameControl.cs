@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -39,11 +38,10 @@ namespace Dva
         public List<GameObject> LivesList;
 
         private ParticleSpawner _particleSpawner;
+        private FieldEventRunner _fieldEventRunner;
         private FeaturesManager _featuresManager;
         private Player _player;
         private Atom _atom;
-        private bool _needToRemove;
-        private bool _isBlackHoleActive = false;
         private float _liveStepCanvas = 0.1f;
 
         public List<GameObject> ParticlesCounter => _particleSpawner.ParticlesCounter;
@@ -57,21 +55,22 @@ namespace Dva
 
         public List<GameObject> ParticleCounter => ParticlesCounter;
 
-        public bool IsBlackHoleActive => _isBlackHoleActive;
+        public bool IsBlackHoleActive => _fieldEventRunner.IsBlackHoleActive;
 
         private void Awake()
         {
             _featuresManager = FindObjectOfType<FeaturesManager>();
             _atom = FindObjectOfType<Atom>();
+            _player = FindObjectOfType<Player>();
             _particleSpawner = new ParticleSpawner(this, _featuresManager, _atom, _particleParent,
                 _neutron, _electron, _proton, _blackHole, _timeFastParticle, _timeSlowParticle,
                 _fieldBiggerParticle, _fieldSmallerParticle, _fastNeutronParticle, _lives,
                 _maxSpecialAmount, _particleRenewTime, _maxLivesInField, _livesTimeAppear);
+            _fieldEventRunner = new FieldEventRunner(this, _featuresManager, _particleSpawner, _player, _atom);
         }
         void Start()
         {
             LivesList = new List<GameObject>();
-            _player = FindObjectOfType<Player>();
             LifesCreation(_livesAmount);
         }
 
@@ -104,166 +103,14 @@ namespace Dva
         //special particle eventcall
         public void EventCall(SpecialParticleType particle)
         {
-            if (particle == SpecialParticleType.BlackHole)
-            {
-                StartCoroutine(BlackHoleEvent());
-            }
-            else if (particle == SpecialParticleType.TimeFast || particle == SpecialParticleType.TimeSlow)
-            {
-                StartCoroutine(SpeedChangeEvent(particle));
-            }
-            else if (particle == SpecialParticleType.FieldRise || particle == SpecialParticleType.FiledShrink)
-            {
-                StartCoroutine(FieldSizeChangeEvent(particle));
-            }
-            else if (particle == SpecialParticleType.FastNeutron)
-            {
-                FastNeutronEvent();
-            }
-            else if (particle == SpecialParticleType.Lives)
+            if (particle == SpecialParticleType.Lives)
             {
                 LivesEvent();
             }
-
-        }
-
-        //creatinf a zone around the atom where all particles draging into atom
-        private IEnumerator BlackHoleEvent()
-        {
-
-            for (int i = _featuresManager.EventCountDown*10; i > 0;)
-            {
-                _isBlackHoleActive = true;
-
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(_player.transform.position, _featuresManager.FOVRange);
-
-                if (colliders.Length > 0)
-                {
-                    foreach (Collider2D collider in colliders)
-                    {
-                        if (collider.gameObject.TryGetComponent(out GeneralParticle particle))
-                        {
-                            particle._toPatrol = false;
-                            particle._toBlackHole = true;
-                        }
-                    }
-                }
-                yield return new WaitForSeconds(1f);
-                i--;
-            }
-
-            _atom.EventAtomUpdate(true);
-            _isBlackHoleActive = false;
-        }
-
-        //increase/decrease speed of particles for certain amount of time
-        private IEnumerator SpeedChangeEvent(SpecialParticleType particle)
-        {
-            float startSpeed = _featuresManager.ParticleSpeed;
-            float multiplier;
-            if (particle == SpecialParticleType.TimeSlow)
-            {
-                multiplier = 0.7f;
-            }
             else
             {
-                multiplier = 10f;
+                _fieldEventRunner.Trigger(particle);
             }
-            for (int i = _featuresManager.EventCountDown; i >= 0;)
-            {
-                _featuresManager.ParticleSpeed = startSpeed * multiplier;
-                yield return new WaitForSeconds(1f);
-                i--;
-            }
-            _featuresManager.ParticleSpeed = _featuresManager.ParticleSpeed / multiplier;
-        }
-
-        //increase/decrease the size of the field for certain amount of time
-        private IEnumerator FieldSizeChangeEvent(SpecialParticleType particle)
-        {
-            //need to destroy the old particles and respawn them, both now and again once the event ends
-            float sizeMultiplier;
-            float left = _featuresManager.LeftBoarder.transform.position.x;
-            float right = _featuresManager.RightBoarder.transform.position.x;
-            float top = _featuresManager.TopBoarder.transform.position.y;
-            float bottom = _featuresManager.BottomBoarder.transform.position.y;
-            Animator _fieldAnimator = _featuresManager.Field.GetComponent<Animator>();
-
-            if (particle == SpecialParticleType.FiledShrink)
-            {
-                sizeMultiplier = 0.7f;
-            }
-            else
-            {
-                sizeMultiplier = 1.5f;
-            }
-
-            _needToRemove = true;
-
-            for (int i = _featuresManager.EventCountDown * 3; i > 0;)
-            {
-                if (_needToRemove)
-                {
-                    if (particle == SpecialParticleType.FiledShrink)
-                    {
-                        _player.gameObject.transform.position = new Vector3(_player.gameObject.transform.position.x * sizeMultiplier, _player.gameObject.transform.position.y, _player.gameObject.transform.position.z * sizeMultiplier);
-                        _fieldAnimator.SetBool("Smaller", true);
-                    }
-                    else
-                    {
-                        _fieldAnimator.SetBool("Bigger", true);
-                    }
-                    _featuresManager.ScaleBorders(left, right, top, bottom, sizeMultiplier);
-
-                    RemoveForEvent(false, ParticlesCounter);
-                    RemoveForEvent(true, TimeFastCounter);
-                    RemoveForEvent(true, TimeSlowCounter);
-                    RemoveForEvent(true, BlackHolesCounter);
-                    RemoveForEvent(true, FieldBiggerCounter);
-                    RemoveForEvent(true, FieldSmallerCounter);
-                    RemoveForEvent(true, NeutronFastCounter);
-
-                    _needToRemove = false;
-                }
-
-                yield return new WaitForSeconds(1f);
-                i--;
-            }
-
-
-            _featuresManager.ScaleBorders(left, right, top, bottom, 1f / sizeMultiplier);
-
-            if (particle == SpecialParticleType.FieldRise)
-            {
-
-                _player.gameObject.transform.position = new Vector3(_player.gameObject.transform.position.x / sizeMultiplier, _player.gameObject.transform.position.y, _player.gameObject.transform.position.z / sizeMultiplier);
-                _fieldAnimator.SetBool("Bigger", false);
-                _needToRemove = true;
-
-                if (_needToRemove)
-                {
-                    RemoveForEvent(false, ParticlesCounter);
-                    RemoveForEvent(true, TimeFastCounter);
-                    RemoveForEvent(true, TimeSlowCounter);
-                    RemoveForEvent(true, BlackHolesCounter);
-                    RemoveForEvent(true, FieldBiggerCounter);
-                    RemoveForEvent(true, FieldSmallerCounter);
-                    RemoveForEvent(true, NeutronFastCounter);
-
-                    _needToRemove = false;
-                }
-            }
-            else
-            {
-                _fieldAnimator.SetBool("Smaller", false);
-            }
-
-        }
-
-        //hit the atom by the fast neutron (just making the atom to decay)
-        private void FastNeutronEvent()
-        {
-            _atom.EventAtomUpdate(false);
         }
 
         private void LivesEvent()
@@ -278,12 +125,6 @@ namespace Dva
                 LivesList.Add(life);
                 _particleSpawner.ResetLivesTimer();
             }
-        }
-
-        //renew all particles after event start/end (returned to the pool, not destroyed)
-        private void RemoveForEvent(bool isSpecials, List<GameObject> list)
-        {
-            _particleSpawner.RemoveForEvent(isSpecials, list);
         }
 
         //add lives to the field
