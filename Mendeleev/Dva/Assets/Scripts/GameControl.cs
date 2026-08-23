@@ -17,6 +17,7 @@ namespace Dva
         [SerializeField] private int _livesAmount = 3;
         [SerializeField] private int _maxLivesInField = 1;
         [SerializeField] private float _livesTimeAppear = 30f;
+        [SerializeField] private float _spawnExclusionRadius = 1.5f;
 
         [Header("Particles")]
         [SerializeField] private GeneralParticle _neutron;
@@ -62,7 +63,7 @@ namespace Dva
             _particleSpawner = new ParticleSpawner(this, _featuresManager, _atom, _particleParent,
                 _neutron, _electron, _proton, _blackHole, _timeFastParticle, _timeSlowParticle,
                 _fieldBiggerParticle, _fieldSmallerParticle, _fastNeutronParticle, _lives,
-                _maxSpecialAmount, _particleRenewTime, _maxLivesInField, _livesTimeAppear);
+                _maxSpecialAmount, _particleRenewTime, _maxLivesInField, _livesTimeAppear, _spawnExclusionRadius);
             _fieldEventRunner = new FieldEventRunner(this, _featuresManager, _particleSpawner, _player, _atom);
         }
         void Start()
@@ -87,13 +88,36 @@ namespace Dva
             _particleSpawner.ReturnSpecialParticle(type, instance);
         }
 
+        //fraction of the field's width/height kept clear along each edge, so patrol/spawn points
+        //never land flush against the boundary (particles could never quite reach a point sitting
+        //on the boundary wall itself, and would just sit stuck against it)
+        private const float c_EdgeMarginFraction = 0.05f;
+
         public Vector3 GetRandomPosition(float leftBoarder, float rightBoarder, float topBoarder, float bottomBoarder)
         {
-            float x = UnityEngine.Random.Range(leftBoarder, rightBoarder);
-            float y = UnityEngine.Random.Range(bottomBoarder, topBoarder);
-            float z = -1;
+            return GetRandomPosition(leftBoarder, rightBoarder, topBoarder, bottomBoarder, null, 0f);
+        }
 
-            return new Vector3(x, y, z);
+        //same as above, but rejects points closer than excludeRadius to excludeCenter - used when
+        //spawning particles so they don't appear right on top of the atom
+        public Vector3 GetRandomPosition(float leftBoarder, float rightBoarder, float topBoarder, float bottomBoarder,
+            Vector3? excludeCenter, float excludeRadius)
+        {
+            float marginX = (rightBoarder - leftBoarder) * c_EdgeMarginFraction;
+            float marginY = (topBoarder - bottomBoarder) * c_EdgeMarginFraction;
+
+            Vector3 position;
+            int attempts = 0;
+            do
+            {
+                float x = UnityEngine.Random.Range(leftBoarder + marginX, rightBoarder - marginX);
+                float y = UnityEngine.Random.Range(bottomBoarder + marginY, topBoarder - marginY);
+                position = new Vector3(x, y, -1);
+                attempts++;
+            }
+            while (excludeCenter.HasValue && Vector3.Distance(position, excludeCenter.Value) < excludeRadius && attempts < 10);
+
+            return position;
         }
 
         //special particle eventcall

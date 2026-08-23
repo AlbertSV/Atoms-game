@@ -28,6 +28,7 @@ namespace Dva
         private readonly int _particleRenewTime;
         private readonly int _maxLivesInField;
         private readonly float _livesTimeAppear;
+        private readonly float _spawnExclusionRadius;
 
         private float _count;
         private float _livesTimeRest;
@@ -51,7 +52,8 @@ namespace Dva
             SpecialParticle blackHole, SpecialParticle timeFastParticle, SpecialParticle timeSlowParticle,
             SpecialParticle fieldBiggerParticle, SpecialParticle fieldSmallerParticle,
             SpecialParticle fastNeutronParticle, SpecialParticle lives,
-            int maxSpecialAmount, int particleRenewTime, int maxLivesInField, float livesTimeAppear)
+            int maxSpecialAmount, int particleRenewTime, int maxLivesInField, float livesTimeAppear,
+            float spawnExclusionRadius)
         {
             _gameControl = gameControl;
             _featuresManager = featuresManager;
@@ -71,6 +73,7 @@ namespace Dva
             _particleRenewTime = particleRenewTime;
             _maxLivesInField = maxLivesInField;
             _livesTimeAppear = livesTimeAppear;
+            _spawnExclusionRadius = spawnExclusionRadius;
             _count = particleRenewTime;
         }
 
@@ -140,7 +143,8 @@ namespace Dva
         private void InstantiateParticle(GameObject particleType, List<GameObject> particleList)
         {
             Vector3 position = _gameControl.GetRandomPosition(_featuresManager.LeftBoarder.position.x, _featuresManager.RightBoarder.position.x,
-                _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y);
+                _featuresManager.TopBoarder.position.y, _featuresManager.BottomBoarder.position.y,
+                _atom.transform.position, _spawnExclusionRadius);
             GameObject particle = SpawnFromPool(particleType, position);
             particleList.Add(particle);
         }
