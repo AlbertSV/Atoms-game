@@ -204,8 +204,8 @@ namespace Dva
                 instance = UnityEngine.Object.Instantiate(prefab, position, prefab.transform.rotation, _particleParent);
             }
 
-            ResetForSpawn(instance);
             instance.SetActive(true);
+            ResetForSpawn(instance);
             return instance;
         }
 
