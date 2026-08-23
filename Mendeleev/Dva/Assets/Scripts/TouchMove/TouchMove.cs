@@ -28,6 +28,11 @@ namespace Dva
         private void OnEnable()
         {
             EnhancedTouchSupport.Enable();
+#if UNITY_EDITOR
+            //lets mouse clicks drive the joystick when testing in the Editor, regardless of the
+            //Game View's own "simulate touch from mouse" toggle
+            TouchSimulation.Enable();
+#endif
             ETouch.Touch.onFingerDown += HandleFingerDown;
             ETouch.Touch.onFingerUp += HandleLoseFinger;
             ETouch.Touch.onFingerMove += HandleFingerMove;
@@ -38,6 +43,9 @@ namespace Dva
             ETouch.Touch.onFingerDown -= HandleFingerDown;
             ETouch.Touch.onFingerUp -= HandleLoseFinger;
             ETouch.Touch.onFingerMove -= HandleFingerMove;
+#if UNITY_EDITOR
+            TouchSimulation.Disable();
+#endif
             EnhancedTouchSupport.Disable();
         }
 
