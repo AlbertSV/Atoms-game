@@ -55,9 +55,11 @@ namespace Dva
 #endif
         }
 
+        //loading synchronously blocks the main thread until the whole scene is ready, which is
+        //exactly the stutter on "Play" - async loading keeps the app responsive while it loads
         private void WaitForAnimationPlay()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
