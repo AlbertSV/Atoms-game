@@ -17,8 +17,7 @@ namespace Dva
         protected override void Awake()
         {
             base.Awake();
-            _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
+            _pointToGo = RandomPatrolPoint();
             _player = FindObjectOfType<Player>();
         }
 
@@ -38,16 +37,7 @@ namespace Dva
         //get the coordinate for particle where to move
         protected override void TaskPatrol()
         {
-            if (Vector3.Distance(transform.position, _pointToGo) < 0.01f)
-            {
-                transform.position = _pointToGo;
-                _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-                _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * Time.deltaTime);
-            }
+            WanderTowardPatrolPoint(_gameFeatures.ParticleSpeed * Time.deltaTime);
         }
 
         //go to the player, if it has black hole event and the particle if radius of it

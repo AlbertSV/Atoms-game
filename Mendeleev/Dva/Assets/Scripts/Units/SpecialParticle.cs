@@ -7,26 +7,15 @@ namespace Dva
 {
     public class SpecialParticle : Particle
     {
-        private float _specialParticleSpeed;
         [SerializeField]  private SpecialParticleType _specialType;
-
-        private Atom _atom;
 
         public SpecialParticleType SpecialType => _specialType;
 
         protected override void Awake()
         {
             base.Awake();
-            _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
-
+            _pointToGo = RandomPatrolPoint();
         }
-
-        private void Start()
-        {
-            _atom = FindObjectOfType<Atom>();
-        }
-    
 
         private void Update()
         {
@@ -38,16 +27,7 @@ namespace Dva
         {
             if (_specialType != SpecialParticleType.FastNeutron)
             {
-                if (Vector3.Distance(transform.position, _pointToGo) < 0.01f)
-                {
-                    transform.position = _pointToGo;
-                    _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-                    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
-                }
-                else
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * 0.7f);
-                }
+                WanderTowardPatrolPoint(_gameFeatures.ParticleSpeed * 0.7f);
             }
             else
             {
