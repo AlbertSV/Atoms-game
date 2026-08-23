@@ -121,13 +121,13 @@ namespace Dva
                 if (_atom.PAmount > _atom.EAmount)
                 {
                     _atom.PAmount = _atom.PAmount / 2;
-                    _atom.EAmount = _atom.PAmount - 1;
+                    _atom.EAmount = _atom.PAmount;
                     _atom.NAmount = _atom.PAmount - 1;
                 }
                 else if (_atom.PAmount < _atom.EAmount)
                 {
                     _atom.EAmount = _atom.EAmount / 2;
-                    _atom.PAmount = _atom.EAmount - 1;
+                    _atom.PAmount = _atom.EAmount;
                     _atom.NAmount = _atom.EAmount - 1;
                 }
                 else
