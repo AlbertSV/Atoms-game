@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using UnityEditor;
-
 namespace Dva
 {
     public class MainMenu : MonoBehaviour

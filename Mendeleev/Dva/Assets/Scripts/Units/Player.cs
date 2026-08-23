@@ -18,42 +18,42 @@ namespace Dva
         //actions when the particles hits the atom
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if(collision.gameObject.GetComponent<CircleCollider2D>() != false)
+            GameObject hit = collision.gameObject;
+
+            if (hit.TryGetComponent(out CircleCollider2D hitCollider))
             {
-                collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                hitCollider.enabled = false;
             }
 
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
 
+            bool isSpecial = hit.TryGetComponent(out SpecialParticle specialParticle);
+            bool isGeneral = hit.TryGetComponent(out GeneralParticle _);
 
-            if (collision.gameObject.GetComponent<SpecialParticle>() != null || collision.gameObject.GetComponent<GeneralParticle>() != null)
+            if (isSpecial || isGeneral)
             {
                 _audioController.AudioPlay(true, _featuresManager.AbsorbAudio);
             }
 
-            if(collision.gameObject.GetComponent<SpecialParticle>() != null)
+            if (isSpecial)
             {
-                _gameControl.EventCall(collision.gameObject.GetComponent<SpecialParticle>().SpecialType);
-                StartCoroutine(SetDestroySpecial(collision.gameObject));
+                _gameControl.EventCall(specialParticle.SpecialType);
+                StartCoroutine(SetDestroySpecial(hit));
             }
             else
             {
-                StartCoroutine(SetDestroy(collision.gameObject));
+                StartCoroutine(SetDestroy(hit));
             }
 
-            if(_eAmount <6)
-            {
-               // ElectronCreate();
-            }
         }
 
         //destroy hitted particle
         public IEnumerator SetDestroy(GameObject objectTriggered)
         {
-            if (objectTriggered.GetComponent<GeneralParticle>() != null)
+            if (objectTriggered.TryGetComponent(out GeneralParticle particle))
             {
                 _gameControl.ParticleCounter.Remove(objectTriggered);
-                IDUpdate(objectTriggered);
+                IDUpdate(particle);
                 Animator animator = objectTriggered.GetComponent<Animator>();
                 animator.SetBool("ToRemove", true);
                 yield return new WaitForSeconds(0f);
@@ -63,35 +63,31 @@ namespace Dva
         //destroy special particle
         public IEnumerator SetDestroySpecial(GameObject objectTriggered)
         {
-            if (objectTriggered.GetComponent<SpecialParticle>() != null)
+            if (objectTriggered.TryGetComponent(out SpecialParticle special))
             {
-                if(objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.BlackHole)
+                switch (special.SpecialType)
                 {
-                    _gameControl._blackHolesCounter.Remove(objectTriggered);
-                }
-                else if(objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.TimeFast)
-                {
-                    _gameControl._timeFastCounter.Remove(objectTriggered);
-                }
-                else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.TimeSlow)
-                {
-                    _gameControl._timeSlowCounter.Remove(objectTriggered);
-                }
-                else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.FiledShrink)
-                {
-                    _gameControl._fieldSmallerCounter.Remove(objectTriggered);
-                }
-                else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.FieldRise)
-                {
-                    _gameControl._fieldBiggerCounter.Remove(objectTriggered);
-                }
-                else if (objectTriggered.GetComponent<SpecialParticle>().SpecialType == SpecialParticleType.Lives)
-                {
-                    _gameControl._livesCounter.Remove(objectTriggered);
-                }
-                else
-                {
-                    _gameControl._neutronFastCounter.Remove(objectTriggered);
+                    case SpecialParticleType.BlackHole:
+                        _gameControl.BlackHolesCounter.Remove(objectTriggered);
+                        break;
+                    case SpecialParticleType.TimeFast:
+                        _gameControl.TimeFastCounter.Remove(objectTriggered);
+                        break;
+                    case SpecialParticleType.TimeSlow:
+                        _gameControl.TimeSlowCounter.Remove(objectTriggered);
+                        break;
+                    case SpecialParticleType.FiledShrink:
+                        _gameControl.FieldSmallerCounter.Remove(objectTriggered);
+                        break;
+                    case SpecialParticleType.FieldRise:
+                        _gameControl.FieldBiggerCounter.Remove(objectTriggered);
+                        break;
+                    case SpecialParticleType.Lives:
+                        _gameControl.LivesCounter.Remove(objectTriggered);
+                        break;
+                    default:
+                        _gameControl.NeutronFastCounter.Remove(objectTriggered);
+                        break;
                 }
 
                 Animator animator = objectTriggered.GetComponent<Animator>();
@@ -100,13 +96,13 @@ namespace Dva
             }
         }
 
-        private int IDUpdate(GameObject particle)
+        private int IDUpdate(GeneralParticle particle)
         {
-            if (particle.GetComponent<GeneralParticle>().GeneralType == GeneralParticleType.Electron)
+            if (particle.GeneralType == GeneralParticleType.Electron)
             {
                 _eAmount += 1;
             }
-            else if(particle.GetComponent<GeneralParticle>().GeneralType == GeneralParticleType.Neutron)
+            else if(particle.GeneralType == GeneralParticleType.Neutron)
             {
                 _nAmount += 1;
             }
@@ -130,39 +126,5 @@ namespace Dva
             }
 
         }
-
-        //create electron on atoms orbit
-        private void ElectronCreate()
-        {
-            if (_eAmount == 2)
-            {
-                transform.GetChild(3).gameObject.SetActive(true);
-                transform.GetChild(4).gameObject.SetActive(false);
-            }
-            else if (_eAmount == 3)
-            {
-                transform.GetChild(4).gameObject.SetActive(true);
-                transform.GetChild(5).gameObject.SetActive(false);
-            }
-            else if (_eAmount == 4)
-            {
-                transform.GetChild(5).gameObject.SetActive(true);
-                transform.GetChild(6).gameObject.SetActive(false);
-            }
-            else if (_eAmount == 5)
-            {
-                transform.GetChild(6).gameObject.SetActive(true);
-                transform.GetChild(7).gameObject.SetActive(false);
-            }
-            else if (_eAmount == 6)
-            {
-                transform.GetChild(7).gameObject.SetActive(true);
-            }
-            else if (_eAmount < 2)
-            {
-                transform.GetChild(3).gameObject.SetActive(false);
-            }
-        }
-
     }
 }

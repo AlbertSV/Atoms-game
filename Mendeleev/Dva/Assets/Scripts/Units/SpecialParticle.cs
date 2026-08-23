@@ -2,33 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using UnityEngine.UIElements;
 
 namespace Dva
 {
     public class SpecialParticle : Particle
     {
-        private float _specialParticleSpeed;
         [SerializeField]  private SpecialParticleType _specialType;
-
-        private Atom _atom;
 
         public SpecialParticleType SpecialType => _specialType;
 
         protected override void Awake()
         {
             base.Awake();
-            _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
-
+            _pointToGo = RandomPatrolPoint();
         }
-
-        private void Start()
-        {
-            _atom = FindObjectOfType<Atom>();
-        }
-    
 
         private void Update()
         {
@@ -40,23 +27,14 @@ namespace Dva
         {
             if (_specialType != SpecialParticleType.FastNeutron)
             {
-                if (Vector3.Distance(transform.position, _pointToGo) < 0.01f)
-                {
-                    transform.position = _pointToGo;
-                    _pointToGo = _gameManager.GetRandomPosition(_gameFeatures.LeftBoarder.position.x, _gameFeatures.RightBoarder.position.x,
-                    _gameFeatures.TopBoarder.position.y, _gameFeatures.BottomBoarder.position.y);
-                }
-                else
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, _pointToGo, _gameFeatures.ParticleSpeed * 0.7f);
-                }
+                WanderTowardPatrolPoint(_gameFeatures.ParticleSpeed * 0.7f);
             }
             else
             {
                 if (Vector3.Distance(transform.position, _pointToGo) < 0.05f)
                 {
-                    _gameManager._neutronFastCounter.Remove(gameObject);
-                    Destroy(gameObject);
+                    _gameManager.NeutronFastCounter.Remove(gameObject);
+                    _gameManager.ReturnSpecialParticle(_specialType, gameObject);
                 }
                 else
                 {
@@ -65,9 +43,10 @@ namespace Dva
             }
         }
 
+        //remove particle after hitting the atom (returned to the pool, not destroyed)
         protected override void RemoveEvent()
         {
-            Destroy(gameObject);
+            _gameManager.ReturnSpecialParticle(_specialType, gameObject);
         }
     }
 }

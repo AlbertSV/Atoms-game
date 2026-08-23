@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-//using System.Numerics;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.Serialization;
 using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 
 namespace Dva
@@ -13,8 +12,9 @@ namespace Dva
         [SerializeField] private Vector2 _joystickSize = new Vector2(100, 100);
         [SerializeField] private FloatingJoystick _joystick;
         [SerializeField] private Rigidbody2D _player;
+        [FormerlySerializedAs("PLAYERSPEED")]
         [SerializeField]
-        private float PLAYERSPEED = 0.1f;
+        private float _playerSpeed = 0.1f;
         [SerializeField] private float _maxSpeed;
 
         private Finger _movementFinger;
@@ -28,6 +28,11 @@ namespace Dva
         private void OnEnable()
         {
             EnhancedTouchSupport.Enable();
+#if UNITY_EDITOR
+            //lets mouse clicks drive the joystick when testing in the Editor, regardless of the
+            //Game View's own "simulate touch from mouse" toggle
+            TouchSimulation.Enable();
+#endif
             ETouch.Touch.onFingerDown += HandleFingerDown;
             ETouch.Touch.onFingerUp += HandleLoseFinger;
             ETouch.Touch.onFingerMove += HandleFingerMove;
@@ -38,6 +43,9 @@ namespace Dva
             ETouch.Touch.onFingerDown -= HandleFingerDown;
             ETouch.Touch.onFingerUp -= HandleLoseFinger;
             ETouch.Touch.onFingerMove -= HandleFingerMove;
+#if UNITY_EDITOR
+            TouchSimulation.Disable();
+#endif
             EnhancedTouchSupport.Disable();
         }
 
@@ -116,7 +124,7 @@ namespace Dva
         //making player move
         private void  MoveUpdate()
         {
-            Vector2 scaledMovement = PLAYERSPEED * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
+            Vector2 scaledMovement = _playerSpeed * Time.deltaTime * new Vector2(_movementAmount.x, _movementAmount.y);
             _player.AddForce(scaledMovement);
 
             if(_player.velocity.magnitude > _maxSpeed)
