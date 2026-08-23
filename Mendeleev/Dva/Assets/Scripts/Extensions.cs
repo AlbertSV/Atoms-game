@@ -1,19 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using System.Xml.Linq;
-using System;
-using System.Collections;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 namespace Dva
 {
     public static class AIUtility
     {
-        private static readonly string c_ConfigPath = "//Resources//Config.xml";
-        private static readonly string c_ElementsConfigPath = "//Resources//ElementsConfig.xml";
-        private static readonly string p_NumbersList = "//Resources//PlayerConfig.xml";
+        //read-only reference data bundled with the game; loaded via Resources so it works in builds
+        private static readonly string c_ConfigResource = "Config";
+        private static readonly string c_ElementsConfigResource = "ElementsConfig";
+        //the player's save file: seeded from the bundled template on first run, then read/written
+        //under Application.persistentDataPath, the only location writable on-device
+        private static readonly string p_SaveResource = "PlayerConfig";
+        private static readonly string p_SaveFileName = "PlayerConfig.xml";
 
         private static Dictionary<int, string> _NameIDDict = new Dictionary<int, string>();
         private static Dictionary<int, string> _SymbolIDDict = new Dictionary<int, string>();
@@ -34,14 +34,32 @@ namespace Dva
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Configuration()
         {
-            _fileToWrite = XDocument.Load(Application.dataPath + p_NumbersList);
-            var root = XDocument.Load(Application.dataPath + c_ConfigPath).Root;
-            ConfigurationAtomData(root);
-            root = XDocument.Load(Application.dataPath + c_ElementsConfigPath).Root;
-            ConfigurationElementsData(root);
-            root = XDocument.Load(Application.dataPath + p_NumbersList).Root;
-            ConfigurationPlayerNumbers(root);
+            ConfigurationAtomData(LoadBundledXml(c_ConfigResource).Root);
+            ConfigurationElementsData(LoadBundledXml(c_ElementsConfigResource).Root);
 
+            _fileToWrite = LoadOrCreateSaveFile();
+            ConfigurationPlayerNumbers(_fileToWrite.Root);
+        }
+
+        private static string SaveFilePath => Path.Combine(Application.persistentDataPath, p_SaveFileName);
+
+        //load a read-only XML file bundled with the game; Resources works in both the Editor and builds,
+        //unlike a raw Application.dataPath file path which only happens to exist in the Editor
+        private static XDocument LoadBundledXml(string resourceName)
+        {
+            return XDocument.Parse(Resources.Load<TextAsset>(resourceName).text);
+        }
+
+        //load the player's save file from persistent storage, seeding it from the bundled empty
+        //template on first run - Application.dataPath isn't writable on-device (e.g. iOS)
+        private static XDocument LoadOrCreateSaveFile()
+        {
+            string path = SaveFilePath;
+            if (!File.Exists(path))
+            {
+                LoadBundledXml(p_SaveResource).Save(path);
+            }
+            return XDocument.Load(path);
         }
 
         //data from config file with all existing atoms
@@ -110,7 +128,7 @@ namespace Dva
             
             _fileToWrite.Element("Units").Element("Atom").Add(new XElement("PlayerElements", new XAttribute("ID", ID),
                 new XAttribute("Number", number)));
-            _fileToWrite.Save(Application.dataPath + p_NumbersList);
+            _fileToWrite.Save(SaveFilePath);
         }
 
         /// getting back dictionary with data of elements
