@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,9 +9,6 @@ namespace Dva
         private GameObject _gameManager;
         protected FeaturesManager _featuresManager;
         protected AudioGameController _audioController;
-        private int _decayCount;
-        private bool _toDecay = false;
-        private bool _inDecay = false;
         protected int _atomID;
         protected int _nAmount = 0;
         protected int _eAmount = 1;
@@ -22,269 +17,73 @@ namespace Dva
         protected TMP_Text _atomCompositionText;
         protected TMP_Text _atomSymbolText;
         protected TMP_Text _atomSymbolObjectText;
-        protected TMP_Text _atomDecayText;
         private TMP_Text _statisticText;
-        private ParticleSystem _particleSystem;
-        private Animator _animator;
         private Dictionary<int, int> _openElements;
         private int _upgradeCounter = 0;
         private float _multiField = 1.1f;
         private float _multiAmount = 1.5f;
         private int _statistic = 0;
         private Player _player;
+        private AtomDecayController _decayController;
 
-        public int AtomID => _atomID;
+        public int AtomID { get => _atomID; internal set => _atomID = value; }
         public int StatisticScore => _statistic;
 
+        internal int NAmount { get => _nAmount; set => _nAmount = value; }
+        internal int EAmount { get => _eAmount; set => _eAmount = value; }
+        internal int PAmount { get => _pAmount; set => _pAmount = value; }
 
         void Start()
         {
             _gameManager = FindObjectOfType<GameControl>().gameObject;
             _featuresManager = _gameManager.GetComponent<FeaturesManager>();
             _audioController = _gameManager.GetComponent<AudioGameController>();
-            _decayCount = _featuresManager.DecayCountDown;
             _atomNameText = _featuresManager.AtomName;
             _atomSymbolText = _featuresManager.AtomSymbol;
             _atomCompositionText = _featuresManager.AtomComposition;
-            _atomDecayText = _featuresManager.AtomDecay;
             _atomSymbolObjectText = _featuresManager.AtomSymbolObject;
-            _particleSystem = _featuresManager.ParticleSystem;
             _statisticText = _featuresManager.StatisticText;
-            _animator = _particleSystem.GetComponentInParent<Animator>();
             _openElements = AIUtility.GetPlayerNumbers;
             _player = FindObjectOfType<Player>();
+            _decayController = new AtomDecayController(this, _gameManager.GetComponent<GameControl>(), _featuresManager, _audioController);
             _audioController.AudioPlay(true, _featuresManager.StartAudio);
         }
-
 
         //check the charge of the atom, if it's not eaqual atom should decay
         protected void AtomCharge()
         {
-            if (_eAmount == _pAmount)
-            {
-                if (_nAmount > _eAmount * 2)
-                {
-                    StartCoroutine(AtomNeutronDecay());
-                }
-                else if (_nAmount <= _eAmount - 2)
-                {
-                    StartCoroutine(AtomNeutronDecay());
-                }
-
-                AtomUpgrade(_atomID);
-                CompositionUpdate();
-                _statistic += 10;
-                StatisticUpdate();
-            }
-            else
-            {
-                if (_nAmount == 1 && _eAmount == 1 && _pAmount == 0 || _nAmount == 1 && _eAmount == 0 && _pAmount == 1)
-                {
-                    CompositionUpdate();
-                    _statistic += 10;
-                    StatisticUpdate();
-                }
-                else
-                {
-                    StartCoroutine(ParticleStateAmountDecrease());
-                }
-            }
-        }
-
-        //atom decay process
-        private IEnumerator ParticleStateAmountDecrease()
-        {
-            if (!_inDecay)
-            {
-                _toDecay = true;
-                _inDecay = true;
-
-                //counter before atom decay, the player has chance to save the atom
-                for (int i = _decayCount; i >= 0;)
-                {
-                    _atomDecayText.text = "Decay in " + i;
-                    _animator.SetBool("ToTrim", true);
-                    _audioController.AudioPlay(true, _featuresManager.TicAudio);
-                    yield return new WaitForSeconds(1f);
-                    i--;
-
-                    //in case the charge back to normal
-                    if (_eAmount == _pAmount && _nAmount >= _eAmount - 2)
-                    {
-                        _audioController.AudioPlay(false, _featuresManager.TicAudio);
-                        _toDecay = false;
-                        _animator.SetBool("ToTrim", false);
-                        _atomDecayText.text = "";
-                        CompositionUpdate();
-                        _inDecay = false;
-                        break;
-                    }
-                }
-
-                _atomDecayText.text = "";
-                //if player coudn't save the atom
-                if (_toDecay)
-                {
-                    _audioController.AudioPlay(false, _featuresManager.TicAudio);
-                    _audioController.AudioPlay(true, _featuresManager.ExplodeAudio);
-                    _animator.SetBool("ToTrim", false);
-                    _particleSystem.Play();
-                    _atomID = AtomDecay();
-                    AtomUpgrade(_atomID);
-                    CompositionUpdate();
-                    _statistic = (int)(_statistic / 2);
-                    StatisticUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>().LivesList);
-                    _inDecay = false;
-                    _toDecay = false;
-                }
-            }
-        }
-
-        //set the amount of particles after decay
-        private int AtomDecay()
-        {
-            {
-                if (_pAmount > _eAmount)
-                {
-                    _pAmount = _pAmount / 2;
-                    _eAmount = _pAmount - 1;
-                    _nAmount = _pAmount - 1;
-                }
-                else if (_pAmount < _eAmount)
-                {
-                    _eAmount = _eAmount / 2;
-                    _pAmount = _eAmount - 1;
-                    _nAmount = _eAmount - 1;
-                }
-                else
-                {
-                    _eAmount = _nAmount;
-                    _pAmount = _nAmount;
-                }
-
-                if (_eAmount < 0) _eAmount = 0;
-                if (_pAmount < 0) _pAmount = 0;
-                if (_nAmount < 0) _nAmount = 0;
-            }
-            _particleSystem.Play();
-            int atomID = AtomIDUpdate();
-            return atomID;
-        }
-
-        //decay if player got to many/not enough of neutrons
-        protected IEnumerator AtomNeutronDecay()
-        {
-            if (!_inDecay)
-            {
-                _toDecay = true;
-                _inDecay = true;
-
-                //counter before decay
-                for (int i = _decayCount; i >= 0;)
-                {
-                    _audioController.AudioPlay(true, _featuresManager.TicAudio);
-                    _animator.SetBool("ToTrim", true);
-                    _atomDecayText.text = "Decay in " + i;
-                    yield return new WaitForSeconds(1f);
-                    i--;
-
-                    //in case if n amount is enough
-                    if (_eAmount == _pAmount)
-                    {
-                        if (_nAmount < _eAmount * 2 && _nAmount >= _eAmount - 2)
-                        {
-                            _audioController.AudioPlay(false, _featuresManager.TicAudio);
-                            _animator.SetBool("ToTrim", false);
-                            _toDecay = false;
-                            _inDecay = false;
-                            _atomDecayText.text = "";
-                            break;
-                        }
-                    }
-                }
-
-                _atomDecayText.text = "";
-
-                //in case if player didn't save the atom
-                if (_toDecay)
-                {
-                    if (_nAmount > _eAmount * 2)
-                    {
-                        _nAmount = _eAmount;
-
-                    }
-                    else if (_nAmount <= _eAmount - 2)
-                    {
-                        _eAmount = _nAmount;
-                        _pAmount = _nAmount;
-                    }
-                    _audioController.AudioPlay(false, _featuresManager.TicAudio);
-                    _audioController.AudioPlay(true, _featuresManager.ExplodeAudio);
-                    _animator.SetBool("ToTrim", false);
-                    _toDecay = false;
-                    _inDecay = false;
-                    _particleSystem.Play();
-                    _atomID = AtomIDUpdate();
-                    _statistic = (int)(_statistic / 1.5);
-                    StatisticUpdate();
-                    CompositionUpdate();
-                    DestroyLife(_gameManager.GetComponent<GameControl>().LivesList);
-                }
-            }
+            _decayController.CheckBalance();
         }
 
         //in case if player got event from special particles
         public void EventAtomUpdate(bool blackHole)
         {
-            //if atom hitted by fast neutron
-            if (!blackHole)
-            {
-                int min = Math.Min(_eAmount, _nAmount);
-                min = Math.Min(min, _pAmount);
-                
-                _pAmount = min / 2;
-                _eAmount = min / 2;
-                _nAmount = min / 2;
-            }
-            //in case if the time of black hole event ended
-            else
-            {
-                if (_pAmount < _eAmount)
-                {
-                    _pAmount = _eAmount;
-                    if (_nAmount <= _pAmount - 2)
-                    {
-                        _eAmount = _nAmount;
-                        _pAmount = _nAmount;
-                    }
-                }
-                else
-                {
-                    _eAmount = _pAmount;
-                    if (_nAmount <= _eAmount - 2)
-                    {
-                        _eAmount = _nAmount;
-                        _pAmount = _nAmount;
-                    }
-                }
-            }
-            _particleSystem.Play();
-            _audioController.AudioPlay(true, _featuresManager.ExplodeAudio);
-            _atomID = AtomIDUpdate();
-            CompositionUpdate();
-            AtomUpgrade(_atomID);
+            _decayController.HandleSpecialEvent(blackHole);
+        }
+
+        //add to the player's score and refresh the score text
+        internal void AddScore(int amount)
+        {
+            _statistic += amount;
+            StatisticUpdate();
+        }
+
+        //shrink the player's score (e.g. after a decay) and refresh the score text
+        internal void ScaleScore(float divisor)
+        {
+            _statistic = (int)(_statistic / divisor);
+            StatisticUpdate();
         }
 
         //updating the text of atom composition after decay
-        protected void CompositionUpdate()
+        internal void CompositionUpdate()
         {
             AtomId.Decode(_atomID, out _nAmount, out _eAmount, out _pAmount);
             _atomCompositionText.text = _nAmount + "n" + _eAmount + "e" + _pAmount + "p";
         }
 
         //upgrade the atom if it has enough amoun of e/p/n
-        protected void AtomUpgrade(int atomID)
+        internal void AtomUpgrade(int atomID)
         {
             AtomId.Decode(atomID, out _, out _, out int level);
 
@@ -332,23 +131,10 @@ namespace Dva
         }
 
         //update current atom ID
-        protected int AtomIDUpdate()
+        internal int AtomIDUpdate()
         {
             _atomID = AtomId.Encode(_nAmount, _eAmount, _pAmount);
             return _atomID;
-        }
-
-        //lost the live if the atom has been decayed
-        private void DestroyLife(List<GameObject> lifesList)
-        {
-
-            Destroy(lifesList[lifesList.Count - 1]);
-            lifesList.RemoveAt(lifesList.Count - 1);
-
-            if (lifesList.Count == 0)
-            {
-                _gameManager.GetComponent<GameControl>().EndGame();
-            }
         }
 
         //check if the player increase atom level
